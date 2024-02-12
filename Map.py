@@ -2,6 +2,9 @@ import folium
 from folium.plugins import LocateControl
 import branca
 
+min_lon, max_lon = 
+min_lat, max_lat = , 13.514
+
 # Base map, location of the mid-point & zoom
 map = folium.Map(location= [9.072264, 7.491302], zoom_start=12)
 
