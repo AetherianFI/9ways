@@ -1,7 +1,10 @@
 import folium
 from folium.plugins import LocateControl
+from folium.plugins import MousePosition
 import branca
+import json
 
+# Coordinates that create a square around Abuja, doesnt work
 min_lon, max_lon = 6.611773, 7.914522
 min_lat, max_lat = 8.306199, 9.527200
 
@@ -23,32 +26,41 @@ folium.CircleMarker([max_lat, max_lon], tooltip="Upper Right Corner").add_to(map
 # Alternative tile theme for folium.Map
 # tiles="Cartodb Positron"
 
-# html code for the popup window on the marker
-html = """
-    <h1> Bus stop T1: Terminal </h1><br>
-    Timetable for the bus stop:
-    <p>
-    <code>
-        Insert timetable here...
-    </code>
-    </p>
-    """
+# Accessing the json where busstops are located
+with open("busstops.json") as file:
+    data = json.load(file)
 
-# Popup
-iframe = branca.element.IFrame(html=html, width=400, height=200)
-popup = folium.Popup(iframe, max_width=400)
-
-# feature group & adding the popup text to marker
+# Feature group
 fg = folium.FeatureGroup(name="My Map")
-fg.add_child(
-    folium.Marker(
-        location=[9.072264, 7.491302], popup=popup, icon=folium.Icon(color="red")
+
+# Go through all the stops in the json and add all of them to the map as markers
+for i in range(len(data["bus_stops"])):
+
+    bus_stop_name = data["bus_stops"][i]["name"]
+    html_with_name = f'<h1 id="bus_stop_name">{bus_stop_name}</h1><br>Timetable for the bus stop:<p><code>Insert timetable here...</code></p>'
+
+    # Create a Popup object with the HTML content
+    popup = folium.Popup(html_with_name, max_width=400)
+
+    # Add marker to the feature group
+    fg.add_child(
+        folium.Marker(
+            location=[
+                data["bus_stops"][i]["latitude"],
+                data["bus_stops"][i]["longitude"],
+            ],
+            popup=popup,
+            icon=folium.Icon(color="red"),
+        )
     )
-)
-map.add_child(fg)
+    # Add feature group to the map
+    map.add_child(fg)
 
 # Gps tracking request through browser
 location = LocateControl().add_to(map)
+
+# Add current mouse coordinates
+mouse = MousePosition().add_to(map)
 
 # Rendering + alternative methods commmented down below
 map.show_in_browser()
