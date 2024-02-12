@@ -1,0 +1,19 @@
+{
+    "bus_stops": [
+        {
+            "name": "Bus stop T1: Terminal",
+            "latitude": 9.072264,
+            "longitude": 7.491302
+        },
+        {
+            "name": "Bus Stop B",
+            "latitude": 9.1,
+            "longitude": 7.2
+        },
+        {
+            "name": "Bus Stop C",
+            "latitude": 9.2,
+            "longitude": 7.3
+        }
+    ]
+}
