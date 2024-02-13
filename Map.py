@@ -5,11 +5,12 @@ import branca
 import json
 
 # Coordinates that create a square around Abuja, doesnt work
-min_lon, max_lon = 6.611773, 7.914522
-min_lat, max_lat = 8.306199, 9.527200
+min_lon, max_lon = 7.21, 7.56
+min_lat, max_lat = 8.944, 9.2
 
 # Base map, location of the mid-point & zoom
 map = folium.Map(
+    max_bounds=True,
     location=[9.072264, 7.491302],
     zoom_start=12,
     min_lat=min_lat,
@@ -64,7 +65,7 @@ mouse = MousePosition().add_to(map)
 
 # Rendering + alternative methods commmented down below
 map.show_in_browser()
-# map.save("Map1.hmtl")
+# map.save("index.hmtl")
 # map.render
 
 
