@@ -1,11 +1,10 @@
 import folium
-from folium.plugins import LocateControl
-from folium.plugins import MousePosition
+from folium.plugins import LocateControl, MousePosition
 import branca
 import json
 
-# Coordinates that create a square around Abuja, doesnt work
-min_lon, max_lon = 7.21, 7.56
+# Coordinates that create a square around Abuja
+min_lon, max_lon = 7.21, 7.67
 min_lat, max_lat = 8.944, 9.2
 
 # Base map, location of the mid-point & zoom
@@ -17,6 +16,11 @@ map = folium.Map(
     max_lat=max_lat,
     min_lon=min_lon,
     max_lon=max_lon,
+    width="75%",
+    height="75%",
+    # Delete the 2 rows under to use the default map tiles
+    tiles="https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png",
+    attr='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>',
 )
 
 folium.CircleMarker([max_lat, min_lon], tooltip="Upper Left Corner").add_to(map)
@@ -28,7 +32,7 @@ folium.CircleMarker([max_lat, max_lon], tooltip="Upper Right Corner").add_to(map
 # tiles="Cartodb Positron"
 
 # Accessing the json where busstops are located
-with open("busstops.json") as file:
+with open("POI.json") as file:
     data = json.load(file)
 
 # Feature group
@@ -43,6 +47,10 @@ for i in range(len(data["bus_stops"])):
     # Create a Popup object with the HTML content
     popup = folium.Popup(html_with_name, max_width=400)
 
+    # Color and icon style of the marker
+    color = data["bus_stops"][i]["color"]
+    icon = data["bus_stops"][i]["icon"]
+
     # Add marker to the feature group
     fg.add_child(
         folium.Marker(
@@ -51,7 +59,7 @@ for i in range(len(data["bus_stops"])):
                 data["bus_stops"][i]["longitude"],
             ],
             popup=popup,
-            icon=folium.Icon(color="red"),
+            icon=folium.Icon(color=color, icon=icon, prefix="fa"),
         )
     )
     # Add feature group to the map
