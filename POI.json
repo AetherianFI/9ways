@@ -3,22 +3,30 @@
         {
             "name": "Bus stop T1: Terminal",
             "latitude": 9.072264,
-            "longitude": 7.491302
+            "longitude": 7.491302,
+            "icon": "bus-simple",
+            "color": "blue"
         },
         {
             "name": "Bus Stop B",
             "latitude": 9.047634,
-            "longitude": 7.481390
+            "longitude": 7.481390,
+            "icon": "bus-simple",
+            "color": "pink"
         },
         {
             "name": "Bus Stop C",
             "latitude": 9.036276,
-            "longitude": 7.493329
+            "longitude": 7.493329,
+            "icon": "bus-simple",
+            "color": "red"
         },
         {
             "name": "Bus Stop D",
             "latitude": 9.058395,
-            "longitude": 7.490683
+            "longitude": 7.490683,
+            "icon": "bus-simple",
+            "color": "red"
         }
     ]
 }

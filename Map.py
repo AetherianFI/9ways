@@ -32,7 +32,7 @@ folium.CircleMarker([max_lat, max_lon], tooltip="Upper Right Corner").add_to(map
 # tiles="Cartodb Positron"
 
 # Accessing the json where busstops are located
-with open("busstops.json") as file:
+with open("POI.json") as file:
     data = json.load(file)
 
 # Feature group
@@ -47,6 +47,10 @@ for i in range(len(data["bus_stops"])):
     # Create a Popup object with the HTML content
     popup = folium.Popup(html_with_name, max_width=400)
 
+    # Color and icon style of the marker
+    color = data["bus_stops"][i]["color"]
+    icon = data["bus_stops"][i]["icon"]
+
     # Add marker to the feature group
     fg.add_child(
         folium.Marker(
@@ -55,7 +59,7 @@ for i in range(len(data["bus_stops"])):
                 data["bus_stops"][i]["longitude"],
             ],
             popup=popup,
-            icon=folium.Icon(color="red"),
+            icon=folium.Icon(color=color, icon=icon, prefix="fa"),
         )
     )
     # Add feature group to the map
