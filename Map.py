@@ -1,11 +1,10 @@
 import folium
-from folium.plugins import LocateControl
-from folium.plugins import MousePosition
+from folium.plugins import LocateControl, MousePosition
 import branca
 import json
 
-# Coordinates that create a square around Abuja, doesnt work
-min_lon, max_lon = 7.21, 7.56
+# Coordinates that create a square around Abuja
+min_lon, max_lon = 7.21, 7.67
 min_lat, max_lat = 8.944, 9.2
 
 # Base map, location of the mid-point & zoom
@@ -17,6 +16,8 @@ map = folium.Map(
     max_lat=max_lat,
     min_lon=min_lon,
     max_lon=max_lon,
+    width="75%",
+    height="75%",
 )
 
 folium.CircleMarker([max_lat, min_lon], tooltip="Upper Left Corner").add_to(map)
