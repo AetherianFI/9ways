@@ -18,6 +18,9 @@ map = folium.Map(
     max_lon=max_lon,
     width="75%",
     height="75%",
+    # Delete the 2 rows under to use the default map tiles
+    tiles="https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png",
+    attr='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>',
 )
 
 folium.CircleMarker([max_lat, min_lon], tooltip="Upper Left Corner").add_to(map)
