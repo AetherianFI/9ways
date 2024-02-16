@@ -27,6 +27,41 @@
             "longitude": 7.490683,
             "icon": "bus-simple",
             "color": "red"
+        },
+        {
+            "name": "Nizamiye Hospital",
+            "latitude": 9.05942,
+            "longitude": 7.3913,
+            "icon": "bus-simple",
+            "color": "red"
+        },
+        {
+            "name": "Jabi lake Mall",
+            "latitude": 9.43664,
+            "longitude": 7.252894,
+            "icon": "bus-simple",
+            "color": "blue"
+        },
+        {
+            "name": "National Childrens Park & Zoo Abuja",
+            "latitude": 9.081637,
+            "longitude": 7.525149,
+            "icon": "bus-simple",
+            "color": "green"
+        },
+        {
+            "name": "Transcorp Hilton Abuja",
+            "latitude": 9.0743181,
+            "longitude": 7.4947183,
+            "icon": "bus-simple",
+            "color": "blue"
+        },
+        {
+            "name": "Nile University of Nigeria",
+            "latitude": 9.0138702,
+            "longitude": 7.3964713,
+            "icon": "bus-simple",
+            "color": "blue"
         }
     ]
 }
