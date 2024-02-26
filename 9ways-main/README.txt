@@ -1,3 +1,0 @@
-For getting started with Folium:
-
-https://python-visualization.github.io/folium/latest/user_guide.html

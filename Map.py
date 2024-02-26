@@ -1,6 +1,5 @@
 import folium
 from folium.plugins import LocateControl, MousePosition, Geocoder
-import branca
 import json
 
 # Coordinates that create a square around Abuja
@@ -18,20 +17,16 @@ map = folium.Map(
     max_lat=max_lat,
     min_lon=min_lon,
     max_lon=max_lon,
-    # width="50%",
-    # height="50%",
-    # Delete comment from the 2 rows under to use different map layout
-    # tiles="https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png",
-    # attr='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>',
 )
+
+# Add a title to the map
+title_html = '<h3 align="center" style="font-size:20px"><b>Title of Your Map</b></h3>'
+map.get_root().html.add_child(folium.Element(title_html))
 
 folium.CircleMarker([max_lat, min_lon], tooltip="Upper Left Corner").add_to(map)
 folium.CircleMarker([min_lat, min_lon], tooltip="Lower Left Corner").add_to(map)
 folium.CircleMarker([min_lat, max_lon], tooltip="Lower Right Corner").add_to(map)
 folium.CircleMarker([max_lat, max_lon], tooltip="Upper Right Corner").add_to(map)
-
-# Alternative tile theme for folium.Map
-# tiles="Cartodb Positron"
 
 # Accessing the json where busstops are located
 with open("POI.json") as file:
@@ -80,6 +75,4 @@ layer_control = folium.LayerControl().add_to(map)
 search = Geocoder().add_to(map)
 
 # Rendering + alternative methods commmented down below
-map.show_in_browser()
-# map.save("index.hmtl")
-# map.render
+map.save("index.html")
