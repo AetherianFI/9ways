@@ -1,5 +1,5 @@
 import folium
-from folium.plugins import LocateControl, MousePosition
+from folium.plugins import LocateControl, MousePosition, Search
 import branca
 import json
 
@@ -18,8 +18,8 @@ map = folium.Map(
     max_lat=max_lat,
     min_lon=min_lon,
     max_lon=max_lon,
-    # width="75%",
-    # height="75%",
+    # width="50%",
+    # height="50%",
     # Delete comment from the 2 rows under to use different map layout
     # tiles="https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png",
     # attr='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>',
@@ -38,7 +38,7 @@ with open("POI.json") as file:
     data = json.load(file)
 
 # Feature group
-fg = folium.FeatureGroup(name="My Map")
+bus_stops = folium.FeatureGroup(name="Bus stops")
 
 # Go through all the stops in the json and add all of them to the map as markers
 for i in range(len(data["bus_stops"])):
@@ -54,7 +54,7 @@ for i in range(len(data["bus_stops"])):
     icon = data["bus_stops"][i]["icon"]
 
     # Add marker to the feature group
-    fg.add_child(
+    bus_stops.add_child(
         folium.Marker(
             location=[
                 data["bus_stops"][i]["latitude"],
@@ -65,13 +65,16 @@ for i in range(len(data["bus_stops"])):
         )
     )
     # Add feature group to the map
-    map.add_child(fg)
+    map.add_child(bus_stops)
 
 # Gps tracking request through browser
 location = LocateControl().add_to(map)
 
 # Add current mouse coordinates
 mouse = MousePosition().add_to(map)
+
+# Add layercontrol UI
+layer_control = folium.LayerControl().add_to(map)
 
 # Rendering + alternative methods commmented down below
 map.show_in_browser()
