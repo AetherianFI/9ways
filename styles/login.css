@@ -1,0 +1,22 @@
+@font-face {
+    font-family: "LEMONMILK";
+    src: url("/fonts/LEMONMILK-Regular.otf");
+}
+
+body {
+    background-color: rgb(39, 39, 39);
+    color: white;
+    font-family: "LEMONMILK";
+}
+
+.username {
+    font-size: 20px;
+}
+
+.password {
+    font-size: 20px;
+}
+
+.login {
+    font-size: 20px;
+}
