@@ -76,6 +76,9 @@ mouse = MousePosition().add_to(map)
 # Add layercontrol UI
 layer_control = folium.LayerControl().add_to(map)
 
+# Add search bar
+search_bar = Search(layer=, collapsed=True, placeholder="Search for a place in Abuja").add_to(map)
+
 # Rendering + alternative methods commmented down below
 map.show_in_browser()
 # map.save("index.hmtl")
