@@ -78,4 +78,4 @@ search = Geocoder().add_to(map)
 # map.show_in_browser()
 
 # Rendering + alternative methods commmented down below
-map.save("index.html")
+map.save("map.html")

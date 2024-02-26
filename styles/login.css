@@ -8,3 +8,15 @@ body {
     color: white;
     font-family: "LEMONMILK";
 }
+
+.username {
+    font-size: 20px;
+}
+
+.password {
+    font-size: 20px;
+}
+
+.login {
+    font-size: 20px;
+}
