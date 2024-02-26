@@ -19,9 +19,6 @@ map = folium.Map(
     max_lon=max_lon,
 )
 
-# Add a title to the map
-title_html = '<h3 align="center" style="font-size:20px"><b>Title of Your Map</b></h3>'
-map.get_root().html.add_child(folium.Element(title_html))
 
 folium.CircleMarker([max_lat, min_lon], tooltip="Upper Left Corner").add_to(map)
 folium.CircleMarker([min_lat, min_lon], tooltip="Lower Left Corner").add_to(map)
@@ -73,6 +70,9 @@ layer_control = folium.LayerControl().add_to(map)
 
 # Add search plugin
 search = Geocoder().add_to(map)
+
+# Renders the map without creating html file
+# map.show_in_browser()
 
 # Rendering + alternative methods commmented down below
 map.save("index.html")
