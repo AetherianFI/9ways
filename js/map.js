@@ -1,3 +1,4 @@
+// Create base map and set the location to Abuja, Nigeria
 var map = L.map("map", {
     center: [9.072264, 7.491302],
     crs: L.CRS.EPSG3857,
