@@ -24,6 +24,7 @@ body {
     font-size: 1rem;
 }
 
+/*HEADER BUTTONS AND LOGO*/
 .header-main {
     width: 100%;
     height: 70px;
@@ -54,8 +55,33 @@ body {
 }
 
 .header-main-nav ul li a{
-    padding: 0 40px;
+    padding: 0 20px;
     line-height: 40px;
     color: rgb(41, 41, 41);
     text-decoration: none;    
+}
+
+/* LOGIN BUTTON*/
+.header-main-login {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background-color: rgb(194, 139, 245);
+    padding-left: 10px; /* You can set this to your desired value */
+}
+
+.header-main-login ul {
+    list-style: none;
+}
+
+.header-main-login ul li {
+    display: inline;
+}
+
+.header-main-login ul li a {
+    padding: 0 20px;
+    line-height: 40px;
+    color: rgb(41, 41, 41);
+    text-decoration: none;
 }
