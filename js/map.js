@@ -3,7 +3,7 @@ var map = L.map("map", {
     center: [9.072264, 7.491302],
     crs: L.CRS.EPSG3857,
     maxBounds: [[8.8, 7.15], [9.2, 7.8]],
-    zoom: 12,
+    zoom: 14,
     zoomControl: true,
     preferCanvas: false,
 }
@@ -26,7 +26,10 @@ fetch("../POI.json")
         // Process the JSON data and create markers
         // For example:
         data.bus_stops.forEach(busStop => {
-            L.marker([busStop.latitude, busStop.longitude]).addTo(bus_stops_layer);
+            var popup = L.popup({ "maxWidth": 300, "maxHeight": 300 });
+            popup.setContent(`<div id="popup" style="width: 100.0%; height: 100.0%;"><h1 id="bus_stop_name">${busStop.name}</h1><br>Timetable for the bus stop:<p><code>Insert timetable here...</code></p></div>`);
+            var bus_marker = L.marker([busStop.latitude, busStop.longitude]).addTo(bus_stops_layer);
+            bus_marker.bindPopup(popup)
         });
     })
     .catch(error => console.error("Error loading JSON file:", error));
@@ -39,7 +42,7 @@ var control_scale = L.control.scale().addTo(map)
 // Create baselayer for bus stops
 var baseLayers = {
     "Bus stops": bus_stops_layer
-}
+};
 
 
 // Add layer control so that markers can be toggled on & off
@@ -47,6 +50,9 @@ var layer_control = L.control.layers(null, baseLayers).addTo(map);
 
 
 // Add geocoder control (Search bar)
-L.Control.geocoder({
+var geocoder = L.Control.geocoder({
     position: 'topright'
 }).addTo(map);
+
+// Add current mouse coordinates to the map
+var mousePosition = L.control.mousePosition({ position: "bottomright" }).addTo(map);
