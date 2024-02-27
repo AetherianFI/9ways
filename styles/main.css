@@ -55,7 +55,7 @@ body {
 }
 
 .header-main-nav ul li a{
-    padding: 0 40px;
+    padding: 0 20px;
     line-height: 40px;
     color: rgb(41, 41, 41);
     text-decoration: none;    
@@ -80,7 +80,7 @@ body {
 }
 
 .header-main-login ul li a {
-    padding: 0 40px;
+    padding: 0 20px;
     line-height: 40px;
     color: rgb(41, 41, 41);
     text-decoration: none;
