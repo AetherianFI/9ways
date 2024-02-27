@@ -16,16 +16,36 @@ var tileLayer = L.tileLayer(
     }).addTo(map);
 
 
+var bus_stops_layer = L.layerGroup().addTo(map)
+
+
 fetch("../POI.json")
     .then(response => response.json())
     .then(data => {
         // Process the JSON data and create markers
         // For example:
         data.bus_stops.forEach(busStop => {
-            L.marker([busStop.latitude, busStop.longitude]).addTo(map);
+            L.marker([busStop.latitude, busStop.longitude]).addTo(bus_stops_layer);
         });
     })
     .catch(error => console.error("Error loading JSON file:", error));
 
+
 // Add length ruler to bottom left corner
-var controlscale = L.control.scale().addTo(map)
+var control_scale = L.control.scale().addTo(map)
+
+
+// Create baselayer for bus stops
+var baseLayers = {
+    "Bus stops": bus_stops_layer
+}
+
+
+// Add layer control so that markers can be toggled on & off
+var layer_control = L.control.layers(null, baseLayers).addTo(map);
+
+
+// Add geocoder control (Search bar)
+L.Control.geocoder({
+    position: 'topright'
+}).addTo(map);
