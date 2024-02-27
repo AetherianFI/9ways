@@ -15,7 +15,7 @@ var tileLayer = L.tileLayer(
         "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 12
     }).addTo(map);
 
-
+// Create layers for the bus stops and add layer to the map
 var bus_stops_layer = L.layerGroup().addTo(map)
 
 
