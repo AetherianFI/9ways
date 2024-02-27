@@ -3,7 +3,7 @@ var map = L.map("map", {
     center: [9.072264, 7.491302],
     crs: L.CRS.EPSG3857,
     maxBounds: [[8.8, 7.15], [9.2, 7.8]],
-    zoom: 12,
+    zoom: 14,
     zoomControl: true,
     preferCanvas: false,
 }
@@ -50,3 +50,4 @@ var layer_control = L.control.layers(null, baseLayers).addTo(map);
 L.Control.geocoder({
     position: 'topright'
 }).addTo(map);
+
