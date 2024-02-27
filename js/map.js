@@ -47,7 +47,9 @@ var layer_control = L.control.layers(null, baseLayers).addTo(map);
 
 
 // Add geocoder control (Search bar)
-L.Control.geocoder({
+var geocoder = L.Control.geocoder({
     position: 'topright'
 }).addTo(map);
 
+// Add current mouse coordinates to the map
+var mousePosition = L.control.mousePosition({ position: "bottomright" }).addTo(map);
