@@ -27,7 +27,7 @@ body {
 /*HEADER BUTTONS AND LOGO*/
 .header-main {
     width: 100%;
-    height: 70px;
+    height: 72px;
     background-color: rgb(194, 139, 245);
     display: flex;
 }
@@ -40,9 +40,11 @@ body {
     padding-left: 10px;
 }
 
+
+
 .header-main-nav {
     width: fit-content;
-    height: 100%;
+    height: auto;
     background-color: rgb(194, 139, 245);
 }
 
@@ -66,7 +68,7 @@ body {
     position: absolute;
     right: 0;
     top: 0;
-    height: 100%;
+    height: auto;
     background-color: rgb(194, 139, 245);
     padding-left: 10px; /* You can set this to your desired value */
 }
