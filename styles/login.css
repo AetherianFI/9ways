@@ -5,6 +5,7 @@
 }
 
 .wrapper {
+    margin: 120px auto;
     width: 420px;
     background: rgb(194, 139, 245);
     color: white;
