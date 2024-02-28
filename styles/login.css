@@ -1,4 +1,10 @@
-body {
+* {
     color: rgb(41, 41, 41);
     font-family: "LEMONMILK";
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
 }
