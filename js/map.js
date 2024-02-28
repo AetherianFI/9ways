@@ -1,6 +1,6 @@
 // Create base map and set the location to Abuja, Nigeria
 var map = L.map("map", {
-    center: [9.052, 7.491302],
+    center: [9.05, 7.491302],
     crs: L.CRS.EPSG3857,
     maxBounds: [[8.8, 7.15], [9.2, 7.8]],
     zoom: 14,
@@ -26,7 +26,7 @@ fetch("../POI.json")
         // Process the JSON data and create markers
         // For example:
         data.bus_stops.forEach(busStop => {
-            var popup = L.popup({ "maxWidth": 300, "maxHeight": 300 });
+            var popup = L.popup({ "maxWidth": 400, "maxHeight": 300 });
             popup.setContent(`<div id="popup" style="width: 100.0%; height: 100.0%;"><h1 id="bus_stop_name">${busStop.name}</h1><br>Timetable for the bus stop:<p><code>Insert timetable here...</code></p></div>`);
             var bus_marker = L.marker([busStop.latitude, busStop.longitude]).addTo(bus_stops_layer);
             bus_marker.bindPopup(popup)
