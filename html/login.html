@@ -6,10 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>9ways login</title>
     <link rel="stylesheet" href="../styles/login.css">
+    <link rel="stylesheet" href="../styles/main.css">
     <script src="../js/login.js"></script>
 </head>
 
 <body>
+    <header class="header-main">
+        <div class="header-main-logo">
+            <img src="../img/logo.png" alt="9ways">
+        </div>
+        <nav class="header-main-nav">
+            <ul>
+                <li><a href="map.html">Home</a></li>
+                <li><a href="travel.html">Travel</a></li>
+                <li><a href="tickets.html">Tickets</a></li>
+
+            </ul>
+        </nav>
+
+        <div class="header-main-login">
+            <ul>
+                <li> <a href="contact.html">Contact us</a></li>
+                <li> <a href="login.html">Login</a></li>
+            </ul>
+        </div>
+    </header>
+
     <form action="map.html" onsubmit="return checkForm()" method="get">
         <label for="username"></label>
         <input type="text" name="username" id="username" placeholder="username" class="username">
@@ -17,6 +39,7 @@
         <input type="text" name="password" id="password" placeholder="password" class="password">
         <input type="submit" value="Login" class="login">
     </form>
+
 </body>
 
 </html>
