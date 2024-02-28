@@ -2,21 +2,73 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>9ways login</title>
     <link rel="stylesheet" href="../styles/login.css">
+    <link rel="stylesheet" href="../styles/main.css">
     <script src="../js/login.js"></script>
+
+    <!-- BOXICONS CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 </head>
 
 <body>
-    <form action="map.html" onsubmit="return checkForm()" method="get">
-        <label for="username"></label>
-        <input type="text" name="username" id="username" placeholder="username" class="username">
-        <label for="password"></label>
-        <input type="text" name="password" id="password" placeholder="password" class="password">
-        <input type="submit" value="Login" class="login">
-    </form>
+
+    <!-- HEADER BAR -->
+    <header class="header-main">
+        <div class="header-main-logo">
+            <img src="../img/logo.png" alt="9ways">
+        </div>
+        <nav class="header-main-nav">
+            <ul>
+                <li><a href="map.html">Home</a></li>
+                <li><a href="travel.html">Travel</a></li>
+                <li><a href="tickets.html">Tickets</a></li>
+            </ul>
+        </nav>
+        <div class="header-main-login">
+            <ul>
+                <li> <a href="contact.html">Contact us</a></li>
+                <li> <a href="login.html">Login</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- LOGIN BOX -->
+    <div class="wrapper">
+
+        <form action="login.html">
+
+            <h1>Login</h1>
+
+            <div class="input-box">
+                <input type="text" placeholder="Username" required>
+                <i class='bx bxs-user'></i>
+            </div>
+
+            <div class="input-box">
+                <input type="password" placeholder="Password" required>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+
+            <div class="remember-forgot">
+                <label><input type="checkbox"> Remember me</label>
+                <a href="#">Forgot password?</a>
+            </div>
+
+            <button type="submit" class="btn">Login</button>
+
+            <div class="register-link">
+                <p>Don't have an account? <a href="#">Register</a></p>
+            </div>
+
+        </form>
+
+    </div>
+
 </body>
 
 </html>
