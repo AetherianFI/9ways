@@ -1,17 +1,4 @@
 body {
-    background-color: rgb(39, 39, 39);
-    color: white;
+    color: rgb(41, 41, 41);
     font-family: "LEMONMILK";
-}
-
-.username {
-    font-size: 20px;
-}
-
-.password {
-    font-size: 20px;
-}
-
-.login {
-    font-size: 20px;
 }
