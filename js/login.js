@@ -41,7 +41,9 @@ function checkLogin() {
 // Add event listener to the form
 document.getElementById("loginForm").addEventListener("submit", checkLogin);
 
-// Clears localstorage from then usernames
+
+// Clears localstorage from then usernames and refreshes the page
 function clearStorage() {
     localStorage.clear()
+    window.location.reload()
 }

@@ -16,7 +16,10 @@ var tileLayer = L.tileLayer(
         "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 12
     }).addTo(map);
 
-// Create layers for the bus stops and add layer to the map
+// Create layer for bus stops that Noa found
+var random_bus_stops = L.layerGroup().addTo(map)
+
+// Create layer for bus stops from airport to city
 var airport_to_city = L.layerGroup().addTo(map)
 
 
@@ -28,7 +31,7 @@ fetch("../databases/POI.json")
         data.bus_stops.forEach(busStop => {
             var popup = L.popup({ "maxWidth": 400, "maxHeight": 300 });
             popup.setContent(`<div id="popup" style="width: 100.0%; height: 100.0%;"><h1 id="bus_stop_name">${busStop.name}</h1><br>Timetable for the bus stop:<p><code>Insert timetable here...</code></p></div>`);
-            var bus_marker = L.marker([busStop.latitude, busStop.longitude]).addTo(bus_stops_layer);
+            var bus_marker = L.marker([busStop.latitude, busStop.longitude]).addTo(airport_to_city);
             bus_marker.bindPopup(popup)
         });
     })
