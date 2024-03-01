@@ -50,3 +50,13 @@ header {
 .right-links {
     margin-left: auto;
 }
+
+#log-in-header {
+    display: none;
+    height: 20px;
+    background-color: white;
+    color: rgb(41, 41, 41);
+    font-size: 14px;
+    justify-content: center;
+    align-items: center;
+}

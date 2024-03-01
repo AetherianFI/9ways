@@ -1,26 +1,42 @@
+function checkIfLoggedIn() {
+    var username = localStorage.getItem("loggedInUser");
+    if (username) {
+        document.getElementById("log-in-header").style.display = "flex";
+        document.getElementById("loggedAs").innerHTML = "Logged in as " + username;
+    }
+}
+
+// Check login status when page loads
+checkIfLoggedIn()
+
+
 function checkLogin() {
     event.preventDefault()
 
-    var username = document.getElementById("username").value
-    var password = document.getElementById("password").value
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
 
     fetch("../databases/accounts.json")
-        .then(response => response.json())
-        .then(data => {
+        .then((response) => response.json())
+        .then((data) => {
             if (data.hasOwnProperty(username)) {
                 if (data[username] === password) {
-                    window.location.href = "../html/map.html"
+                    localStorage.setItem("loggedInUser", username);
+                    document.getElementById("log-in-header").style.display = "flex";
+                    document.getElementById("loggedAs").innerHTML = "Logged in as " + username;
+                    window.location.href = "../html/map.html";
                 } else {
-                    alert("Wrong password")
+                    alert("Wrong password");
                 }
             } else {
-                alert("Username not found")
+                alert("Username not found");
             }
         })
-        .catch(error => {
-            console.error("Error fetching JSON:", error)
-        })
+        .catch((error) => {
+            console.error("Error fetching JSON:", error);
+        });
 }
+
 
 // Add event listener to the form
 document.getElementById("loginForm").addEventListener("submit", checkLogin);
