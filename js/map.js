@@ -17,7 +17,7 @@ var tileLayer = L.tileLayer(
     }).addTo(map);
 
 // Create layers for the bus stops and add layer to the map
-var bus_stops_layer = L.layerGroup().addTo(map)
+var airport_to_city = L.layerGroup().addTo(map)
 
 
 fetch("../databases/POI.json")
@@ -41,7 +41,7 @@ var control_scale = L.control.scale().addTo(map)
 
 // Create baselayer for bus stops
 var baseLayers = {
-    "Bus stops": bus_stops_layer
+    "Airport to City": airport_to_city
 };
 
 
