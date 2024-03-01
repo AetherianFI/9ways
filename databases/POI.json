@@ -36,7 +36,7 @@
             "color": "blue"
         },
         {
-            "name": "Mabushi bus stop",
+            "name": "Mabushi Bus Stop",
             "latitude": 9.07844,
             "longitude": 7.45669,
             "icon": "bus-simple",
@@ -71,13 +71,6 @@
             "color": "red"
         },
         {
-            "name": "Dandata bus stop",
-            "latitude": 8.9793,
-            "longitude": 7.3767,
-            "icon": "bus-simple",
-            "color": "red"
-        },
-        {
             "name": "Police Bus Stop",
             "latitude": 8.97266,
             "longitude": 7.36307,
@@ -85,7 +78,7 @@
             "color": "red"
         },
         {
-            "name": "Umaru Musa Yar'Adua Expressway Stop 4",
+            "name": "Dandata Bus Stop",
             "latitude": 9.00804,
             "longitude": 7.41695,
             "icon": "bus-simple",
@@ -107,8 +100,8 @@
         },
         {
             "name": "Berger Bus Stop",
-            "latitude": 9.06691,
-            "longitude": 7.45256,
+            "latitude": 9.06688,
+            "longitude": 7.45305,
             "icon": "bus-simple",
             "color": "red"
         },
