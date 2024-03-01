@@ -25,65 +25,28 @@ body {
     font-size: 1rem;
 }
 
-/*HEADER BUTTONS AND LOGO*/
-.header-main {
-    width: 100%;
+
+/* HEADER */
+header {
+    background-color: rgb(194, 139, 245);
     height: 72px;
-    background-color: rgb(194, 139, 245);
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
 }
 
-.header-main-logo {
-    width: fit-content;
-    height: 100%;
-    background-color: rgb(194, 139, 245);
-    display: flex;
-    padding-left: 10px;
-}
-
-.header-main-nav {
-    width: fit-content;
-    height: auto;
-    background-color: rgb(194, 139, 245);
-}
-
-.header-main-nav ul {
-    list-style: none;
-}
-
-.header-main-nav ul li {
-    display: inline;
-}
-
-.header-main-nav ul li a {
-    padding: 0 20px;
-    line-height: 40px;
+.left-links a,
+.right-links a {
     color: rgb(41, 41, 41);
     text-decoration: none;
+    margin-right: 20px;
 }
 
-/* LOGIN BUTTON*/
-.header-main-login {
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: auto;
-    background-color: rgb(194, 139, 245);
-    padding-left: 10px;
-    /* You can set this to your desired value */
+.left-links {
+    margin-left: 10px;
 }
 
-.header-main-login ul {
-    list-style: none;
-}
-
-.header-main-login ul li {
-    display: inline;
-}
-
-.header-main-login ul li a {
-    padding: 0 20px;
-    line-height: 40px;
-    color: rgb(41, 41, 41);
-    text-decoration: none;
+.right-links {
+    margin-left: auto;
 }
