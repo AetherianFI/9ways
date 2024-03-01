@@ -1,0 +1,23 @@
+body {
+    margin: 0px;
+}
+
+header {
+    background-color: rgb(194, 139, 245);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.left-links a,
+.right-links a {
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.right-links {
+    margin-left: auto;
+}
