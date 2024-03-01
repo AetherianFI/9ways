@@ -9,3 +9,6 @@ https://leafletjs.com/reference.html
 2. Install "Live Server" to your Visual Studio Code from the extensions tab (Ctrl + Shift + X)
 3. Open localhost server by clicking "Go Live" from the bottom right corner ![Go Live](https://i.gyazo.com/296ce5dd7e1dc9f81e701776a3f39667.png)
 4. Window should open automatically or if it doesn't then navigate to [http://127.0.0.1:5500/html/map.html](http://127.0.0.1:5500/html/map.html)
+
+## Login screen
+Logging in for the site works by writing correct combinations of premade accounts that can be found from accounts.json
