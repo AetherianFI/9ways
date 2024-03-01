@@ -22,9 +22,9 @@
             "color": "blue"
         },
         {
-            "name": "Transcorp Hilton Abuja",
-            "latitude": 9.0743181,
-            "longitude": 7.4947183,
+            "name": "Transcorp Hilton Bus Stop",
+            "latitude": 9.07719,
+            "longitude": 7.49666,
             "icon": "bus-simple",
             "color": "blue"
         },
@@ -36,7 +36,7 @@
             "color": "blue"
         },
         {
-            "name": "Nnamdi Azikiwe Expy Stop",
+            "name": "Mabushi bus stop",
             "latitude": 9.07844,
             "longitude": 7.45669,
             "icon": "bus-simple",
@@ -50,28 +50,35 @@
             "color": "red"
         },
         {
-            "name": "Abuja-Keffi Expressway Stop",
+            "name": "Nyanya Bridge",
             "latitude": 9.02272,
             "longitude": 7.56979,
             "icon": "bus-simple",
             "color": "red"
         },
         {
-            "name": "Umaru Musa Yar'Adua Expressway Stop",
+            "name": "Immigration Bus Stop",
             "latitude": 8.96113,
             "longitude": 7.2436,
             "icon": "bus-simple",
             "color": "red"
         },
         {
-            "name": "Umaru Musa Yar'Adua Expressway Stop 2",
+            "name": "Kuje/Kyami Bus Stop",
             "latitude": 8.95349,
             "longitude": 7.26371,
             "icon": "bus-simple",
             "color": "red"
         },
         {
-            "name": "Umaru Musa Yar'Adua Expressway Stop 3",
+            "name": "Dandata bus stop",
+            "latitude": 8.9793,
+            "longitude": 7.3767,
+            "icon": "bus-simple",
+            "color": "red"
+        },
+        {
+            "name": "Police Bus Stop",
             "latitude": 8.97266,
             "longitude": 7.36307,
             "icon": "bus-simple",
@@ -85,28 +92,28 @@
             "color": "red"
         },
         {
-            "name": "Abuja City Gate",
-            "latitude": 9.03556,
-            "longitude": 7.44823,
-            "icon": "bus-simple",
-            "color": "red"
-        },
-        {
-            "name": "Moshood Abiola Way Stop",
+            "name": "Area 1 Bus Stop",
             "latitude": 9.02931,
             "longitude": 7.46921,
             "icon": "bus-simple",
             "color": "red"
         },
         {
-            "name": "Herbert Macaulay Way Stop 2",
+            "name": "Lugbe Car-Wash Bus Stop",
+            "latitude": 8.97698,
+            "longitude": 7.3726,
+            "icon": "bus-simple",
+            "color": "red"
+        },
+        {
+            "name": "Berger Bus Stop",
             "latitude": 9.06691,
             "longitude": 7.45256,
             "icon": "bus-simple",
             "color": "red"
         },
         {
-            "name": "Nigerian National Petroleum Cooperation Towers",
+            "name": "NNPC towers Bus Stop",
             "latitude": 9.05485,
             "longitude": 7.48441,
             "icon": "bus-simple",
