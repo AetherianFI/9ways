@@ -4,7 +4,7 @@ function checkLogin() {
     var username = document.getElementById("username").value
     var password = document.getElementById("password").value
 
-    fetch("../accounts.json")
+    fetch("../databases/accounts.json")
         .then(response => response.json())
         .then(data => {
             if (data.hasOwnProperty(username)) {

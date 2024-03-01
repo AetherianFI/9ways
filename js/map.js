@@ -20,7 +20,7 @@ var tileLayer = L.tileLayer(
 var bus_stops_layer = L.layerGroup().addTo(map)
 
 
-fetch("../POI.json")
+fetch("../databases/POI.json")
     .then(response => response.json())
     .then(data => {
         // Process the JSON data and create markers
