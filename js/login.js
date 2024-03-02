@@ -7,11 +7,10 @@ function checkIfLoggedIn() {
 }
 
 // Check login status when page loads
-checkIfLoggedIn()
-
+checkIfLoggedIn();
 
 function checkLogin() {
-    event.preventDefault()
+    event.preventDefault();
 
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
@@ -19,6 +18,7 @@ function checkLogin() {
     fetch("../databases/accounts.json")
         .then((response) => response.json())
         .then((data) => {
+            console.log(window.location.href);
             if (data.hasOwnProperty(username)) {
                 if (data[username] === password) {
                     localStorage.setItem("loggedInUser", username);
@@ -37,13 +37,11 @@ function checkLogin() {
         });
 }
 
-
 // Add event listener to the form
 document.getElementById("loginForm").addEventListener("submit", checkLogin);
 
-
 // Clears localstorage from then usernames and refreshes the page
 function clearStorage() {
-    localStorage.clear()
-    window.location.reload()
+    localStorage.clear();
+    window.location.reload();
 }
