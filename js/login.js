@@ -6,10 +6,20 @@ function checkIfLoggedIn() {
     }
 }
 
+
+// Clears localstorage from then usernames and refreshes the page
+function clearStorage() {
+    localStorage.clear();
+    window.location.reload();
+}
+
+
 // Check login status when page loads
 checkIfLoggedIn();
 
-function checkLogin() {
+
+// Add event listener to the form
+document.getElementById("loginform").addEventListener("submit", function (event) {
     event.preventDefault();
 
     var username = document.getElementById("username").value;
@@ -34,13 +44,4 @@ function checkLogin() {
         .catch((error) => {
             console.error("Error fetching JSON:", error);
         });
-}
-
-// Add event listener to the form
-document.getElementById("loginForm").addEventListener("submit", checkLogin);
-
-// Clears localstorage from then usernames and refreshes the page
-function clearStorage() {
-    localStorage.clear();
-    window.location.reload();
-}
+});
