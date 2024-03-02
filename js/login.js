@@ -17,9 +17,8 @@ function clearStorage() {
 // Check login status when page loads
 checkIfLoggedIn();
 
-
-// Add event listener to the form
-document.getElementById("loginform").addEventListener("submit", function (event) {
+// Runs after loginform is submitted
+function checkLogin(event) {
     event.preventDefault();
 
     var username = document.getElementById("username").value;
@@ -44,4 +43,4 @@ document.getElementById("loginform").addEventListener("submit", function (event)
         .catch((error) => {
             console.error("Error fetching JSON:", error);
         });
-});
+}
