@@ -18,7 +18,6 @@ function checkLogin() {
     fetch("../databases/accounts.json")
         .then((response) => response.json())
         .then((data) => {
-            console.log(window.location.href);
             if (data.hasOwnProperty(username)) {
                 if (data[username] === password) {
                     localStorage.setItem("loggedInUser", username);
