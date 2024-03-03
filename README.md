@@ -11,4 +11,4 @@ https://leafletjs.com/reference.html
 4. Window should open automatically or if it doesn't then navigate to [http://127.0.0.1:5500/html/map.html](http://127.0.0.1:5500/html/map.html)
 
 ## Login screen
-Logging in for the site works by writing correct combinations of premade accounts that can be found from accounts.json
+Logging into to the website works by writing correct combinations of premade accounts that can be found from accounts.json
