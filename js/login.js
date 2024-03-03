@@ -9,15 +9,15 @@ function checkIfLoggedIn() {
 }
 
 
+// Check login status when page loads
+checkIfLoggedIn();
+
+
 // Clears localstorage from then usernames and refreshes the page
 function clearStorage() {
     localStorage.clear();
     window.location.reload();
 }
-
-
-// Check login status when page loads
-checkIfLoggedIn();
 
 
 // Runs after loginform is submitted
