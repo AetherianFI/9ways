@@ -1,8 +1,9 @@
 function checkIfLoggedIn() {
     var username = localStorage.getItem("loggedInUser");
     if (username) {
+        // Makes the top white bar visible and shows the logged in user
         document.getElementById("log-in-header").style.display = "flex";
-        document.getElementById("loggedAs").innerHTML = "Logged in as " + username;
+        document.getElementById("loggedAs").innerHTML = `Logged in as ${username}`;
     }
 }
 
@@ -30,8 +31,7 @@ function checkLogin(event) {
             if (data.hasOwnProperty(username)) {
                 if (data[username] === password) {
                     localStorage.setItem("loggedInUser", username);
-                    document.getElementById("log-in-header").style.display = "flex";
-                    document.getElementById("loggedAs").innerHTML = "Logged in as " + username;
+                    checkIfLoggedIn()
                     window.location.href = "../html/map.html";
                 } else {
                     alert("Wrong password");
