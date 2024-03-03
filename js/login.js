@@ -1,3 +1,4 @@
+// Checks if user is logged in and makes the top white bar visible and shows the current user that's logged in
 function checkIfLoggedIn() {
     var username = localStorage.getItem("loggedInUser");
     if (username) {
