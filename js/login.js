@@ -18,6 +18,7 @@ function clearStorage() {
 // Check login status when page loads
 checkIfLoggedIn();
 
+
 // Runs after loginform is submitted
 function checkLogin(event) {
     event.preventDefault();
