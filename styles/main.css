@@ -57,8 +57,16 @@ header {
     background-color: white;
     color: rgb(41, 41, 41);
     font-size: 14px;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+}
+
+#loggedAs {
+    margin-left: 20px;
+}
+
+#logout {
+    margin-right: 20px;
 }
 
 .header-logo {
