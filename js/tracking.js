@@ -31,10 +31,6 @@ function getPosition(position) {
         map.removeLayer(marker)
     }
 
-    if (circle) {
-        map.removeLayer(circle)
-    }
-
     // Define a custom bus icon
     var busIcon = L.icon({
         iconUrl: '../img/location.png', // Replace 'path/to/bus-icon.png' with the path to your bus icon image
@@ -44,11 +40,10 @@ function getPosition(position) {
     });
 
     marker = L.marker([lat, long], { icon: busIcon }); // Pass the custom icon to the marker
-    circle = L.circle([lat, long], { radius: accuracy })
 
     var featureGroup = L.featureGroup([marker]).addTo(map)
 
-    map.fitBounds(featureGroup.getBounds())
+    map.setView([lat, long], 16);
 
     console.log("Your coordinate is: Lat: " + lat + " Long: " + long + " Accuracy: " + accuracy)
 }
