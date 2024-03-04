@@ -80,15 +80,38 @@ var mousePosition = L.control.mousePosition({ position: "bottomright" }).addTo(m
 
 
 // Takes 2 coordinates as input and calculates route between those 2 coordinates
-L.Routing.control({
-    waypoints: [
+/* L.Routing.control({
+     //geocoder
+     waypoints: [
         L.latLng(9.0664, 7.45706),
         L.latLng(9.04794, 7.49499)
-    ],
+    ]
+    ,
     lineOptions: {
         styles: [{ color: 'blue', opacity: 0.6, weight: 6 }]
     }
-}).addTo(map);
+}).addTo(map); */
 
+// Marker
+/* var marker = L.marker([9.0664, 7.45706]).addTo(map); */
+
+
+// On click event for creating markers
+/* map.on('click', function (e)
+    {
+        console.log(e)
+        var secondMarker = L.marker([e.latlng.lat, e.latlng.lng]).addTo(map);
+        
+        L.Routing.control({
+            waypoints: [
+                L.latLng(9.0664, 7.45706),
+                L.latLng(secondMarker)
+            ]
+            ,
+            lineOptions: {
+                styles: [{ color: 'blue', opacity: 0.6, weight: 6 }]
+            }
+        }).addTo(map);
+    }) */
 
 
