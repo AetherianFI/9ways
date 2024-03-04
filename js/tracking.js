@@ -4,11 +4,12 @@ var map = L.map('map').setView([9.072264, 7.491302], 12);
 // Get the location instantly after the code runs and page loads instead of waiting 5s
 navigator.geolocation.getCurrentPosition(getPosition)
 
-//osm layer
-var osm = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-});
-osm.addTo(map);
+// Choose tiles that the map uses and set min and max zoom
+var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    minZoom: 12,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
 
 if (!navigator.geolocation) {
     console.log("Your browser doesn't support geolocation feature!")
