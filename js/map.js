@@ -79,9 +79,13 @@ var geocoder = L.Control.geocoder({
 var mousePosition = L.control.mousePosition({ position: "bottomright" }).addTo(map);
 
 
+// Takes 2 coordinates as input and calculates route between those 2 coordinates
 L.Routing.control({
     waypoints: [
         L.latLng(9.0664, 7.45706),
         L.latLng(9.04794, 7.49499)
-    ]
+    ],
+    lineOptions: {
+        styles: [{ color: 'blue', opacity: 0.6, weight: 6 }]
+    }
 }).addTo(map);
