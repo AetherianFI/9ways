@@ -6,7 +6,7 @@ navigator.geolocation.getCurrentPosition(getPosition)
 
 // Choose tiles that the map uses and set min and max zoom
 var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 16,
+    maxZoom: 19,
     minZoom: 12,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
@@ -43,7 +43,7 @@ function getPosition(position) {
 
     var featureGroup = L.featureGroup([marker]).addTo(map)
 
-    map.fitBounds(featureGroup.getBounds())
+    map.setView([lat, long], 16);
 
     console.log("Your coordinate is: Lat: " + lat + " Long: " + long + " Accuracy: " + accuracy)
 }
