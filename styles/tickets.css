@@ -1,0 +1,31 @@
+.ticket-types {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.ticket-types h1 {
+    margin-top: 0;
+    color: #333;
+}
+
+.ticket-types p {
+    color: #555;
+}
+
+.ticket-types ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ticket-types ul li {
+    margin-bottom: 10px;
+}
+
+.ticket-types ul li:last-child {
+    margin-bottom: 0;
+}
