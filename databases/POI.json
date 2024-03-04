@@ -4,119 +4,102 @@
             "name": "Nizamiye Hospital",
             "latitude": 9.05942,
             "longitude": 7.3913,
-            "icon": "bus-simple",
             "color": "blue"
         },
         {
             "name": "Jabi lake Mall",
             "latitude": 9.07616,
             "longitude": 7.42585,
-            "icon": "bus-simple",
             "color": "blue"
         },
         {
             "name": "National Childrens Park & Zoo Abuja",
             "latitude": 9.081637,
             "longitude": 7.525149,
-            "icon": "bus-simple",
             "color": "blue"
         },
         {
             "name": "Transcorp Hilton Bus Stop",
             "latitude": 9.07719,
             "longitude": 7.49666,
-            "icon": "bus-simple",
             "color": "blue"
         },
         {
             "name": "Nile University of Nigeria",
             "latitude": 9.0138702,
             "longitude": 7.3964713,
-            "icon": "bus-simple",
             "color": "blue"
         },
         {
             "name": "Mabushi Bus Stop",
             "latitude": 9.07844,
             "longitude": 7.45669,
-            "icon": "bus-simple",
             "color": "red"
         },
         {
             "name": "Herbert Macaulay Way Stop",
             "latitude": 9.046681,
             "longitude": 7.45331,
-            "icon": "bus-simple",
             "color": "red"
         },
         {
             "name": "Nyanya Bridge",
             "latitude": 9.02272,
             "longitude": 7.56979,
-            "icon": "bus-simple",
             "color": "red"
         },
         {
             "name": "Immigration Bus Stop",
             "latitude": 8.96113,
             "longitude": 7.2436,
-            "icon": "bus-simple",
             "color": "red"
         },
         {
             "name": "Kuje/Kyami Bus Stop",
             "latitude": 8.95349,
             "longitude": 7.26371,
-            "icon": "bus-simple",
             "color": "red"
         },
         {
             "name": "Police Bus Stop",
             "latitude": 8.97266,
             "longitude": 7.36307,
-            "icon": "bus-simple",
             "color": "red"
         },
         {
             "name": "Dandata Bus Stop",
             "latitude": 9.00804,
             "longitude": 7.41695,
-            "icon": "bus-simple",
             "color": "red"
         },
         {
             "name": "Area 1 Bus Stop",
             "latitude": 9.02931,
             "longitude": 7.46921,
-            "icon": "bus-simple",
             "color": "red"
         },
         {
             "name": "Lugbe Car-Wash Bus Stop",
             "latitude": 8.97698,
             "longitude": 7.3726,
-            "icon": "bus-simple",
             "color": "red"
         },
         {
             "name": "Berger Bus Stop",
             "latitude": 9.06688,
             "longitude": 7.45305,
-            "icon": "bus-simple",
             "color": "red"
         },
         {
             "name": "NNPC towers Bus Stop",
             "latitude": 9.05485,
             "longitude": 7.48441,
-            "icon": "bus-simple",
             "color": "red"
         },
         {
             "name": "Shehu Shagari Wy",
             "latitude": 9.07054,
             "longitude": 7.49532,
-            "icon": "bus-simple",
             "color": "red"
         }
     ]

@@ -23,6 +23,15 @@ var random_bus_stops = L.layerGroup().addTo(map)
 var airport_to_city = L.layerGroup().addTo(map)
 
 
+// Create busIscon
+var busIcon = L.icon({
+    iconUrl: '../img/location.png', // Replace 'path/to/bus-icon.png' with the path to your bus icon image
+    iconSize: [50, 50], // Set the size of your icon
+    iconAnchor: [19, 38], // Set the anchor point of the icon
+    popupAnchor: [0, -38] // Set the popup anchor point
+})
+
+
 fetch("../databases/POI.json")
     .then(response => response.json())
     .then(data => {
@@ -31,7 +40,7 @@ fetch("../databases/POI.json")
         data.bus_stops.forEach(busStop => {
             var popup = L.popup({ "maxWidth": 400, "maxHeight": 300 });
             popup.setContent(`<div id="popup" style="width: 100.0%; height: 100.0%;"><h1 id="bus_stop_name">${busStop.name}</h1><br>Timetable for the bus stop:<p><code>Insert timetable here...</code></p></div>`);
-            var bus_marker = L.marker([busStop.latitude, busStop.longitude])
+            var bus_marker = L.marker([busStop.latitude, busStop.longitude], { icon: busIcon })
             if (busStop.color === "red") {
                 bus_marker.addTo(airport_to_city)
             } else {
