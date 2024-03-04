@@ -77,3 +77,11 @@ var geocoder = L.Control.geocoder({
 
 // Add current mouse coordinates to the map
 var mousePosition = L.control.mousePosition({ position: "bottomright" }).addTo(map);
+
+
+L.Routing.control({
+    waypoints: [
+        L.latLng(9.0664, 7.45706),
+        L.latLng(9.04794, 7.49499)
+    ]
+}).addTo(map);
