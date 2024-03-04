@@ -6,7 +6,7 @@ navigator.geolocation.getCurrentPosition(getPosition)
 
 // Choose tiles that the map uses and set min and max zoom
 var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
+    maxZoom: 16,
     minZoom: 12,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
@@ -31,10 +31,6 @@ function getPosition(position) {
         map.removeLayer(marker)
     }
 
-    if (circle) {
-        map.removeLayer(circle)
-    }
-
     // Define a custom bus icon
     var busIcon = L.icon({
         iconUrl: '../img/location.png', // Replace 'path/to/bus-icon.png' with the path to your bus icon image
@@ -44,7 +40,6 @@ function getPosition(position) {
     });
 
     marker = L.marker([lat, long], { icon: busIcon }); // Pass the custom icon to the marker
-    circle = L.circle([lat, long], { radius: accuracy })
 
     var featureGroup = L.featureGroup([marker]).addTo(map)
 
