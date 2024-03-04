@@ -20,6 +20,7 @@ var tileLayer = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 // Create layer for bus stops that Noa found
 var random_bus_stops = L.layerGroup().addTo(map)
 
+
 // Create layer for bus stops from airport to city
 var airport_to_city = L.layerGroup().addTo(map)
 
@@ -73,5 +74,18 @@ var geocoder = L.Control.geocoder({
     position: 'topright'
 }).addTo(map);
 
+
 // Add current mouse coordinates to the map
 var mousePosition = L.control.mousePosition({ position: "bottomright" }).addTo(map);
+
+
+// Takes 2 coordinates as input and calculates route between those 2 coordinates
+L.Routing.control({
+    waypoints: [
+        L.latLng(9.0664, 7.45706),
+        L.latLng(9.04794, 7.49499)
+    ],
+    lineOptions: {
+        styles: [{ color: 'blue', opacity: 0.6, weight: 6 }]
+    }
+}).addTo(map);
