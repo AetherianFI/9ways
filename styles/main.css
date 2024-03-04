@@ -10,7 +10,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: "LEMONMILK";
-    background-color: beige
+    background-color: rgb(252, 245, 245)
 }
 
 #map {
@@ -28,7 +28,7 @@ body {
 
 /* HEADER */
 header {
-    background-color: rgb(194, 139, 245);
+    background-color: rgb(118, 25, 204);
     height: 72px;
     display: flex;
     justify-content: space-between;
@@ -38,7 +38,7 @@ header {
 
 .left-links a,
 .right-links a {
-    color: rgb(41, 41, 41);
+    color: rgb(228, 228, 228);
     text-decoration: none;
     margin-right: 20px;
 }
