@@ -80,7 +80,7 @@ var mousePosition = L.control.mousePosition({ position: "bottomright" }).addTo(m
 
 
 // Takes 2 coordinates as input and calculates route between those 2 coordinates
-/* L.Routing.control({
+L.Routing.control({
      //geocoder
      waypoints: [
         L.latLng(9.0664, 7.45706),
@@ -90,7 +90,7 @@ var mousePosition = L.control.mousePosition({ position: "bottomright" }).addTo(m
     lineOptions: {
         styles: [{ color: 'blue', opacity: 0.6, weight: 6 }]
     }
-}).addTo(map); */
+}).addTo(map);
 
 // Marker
 /* var marker = L.marker([9.0664, 7.45706]).addTo(map); */
@@ -99,19 +99,22 @@ var mousePosition = L.control.mousePosition({ position: "bottomright" }).addTo(m
 // On click event for creating markers
 /* map.on('click', function (e)
     {
-        console.log(e)
+        if (markerAmount <= 1)
+        {
+        // console.log(e)
         var secondMarker = L.marker([e.latlng.lat, e.latlng.lng]).addTo(map);
+        markerAmount += 1
+            log.debug(markerAmount);
         
-        L.Routing.control({
-            waypoints: [
-                L.latLng(9.0664, 7.45706),
-                L.latLng(secondMarker)
-            ]
-            ,
-            lineOptions: {
+        L.Routing.control
+        ({
+            waypoints: [L.latLng([9.0664, 7.45706]), L.latLng(secondMarker)] , 
+            lineOptions: 
+            {
                 styles: [{ color: 'blue', opacity: 0.6, weight: 6 }]
             }
         }).addTo(map);
+        }
     }) */
 
 
