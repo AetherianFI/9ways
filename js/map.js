@@ -83,10 +83,10 @@ var mousePosition = L.control.mousePosition({ position: "bottomright" }).addTo(m
 L.Routing.control({
     //geocoder
     waypoints: [
-        L.latLng(9.04523, 7.46469),
-        L.latLng(9.04794, 7.49499)
-    ]
-    ,
+        L.latLng(9.05603, 7.4901),
+        L.latLng(9.03768, 7.4783)
+    ],
+    routeWhileDragging: true,
     lineOptions: {
         styles: [{ color: 'blue', opacity: 0.6, weight: 6 }]
     }
