@@ -81,9 +81,9 @@ var mousePosition = L.control.mousePosition({ position: "bottomright" }).addTo(m
 
 // Takes 2 coordinates as input and calculates route between those 2 coordinates
 L.Routing.control({
-     //geocoder
-     waypoints: [
-        L.latLng(9.0664, 7.45706),
+    //geocoder
+    waypoints: [
+        L.latLng(9.04523, 7.46469),
         L.latLng(9.04794, 7.49499)
     ]
     ,
