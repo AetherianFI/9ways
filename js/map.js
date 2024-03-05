@@ -71,7 +71,8 @@ var layer_control = L.control.layers(null, baseLayers).addTo(map);
 
 // Add geocoder control (Search bar)
 var geocoder = L.Control.geocoder({
-    position: 'topright'
+    position: 'topright',
+    expand: "hover",
 }).addTo(map);
 
 
@@ -79,18 +80,36 @@ var geocoder = L.Control.geocoder({
 var mousePosition = L.control.mousePosition({ position: "bottomright" }).addTo(map);
 
 
-// Takes 2 coordinates as input and calculates route between those 2 coordinates
-L.Routing.control({
-    //geocoder
-    waypoints: [
-        L.latLng(9.05603, 7.4901),
-        L.latLng(9.03768, 7.4783)
-    ],
-    routeWhileDragging: true,
-    lineOptions: {
-        styles: [{ color: 'blue', opacity: 0.6, weight: 6 }]
-    }
-}).addTo(map);
+// Handle form submission
+var form = document.getElementById('routeForm');
+
+form.addEventListener('submit', function (event) {
+
+    event.preventDefault(); // Prevent the form from submitting normally
+
+    // Get the start and end points from the form
+    var start = document.getElementById('start').value;
+    var end = document.getElementById('end').value;
+
+    // Geocode start and end points
+    geocoder.geocode(start, function (startResults) {
+        var startCoords = startResults.length > 0 ? startResults[0].center : null;
+        geocoder.geocode(end, function (endResults) {
+            var endCoords = endResults.length > 0 ? endResults[0].center : null;
+
+            // Update waypoints for routing control
+            if (startCoords && endCoords) {
+                control.setWaypoints([
+                    L.latLng(startCoords.lat, startCoords.lng),
+                    L.latLng(endCoords.lat, endCoords.lng)
+                ]);
+            } else {
+                alert('Unable to geocode start or end point.');
+            }
+        });
+    });
+});
+
 
 // Marker
 /* var marker = L.marker([9.0664, 7.45706]).addTo(map); */
