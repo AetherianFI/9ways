@@ -76,3 +76,7 @@ header {
     height: 100%;
     display: flex;
 }
+
+#routeForm {
+    display: flex;
+}
