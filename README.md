@@ -20,7 +20,7 @@ Accounts can be found from the accounts.json where the key is the username and v
 ## Acknowledgments
 All icons used on the website are from [Boxicons](https://boxicons.com/) ([see lisence](https://boxicons.com/usage#license)).
 
-### In addition project uses following LeaftletJS plugins:
+### In addition project uses following LeafletJS plugins:
 [leaflet-control-geocoder](https://github.com/perliedman/leaflet-control-geocoder) ([see lisence](https://github.com/perliedman/leaflet-control-geocoder/blob/master/LICENSE)).
 
 [Leaflet.MousePosition](https://github.com/ardhi/Leaflet.MousePosition) ([see lisence](https://github.com/ardhi/Leaflet.MousePosition/blob/master/MIT-LICENCE.txt)).
