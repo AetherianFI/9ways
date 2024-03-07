@@ -81,7 +81,7 @@ var mousePosition = L.control.mousePosition({ position: "bottomright" }).addTo(m
 
 
 // Add routing service with user input (routing machine)
-L.Routing.control({
+var routing = L.Routing.control({
     waypoints: [
         L.latLng(9.05258, 7.46182),
         L.latLng(9.03324, 7.47639)
