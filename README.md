@@ -18,14 +18,14 @@ You can login using the already existing accounts.
 Accounts can be found from the accounts.json where the key is the username and value is the password.
 
 ## Acknowledgments
-All icons used on the website are from [Boxicons](https://boxicons.com/) ([see lisence](https://boxicons.com/usage#license)).
+All icons used on the website are from [Boxicons](https://boxicons.com/) ([see license](https://boxicons.com/usage#license)).
 
 ### In addition project uses following LeafletJS plugins:
-[leaflet-control-geocoder](https://github.com/perliedman/leaflet-control-geocoder) ([see lisence](https://github.com/perliedman/leaflet-control-geocoder/blob/master/LICENSE)).
+[leaflet-control-geocoder](https://github.com/perliedman/leaflet-control-geocoder) ([see license](https://github.com/perliedman/leaflet-control-geocoder/blob/master/LICENSE)).
 
-[Leaflet.MousePosition](https://github.com/ardhi/Leaflet.MousePosition) ([see lisence](https://github.com/ardhi/Leaflet.MousePosition/blob/master/MIT-LICENCE.txt)).
+[Leaflet.MousePosition](https://github.com/ardhi/Leaflet.MousePosition) ([see license](https://github.com/ardhi/Leaflet.MousePosition/blob/master/MIT-LICENCE.txt)).
 
-[leaflet-routing-machine](https://github.com/perliedman/leaflet-routing-machine?tab=License-1-ov-file) ([see lisence](https://github.com/perliedman/leaflet-routing-machine/blob/master/LICENSE.md)).
+[leaflet-routing-machine](https://github.com/perliedman/leaflet-routing-machine?tab=License-1-ov-file) ([see license](https://github.com/perliedman/leaflet-routing-machine/blob/master/LICENSE.md)).
 
 ## For getting started with LeafletJS:
 https://leafletjs.com/reference.html
