@@ -1,18 +1,32 @@
 # 9ways
-![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 
-### Test
+## Built With
+![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 
 ## Installation
-1. Clone the repository with GitHub Desktop for example and open the project in Visual Studio Code
-2. Install "Live Server" to your Visual Studio Code from the extensions tab (Ctrl + Shift + X)
-3. Open localhost server by clicking "Go Live" from the bottom right corner ![Go Live](https://i.gyazo.com/296ce5dd7e1dc9f81e701776a3f39667.png)
-4. Window should open automatically or if it doesn't then navigate to [http://127.0.0.1:5500/html/map.html](http://127.0.0.1:5500/html/map.html)
+1. Clone the repository with GitHub Desktop for example and open with Visual Studio Code for example.
+2. Install [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) to your Visual Studio Code from the extensions tab (Ctrl + Shift + X).
+3. Start your localhost server by clicking "Go Live" from the bottom right corner.
+4. Window should open automatically or if it doesn't then navigate to [http://127.0.0.1:5500/html/map.html](http://127.0.0.1:5500/html/map.html).
 
 ## Usage
-Creating new accounts isn't currently possible on the website. You can login using the already existing accounts. Accounts can be found from the accounts.json where the key is the username and value is the password.
+Creating new accounts isn't currently possible on the website. 
+You can login using the already existing accounts. 
+Accounts can be found from the accounts.json where the key is the username and value is the password.
+
+## Acknowledgments
+All icons used on the website are from [Boxicons](https://boxicons.com/) ([see lisence](https://boxicons.com/usage#license)).
+
+### LeafletJS
+https://github.com/Leaflet/Leaflet/tree/main
+
+### In addition project uses following LeaftletJS plugins:
+[leaflet-control-geocoder](https://github.com/perliedman/leaflet-control-geocoder) [see lisence](https://github.com/perliedman/leaflet-control-geocoder?tab=BSD-2-Clause-1-ov-file)
+[Leaflet.MousePosition](https://github.com/ardhi/Leaflet.MousePosition) [see lisence](https://github.com/ardhi/Leaflet.MousePosition/blob/master/MIT-LICENCE.txt)
+[leaflet-routing-machine](https://github.com/perliedman/leaflet-routing-machine?tab=License-1-ov-file) [see lisence](https://github.com/perliedman/leaflet-routing-machine?tab=License-1-ov-file)
 
 ## For getting started with LeafletJS:
 https://leafletjs.com/reference.html
-
-## Acknowledgments
