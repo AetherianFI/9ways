@@ -7,7 +7,7 @@
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 
 ## Installation
-1. Clone the repository with GitHub Desktop for example and open with Visual Studio Code for example.
+1. Clone the repository with GitHub Desktop and open with Visual Studio Code.
 2. Install [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) to your Visual Studio Code from the extensions tab (Ctrl + Shift + X).
 3. Start your localhost server by clicking "Go Live" from the bottom right corner.
 4. Window should open automatically or if it doesn't then navigate to [http://127.0.0.1:5500/html/map.html](http://127.0.0.1:5500/html/map.html).
