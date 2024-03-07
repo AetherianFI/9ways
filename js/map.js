@@ -69,7 +69,7 @@ var baseLayers = {
 var layer_control = L.control.layers(null, baseLayers).addTo(map);
 
 
-// Add geocoder control (Search bar)
+// Add control geocoder(Search bar)
 var geocoder = L.Control.geocoder({
     position: 'topright',
     expand: "hover",
@@ -80,7 +80,7 @@ var geocoder = L.Control.geocoder({
 var mousePosition = L.control.mousePosition({ position: "bottomright" }).addTo(map);
 
 
-// Add routing service with user input
+// Add routing service with user input (routing machine)
 L.Routing.control({
     waypoints: [
         L.latLng(9.05258, 7.46182),
