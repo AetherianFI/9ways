@@ -21,11 +21,11 @@ Accounts can be found from the accounts.json where the key is the username and v
 All icons used on the website are from [Boxicons](https://boxicons.com/) ([see lisence](https://boxicons.com/usage#license)).
 
 ### In addition project uses following LeaftletJS plugins:
-[leaflet-control-geocoder](https://github.com/perliedman/leaflet-control-geocoder) ([see lisence](https://github.com/perliedman/leaflet-control-geocoder?tab=BSD-2-Clause-1-ov-file)).
+[leaflet-control-geocoder](https://github.com/perliedman/leaflet-control-geocoder) ([see lisence](https://github.com/perliedman/leaflet-control-geocoder/blob/master/LICENSE)).
 
 [Leaflet.MousePosition](https://github.com/ardhi/Leaflet.MousePosition) ([see lisence](https://github.com/ardhi/Leaflet.MousePosition/blob/master/MIT-LICENCE.txt)).
 
-[leaflet-routing-machine](https://github.com/perliedman/leaflet-routing-machine?tab=License-1-ov-file) ([see lisence](https://github.com/perliedman/leaflet-routing-machine?tab=License-1-ov-file)).
+[leaflet-routing-machine](https://github.com/perliedman/leaflet-routing-machine?tab=License-1-ov-file) ([see lisence](https://github.com/perliedman/leaflet-routing-machine/blob/master/LICENSE.md)).
 
 ## For getting started with LeafletJS:
 https://leafletjs.com/reference.html
