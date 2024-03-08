@@ -30,10 +30,11 @@ function checkLogin(event) {
     fetch("../databases/accounts.json")
         .then((response) => response.json())
         .then((data) => {
-            if (data.hasOwnProperty(username)) {
-                if (data[username] === password) {
+            const user = data.find((user) => user.username === username);
+            if (user) {
+                if (user.password === password) {
                     localStorage.setItem("loggedInUser", username);
-                    checkIfLoggedIn()
+                    checkIfLoggedIn();
                     window.location.href = "../html/map.html";
                 } else {
                     alert("Wrong password");
@@ -43,6 +44,6 @@ function checkLogin(event) {
             }
         })
         .catch((error) => {
-            console.error("Error fetching JSON:", error);
+            console.error("Error fetching accounts.json:", error);
         });
 }
