@@ -16,4 +16,7 @@ registrationForm.addEventListener("submit", (event) => {
         .then(res => res.text()) // Parse response as text
         .then(data => console.log(data)) // Log the text response
         .catch(error => console.log(error))
+
+    // Redirect user to userpage after registering
+    window.location.href = "../html/userpage.html";
 });
