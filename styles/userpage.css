@@ -1,0 +1,29 @@
+.user-box {
+    max-width: 450px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+#my-account {
+    display: flex;
+    justify-content: center;
+}
+
+.user-box p {
+    display: flex;
+    justify-content: center;
+    color: #555;
+}
+
+.change-password p {
+    color: white;
+    border-color: rgb(52, 141, 241);
+    background-color: rgb(52, 141, 241);
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
