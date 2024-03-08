@@ -33,18 +33,10 @@
     color: #555;
 }
 
-.logout,
-.change-password {
+.logout {
     width: 40%;
     margin: 0 auto;
     cursor: pointer;
-}
-
-.change-password p {
-    color: white;
-    background-color: rgb(0, 182, 173);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
 }
 
 .logout p {
