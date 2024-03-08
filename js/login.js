@@ -1,10 +1,3 @@
-// Clears localstorage from then usernames and refreshes the page
-function clearStorage() {
-    localStorage.clear();
-    window.location.reload();
-}
-
-
 // Runs after loginform is submitted
 function checkLogin(event) {
     event.preventDefault();
