@@ -1,0 +1,47 @@
+.user-box {
+    max-width: 450px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #333;
+    font-size: 14px;
+}
+
+#my-account {
+    display: flex;
+    justify-content: center;
+}
+
+#loginHere {
+    display: flex;
+    justify-content: center;
+}
+
+#loginHere a {
+    color: rgb(0, 141, 207);
+}
+
+#settings-box {
+    display: none;
+}
+
+.user-box p {
+    display: flex;
+    justify-content: center;
+    color: #555;
+}
+
+.logout {
+    width: 40%;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.logout p {
+    color: white;
+    background-color: rgb(117, 33, 243);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}

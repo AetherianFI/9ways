@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tickets - 9ways</title>
+    <title>Login - 9ways</title>
 
     <!-- BASIC PAGE CSS -->
     <link rel="stylesheet" href="../styles/main.css">
-    <link rel="stylesheet" href="../styles/tickets.css">
+    <link rel="stylesheet" href="../styles/userpage.css">
 
     <!-- BOXICONS CSS -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -38,22 +37,31 @@
             <a href="login.html"><i class='bx bxs-user'></i> Login</a>
             <a><i class='bx bx-globe'></i> English</a>
         </div>
-
     </header>
 
-    <div class="ticket-types">
-        <h1>Ticket Types</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do:</p>
-        <ul>
-            <li>Season ticket: lorem ipsum</li>
-            <li>Single ticket: lorem ipsum</li>
-            <li>Day ticket: lorem ipsum</li>
-        </ul>
+    <div class="color-bg">
+        <div class="user-box">
+            <h1 id="my-account">My account</h1>
+            <p>
+                <span id="currentUser"></span>
+            </p>
+            <div id="loginHere">
+                <a href="../html/login.html">Login here</a>
+            </div>
+            <div id="settings-box">
+                <div class="logout">
+                    <p>Logout</p>
+                </div>
+            </div>
+        </div>
     </div>
 
 </body>
 
 <!-- LOGIN.JS FILE THAT HANDLES THE LOGOUT BUTTON AND LOGGING IN -->
 <script src="../js/login.js"></script>
+
+<!-- SETS THE CURRECTLY LOGGED IN ACCOUNT TEXT -->
+<script src="../js/user.js"></script>
 
 </html>
