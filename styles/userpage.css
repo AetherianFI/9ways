@@ -13,6 +13,10 @@
     justify-content: center;
 }
 
+#settings-box {
+    display: none;
+}
+
 .user-box p {
     display: flex;
     justify-content: center;
@@ -21,8 +25,15 @@
 
 .change-password p {
     color: white;
-    border-color: rgb(52, 141, 241);
-    background-color: rgb(52, 141, 241);
+    background-color: rgb(93, 160, 236);
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.logout p {
+    color: white;
+    background-color: rgb(230, 112, 82);
     border-radius: 20px;
     cursor: pointer;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
