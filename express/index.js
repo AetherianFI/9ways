@@ -16,7 +16,7 @@ app.post("/saveFormData", (req, res) => {
     fs.readFile("../databases/accounts.json", (err, data) => {
         if (err) {
             console.error(err);
-            res.status(500).send("Error reading form data");
+            res.status(500).send("Error reading form data from accounts.json");
             return;
         }
 
@@ -37,7 +37,7 @@ app.post("/saveFormData", (req, res) => {
         fs.writeFile("../databases/accounts.json", jsonFormData, (err) => {
             if (err) {
                 console.error(err);
-                res.status(500).send("Error saving form data");
+                res.status(500).send("Error saving form data to accounts.json");
             } else {
                 console.log("Form data saved successfully");
                 res.status(200).send("Form data saved successfully");
