@@ -10,10 +10,20 @@
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 
 ## Installation
-1. Clone the repository with GitHub Desktop and open with Visual Studio Code.
-2. Install [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) to your Visual Studio Code from the extensions tab (Ctrl + Shift + X).
-3. Start your localhost server by clicking "Go Live" from the bottom right corner.
-4. Window should open automatically or if it doesn't then navigate to [http://127.0.0.1:5500/html/map.html](http://127.0.0.1:5500/html/map.html).
+1. Install Node.js from the [official website](https://nodejs.org/en)
+2. Clone the repository on your local machine and open with Visual Studio Code for example.
+3. Install [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) to your Visual Studio Code from the extensions tab (Ctrl + Shift + X).
+4. Install express.js and cors:
+   
+```
+$ npm install express
+```
+```
+$ npm install cors
+```
+5. Run ```express/index.js``` by switching to express folder with ```cd express``` and then using ```node .``` or ```node index.js```.
+6. Start your localhost server by clicking "Go Live" from the bottom right corner.
+Window should open automatically or if it doesn't then navigate to [http://127.0.0.1:5500/html/map.html](http://127.0.0.1:5500/html/map.html).
 
 ## Usage
 Creating new accounts isn't currently possible on the website. 
@@ -23,7 +33,7 @@ Accounts can be found from the accounts.json where the key is the username and v
 ## Acknowledgments
 All icons used on the website are from [Boxicons](https://boxicons.com/) ([see license](https://boxicons.com/usage#license)).
 
-### In addition project uses following LeafletJS plugins:
+### Project uses following LeafletJS plugins:
 [leaflet-control-geocoder](https://github.com/perliedman/leaflet-control-geocoder) ([see license](https://github.com/perliedman/leaflet-control-geocoder/blob/master/LICENSE)).
 
 [Leaflet.MousePosition](https://github.com/ardhi/Leaflet.MousePosition) ([see license](https://github.com/ardhi/Leaflet.MousePosition/blob/master/MIT-LICENCE.txt)).
