@@ -80,20 +80,6 @@ var geocoder = L.Control.geocoder({
 var mousePosition = L.control.mousePosition({ position: "bottomright" }).addTo(map);
 
 
-// Add routing service with user input (routing machine)
-var routing = L.Routing.control({
-    waypoints: [
-        L.latLng(9.05258, 7.46182),
-        L.latLng(9.03324, 7.47639)
-    ],
-    routeWhileDragging: true,
-    geocoder: L.Control.Geocoder.nominatim(),
-    lineOptions: {
-        styles: [{ color: 'blue', opacity: 0.7, weight: 6 }]
-    }
-}).addTo(map);
-
-
 // Marker
 /* var marker = L.marker([9.0664, 7.45706]).addTo(map); */
 
