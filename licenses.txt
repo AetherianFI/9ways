@@ -1,5 +1,0 @@
-Leaflet Control Geocoder == BSD-2-Clause license https://github.com/perliedman/leaflet-control-geocoder, library for the search function
-leaflet == BSD2-Clause license https://github.com/Leaflet/Leaflet/tree/main, library for the maps
-Leaflet.MousePosition == MIT license https://github.com/ardhi/Leaflet.MousePosition, library for the mouse coordinates
-Boxicons == MIT license https://boxicons.com/usage#license, opensource icons for the login screen
-Leaflet-routing-machine == ISC license https://github.com/perliedman/leaflet-routing-machine?tab=License-1-ov-file, A to B routes
