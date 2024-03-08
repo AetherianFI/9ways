@@ -1,4 +1,12 @@
-{
-    "admin": "9ways",
-    "test": "test"
-}
+[
+    {
+        "email": "admin@9ways.com",
+        "username": "9ways_admin",
+        "password": "9ways"
+    },
+    {
+        "email": "test@test.com",
+        "username": "test",
+        "password": "test"
+    }
+]
