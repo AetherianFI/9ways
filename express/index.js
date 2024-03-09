@@ -9,6 +9,9 @@ app.use(express.json());
 app.use(cors()); // Use the cors middleware
 
 
+// Receives POST requests from /saveFormData endpoit on port 3000
+// Reads accounts.json and if there's already any data there then saves that to "existingData" variable
+// New received data from POST request is also added to "existingData" variable and that is stringified and added to accounts.json
 app.post("/saveFormData", (req, res) => {
     const formData = req.body;
 
