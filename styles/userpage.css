@@ -20,7 +20,8 @@
 }
 
 #loginHere a {
-    color: rgb(0, 141, 207);
+    color: #38a9eb;
+    font-weight: 600;
 }
 
 #settings-box {
@@ -34,14 +35,15 @@
 }
 
 .logout {
-    width: 40%;
+    width: 20%;
     margin: 0 auto;
     cursor: pointer;
 }
 
 .logout p {
     color: white;
-    background-color: rgb(117, 33, 243);
+    background-color: #eb5c38;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
+    padding: 5px;
 }
