@@ -26,9 +26,9 @@ $ npm install cors
 Window should open automatically or if it doesn't then navigate to [http://127.0.0.1:5500/html/map.html](http://127.0.0.1:5500/html/map.html).
 
 ## Usage
-Creating new accounts isn't currently possible on the website. 
-You can login using the already existing accounts. 
-Accounts can be found from the accounts.json where the key is the username and value is the password.
+You can login to website with already existing accounts or make a new one for yourself. 
+Existing accounts can be found from the accounts.json.
+Creating account happens on register.html page and submitted form data is then sent to express.js server (express/index.js) that receives the data and saves it into accounts.json.
 
 ## Acknowledgments
 All icons used on the website are from [Boxicons](https://boxicons.com/) ([see license](https://boxicons.com/usage#license)).
