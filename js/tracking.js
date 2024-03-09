@@ -1,8 +1,10 @@
 var username = localStorage.getItem("loggedInUser");
 var tracking_map = document.getElementById("map");
+var login_first_box = document.getElementById("loginFirst");
 
 //If user is logged in then make the map visible, on default map is not visible
 if (username) {
+    login_first_box.style.display = "none";
     tracking_map.style.display = "block";
 
     // Map initialization
