@@ -34,6 +34,7 @@ var busIcon = L.icon({
 })
 
 
+// Draw markers on the map from POI.json
 fetch("../databases/POI.json")
     .then(response => response.json())
     .then(data => {
