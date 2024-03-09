@@ -55,3 +55,11 @@ function getPosition(position) {
             accuracy
     );
 }
+
+//If user is logged in then make the map visible, on default map is not visible
+var username = localStorage.get("loggedInUser");
+var tracking_map = document.getElementById("map");
+
+if (username) {
+    tracking_map.style.display = "block";
+}
