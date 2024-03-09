@@ -1,4 +1,5 @@
 // Runs after loginform is submitted
+// Checks if submitted username and password are found from the accounts.json and if they are then saves username to localStorage and redirects to userpage.html
 function checkLogin(event) {
     event.preventDefault();
 
