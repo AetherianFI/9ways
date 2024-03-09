@@ -4,10 +4,8 @@ const fs = require("fs");
 const app = express();
 const port = 3000;
 
-
 app.use(express.json());
 app.use(cors()); // Use the cors middleware
-
 
 // Receives POST requests from /saveFormData endpoit on port 3000
 // Reads accounts.json and if there's already any data there then saves that to "existingData" variable
@@ -49,7 +47,6 @@ app.post("/saveFormData", (req, res) => {
     });
 });
 
-
 app.listen(port, () => {
-    console.log(`Server is running on port ${port}`)
-})
+    console.log(`Server is running on port ${port}`);
+});
