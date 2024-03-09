@@ -1,5 +1,7 @@
 const registrationForm = document.getElementById("registrationForm");
 
+// sends POST request to localhost:3000 where index.js express server is running
+// request contains the registration information from register.html
 registrationForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
