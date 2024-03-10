@@ -6,6 +6,11 @@ registrationForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
     const formData = new FormData(registrationForm);
+
+    // Get current unix time and add it to formData
+    var timenow = Date.now();
+    formData.append("creation_time", timenow);
+
     const data = Object.fromEntries(formData);
 
     fetch("http://localhost:3000/saveFormData", {
@@ -20,5 +25,5 @@ registrationForm.addEventListener("submit", (event) => {
         .catch((error) => console.log(error));
 
     // Redirect user to userpage after registering
-    window.location.href = "../html/userpage.html";
+    window.location.href = "../html/login.html";
 });

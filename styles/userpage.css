@@ -5,45 +5,43 @@
     background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.loggedIn {
+    text-align: center;
     color: #333;
-    font-size: 14px;
-}
-
-#my-account {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
-#loginHere {
-    display: flex;
-    justify-content: center;
+.loggedIn h1 {
+    color: #3895eb;
 }
 
-#loginHere a {
-    color: #38a9eb;
+.loggedIn h2 {
+    padding: 5px;
+    background-color: #eb5c38;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 25%;
+    color: white;
+}
+
+.loggedIn span {
     font-weight: 600;
 }
 
-#settings-box {
-    display: none;
+.notLoggedIn {
+    text-align: center;
 }
 
-.user-box p {
-    display: flex;
-    justify-content: center;
-    color: #555;
+.notLoggedIn h1 {
+    color: #eb5c38;
 }
 
-.logout {
-    width: 20%;
-    margin: 0 auto;
-    cursor: pointer;
-}
-
-.logout p {
-    color: white;
-    background-color: #eb5c38;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
-    padding: 5px;
+.notLoggedIn a {
+    color: #333;
+    font-weight: 600;
 }
