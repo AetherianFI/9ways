@@ -1,94 +1,102 @@
 <!DOCTYPE html>
 
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Directions - 9ways</title>
 
-<head>
+        <!-- BASIC PAGE CSS -->
+        <link rel="stylesheet" href="../styles/main.css" />
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Directions - 9ways</title>
+        <!-- LEAFTLET CSS FILE -->
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+            integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+            crossorigin=""
+        />
 
-    <!-- BASIC PAGE CSS -->
-    <link rel="stylesheet" href="../styles/main.css">
+        <!-- Make sure you put this AFTER Leaflet's CSS -->
+        <script
+            src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""
+        ></script>
 
-    <!-- LEAFTLET CSS FILE -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+        <!-- LEAFLET-CONTROL-GEOCODER -->
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css"
+        />
+        <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
 
-    <!-- Make sure you put this AFTER Leaflet's CSS -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+        <!-- LEAFLET.MOUSEPOSITION -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.css"
+        />
+        <script src="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.js"></script>
 
+        <!-- LEAFLET-ROUTING-MACHINE -->
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css"
+        />
+        <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
 
-    <!-- LEAFLET-CONTROL-GEOCODER -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
-    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+        <!-- BOXICONS CSS -->
+        <link
+            href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+            rel="stylesheet"
+        />
+    </head>
 
+    <body>
+        <!-- HEADER BAR -->
+        <header>
+            <div class="header-logo">
+                <img src="../img/logo.png" alt="9ways" />
+            </div>
+            <nav class="left-links">
+                <a href="map.html">Home</a>
+                <a href="tracking.html">Tracking</a>
+                <a href="directions.html">Directions</a>
+                <a href="tickets.html">Tickets</a>
+                <a href="routes.html">Routes</a>
+            </nav>
 
-    <!-- LEAFLET.MOUSEPOSITION -->
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.css">
-    <script src="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.js"></script>
+            <div class="right-links">
+                <a href="userpage.html"
+                    ><i class="bx bxs-user-account"></i> User</a
+                >
+                <a href="contact.html"
+                    ><i class="bx bxs-envelope"></i> Contact us</a
+                >
+                <a href="login.html"><i class="bx bxs-user"></i> Login</a>
+                <a><i class="bx bx-globe"></i> English</a>
+            </div>
+        </header>
 
-    <!-- LEAFLET-ROUTING-MACHINE -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
-    <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
+        <!-- Adds the map and all the functionality -->
+        <div id="map"></div>
+    </body>
 
-    <!-- BOXICONS CSS -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- LOGIN.JS FILE THAT HANDLES THE LOGOUT BUTTON AND LOGGING IN -->
+    <script src="../js/login.js"></script>
 
-</head>
+    <!--ALL THE MAP FUNCTIONS, MARKERS ETC. ARE LOCATED IN THE MAP.JS FILE-->
+    <script src="../js/map.js"></script>
 
-<body>
-
-    <!-- HEADER BAR -->
-    <header>
-
-        <div class="header-logo">
-            <img src="../img/logo.png" alt="9ways">
-        </div>
-        <nav class="left-links">
-            <a href="map.html">Home</a>
-            <a href="tracking.html">Tracking</a>
-            <a href="directions.html">Directions</a>
-            <a href="tickets.html">Tickets</a>
-            <a href="routes.html">Routes</a>
-        </nav>
-
-        <div class="right-links">
-            <a href="userpage.html"><i class='bx bxs-user-account'></i></i> User</box-icon></a>
-            <a href="contact.html"><i class='bx bxs-envelope'></i> Contact us</a>
-            <a href="login.html"><i class='bx bxs-user'></i> Login</a>
-            <a><i class='bx bx-globe'></i> English</a>
-        </div>
-    </header>
-
-
-    <!-- Adds the map and all the functionality -->
-    <div id="map"></div>
-
-
-</body>
-
-<!-- LOGIN.JS FILE THAT HANDLES THE LOGOUT BUTTON AND LOGGING IN -->
-<script src="../js/login.js"></script>
-
-<!--ALL THE MAP FUNCTIONS, MARKERS ETC. ARE LOCATED IN THE MAP.JS FILE-->
-<script src="../js/map.js"></script>
-
-<script>
-    // Add routing service with user input (routing machine)
-    var routing = L.Routing.control({
-        waypoints: [
-            L.latLng(9.05258, 7.46182),
-            L.latLng(9.03324, 7.47639)
-        ],
-        routeWhileDragging: true,
-        geocoder: L.Control.Geocoder.nominatim(),
-        lineOptions: {
-            styles: [{ color: 'blue', opacity: 0.7, weight: 6 }]
-        }
-    }).addTo(map);
-</script>
-
+    <script>
+        // Add routing service with user input (routing machine)
+        var routing = L.Routing.control({
+            waypoints: [L.latLng(9.05258, 7.46182), L.latLng(9.03324, 7.47639)],
+            routeWhileDragging: true,
+            geocoder: L.Control.Geocoder.nominatim(),
+            lineOptions: {
+                styles: [{ color: "blue", opacity: 0.7, weight: 6 }],
+            },
+        }).addTo(map);
+    </script>
 </html>

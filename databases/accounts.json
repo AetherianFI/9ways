@@ -3,12 +3,12 @@
         "email": "admin@9ways.com",
         "username": "9ways_admin",
         "password": "9ways",
-        "creation_time": "1654777530"
+        "creation_time": "1654777530000"
     },
     {
         "email": "test@test.com",
         "username": "test",
         "password": "test",
-        "creation_time": "1710084330"
+        "creation_time": "1710084330000"
     }
 ]
