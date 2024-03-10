@@ -18,7 +18,6 @@ if (username) {
             );
             const unix_to_date = new Date(parseInt(creationDate.creation_time));
             accountCreated.textContent = `Account created: ${unix_to_date}`;
-            console.log(unix_to_date);
         })
 
         .catch((error) => {
