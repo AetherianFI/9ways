@@ -11,13 +11,11 @@
     color: #eb5c38;
 }
 
-#loginFirst h2 {
+#loginFirst a {
     color: #333;
+    font-weight: 600;
 }
 
-#loginFirst h1,
-h2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#loginFirst {
+    text-align: center;
 }
