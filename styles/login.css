@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 .right-links a i {
     color: white;
@@ -13,9 +13,11 @@
 .wrapper {
     margin: 80px auto;
     width: 420px;
-    background: linear-gradient(90deg,
-            rgb(0, 182, 173) 0%,
-            rgb(117, 33, 243) 100%);
+    background: linear-gradient(
+        90deg,
+        rgb(0, 182, 173) 0%,
+        rgb(117, 33, 243) 100%
+    );
     color: white;
     border-radius: 10px;
     padding: 30px 40px;
@@ -39,7 +41,7 @@
     background: transparent;
     border: none;
     outline: none;
-    border: 2px solid rgba(255, 255, 255, .2);
+    border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 40px;
     font-size: 16px;
     color: white;
@@ -87,7 +89,7 @@
     border: none;
     outline: none;
     border-radius: 40px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     font-size: 16px;
     font-weight: 600;
