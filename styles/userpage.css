@@ -15,11 +15,11 @@
     align-items: center;
 }
 
-.loggedIn h1 {
+#my-account {
     color: #3895eb;
 }
 
-.loggedIn h2 {
+#logoutButton {
     padding: 5px;
     background-color: #eb5c38;
     border-radius: 20px;
@@ -29,15 +29,11 @@
     color: white;
 }
 
-.loggedIn span {
-    font-weight: 600;
-}
-
 .notLoggedIn {
     text-align: center;
 }
 
-.notLoggedIn h1 {
+#pageLocked {
     color: #eb5c38;
 }
 
