@@ -1,31 +1,66 @@
-.ticket-types {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #f9f9f9;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.right-links a i {
+    color: white;
+}
+
+* {
+    color: rgb(41, 41, 41);
+    font-family: "LEMONMILK", "Poppins";
+    box-sizing: border-box;
+}
+
+.wrapper {
+    margin: 80px auto;
+    width: 600px;
+    background-color: red;
+    color: white;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px 40px;
+    text-align: center;
 }
 
-.ticket-types h1 {
-    margin-top: 0;
-    color: #333;
+
+.button-box {
+    width: auto;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: right;
 }
 
-.ticket-types p {
-    color: #555;
+.button-box span,
+.button-box input{
+    background-color: white;
+    font-size: 1rem;
+    padding: 8px;
 }
 
-.ticket-types ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+.button-box input{
+    text-align: center;
+    width: 70px;
+    letter-spacing: 1px;
+
 }
 
-.ticket-types ul li {
-    margin-bottom: 10px;
+.button-box span{
+    user-select: none;
+    cursor: pointer;
 }
 
-.ticket-types ul li:last-child {
-    margin-bottom: 0;
+.button-box span:first-child{
+    border-radius: 25px 0 0 25px;
+}
+
+.button-box span:last-child{
+    border-radius: 0 25px 25px 0;
+}
+
+.button-box span:hover{
+    color: rgb(0, 0, 0);
+    background-color: pink;
+}
+
+.button-box h2{
+
 }
