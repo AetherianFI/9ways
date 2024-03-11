@@ -12,77 +12,77 @@
             "latitude": 9.046681,
             "longitude": 7.45331,
             "route": 1,
-            "timetable": []
+            "timetable": ["8.05", "10.05", "13.05", "15.05", "17.05"]
         },
         {
             "name": "Nyanya Bridge",
             "latitude": 9.02272,
             "longitude": 7.56979,
             "route": 1,
-            "timetable": []
+            "timetable": ["8.15", "10.15", "13.15", "15.15", "17.15"]
         },
         {
             "name": "Immigration Bus Stop",
             "latitude": 8.96113,
             "longitude": 7.2436,
             "route": 1,
-            "timetable": []
+            "timetable": ["8.25", "10.25", "13.25", "15.25", "17.25"]
         },
         {
             "name": "Kuje/Kyami Bus Stop",
             "latitude": 8.95349,
             "longitude": 7.26371,
             "route": 1,
-            "timetable": []
+            "timetable": ["8.30", "10.30", "13.30", "15.30", "17.30"]
         },
         {
             "name": "Police Bus Stop",
             "latitude": 8.97266,
             "longitude": 7.36307,
             "route": 1,
-            "timetable": []
+            "timetable": ["8.35", "10.35", "13.35", "15.35", "17.35"]
         },
         {
             "name": "Dandata Bus Stop",
             "latitude": 9.00804,
             "longitude": 7.41695,
             "route": 1,
-            "timetable": []
+            "timetable": ["8.45", "10.45", "13.45", "17.45"]
         },
         {
             "name": "Area 1 Bus Stop",
             "latitude": 9.02931,
             "longitude": 7.46921,
             "route": 1,
-            "timetable": []
+            "timetable": ["8.50", "10.50", "13.50", "15.50", "17.50"]
         },
         {
             "name": "Lugbe Car-Wash Bus Stop",
             "latitude": 8.97698,
             "longitude": 7.3726,
             "route": 1,
-            "timetable": []
+            "timetable": ["9.00", "11.00", "16.00", "18.00"]
         },
         {
             "name": "Berger Bus Stop",
             "latitude": 9.06688,
             "longitude": 7.45305,
             "route": 1,
-            "timetable": []
+            "timetable": ["9.15", "11.15", "14.15", "18.15"]
         },
         {
             "name": "NNPC towers Bus Stop",
             "latitude": 9.05485,
             "longitude": 7.48441,
             "route": 1,
-            "timetable": []
+            "timetable": ["9.20", "11.20", "14.20", "16.20", "18.20"]
         },
         {
             "name": "Shehu Shagari Wy",
             "latitude": 9.07054,
             "longitude": 7.49532,
             "route": 1,
-            "timetable": []
+            "timetable": ["9.25", "11.25", "14.25", "16.25", "18.25"]
         },
         {
             "name": "Masaka last bus stop/turning",
