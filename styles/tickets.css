@@ -1,66 +1,52 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
-.right-links a i {
-    color: white;
-}
-
-* {
-    color: rgb(41, 41, 41);
-    font-family: "LEMONMILK", "Poppins";
-    box-sizing: border-box;
-}
-
 .wrapper {
-    margin: 80px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(
+        90deg,
+        rgb(0, 182, 173) 0%,
+        rgb(117, 33, 243) 100%
+    );
     width: 600px;
-    background-color: red;
-    color: white;
+    height: 350px;
+    margin: 80px auto; /* Center the wrapper horizontally */
     border-radius: 10px;
-    padding: 30px 40px;
-    text-align: center;
 }
 
+.button-container {
+    display: flex;
+    justify-content: space-around; /* Make the layout symmetrical */
+    margin-top: 20px; /* Adjust the margin as needed */
+    width: 90%;
+}
 
 .button-box {
-    width: auto;
-    text-align: right;
     display: flex;
     align-items: center;
-    justify-content: right;
+    justify-content: space-between;
+    width: 200px;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    margin-left: auto; /* Add this line */
 }
 
-.button-box span,
-.button-box input{
-    background-color: white;
-    font-size: 1rem;
-    padding: 8px;
-}
-
-.button-box input{
-    text-align: center;
-    width: 70px;
-    letter-spacing: 1px;
-
-}
-
-.button-box span{
-    user-select: none;
+.button-box span {
     cursor: pointer;
+    padding: 5px;
+    border-radius: 10px;
 }
 
-.button-box span:first-child{
-    border-radius: 25px 0 0 25px;
+.button-box span:hover {
+    background-color: #ccc;
 }
 
-.button-box span:last-child{
-    border-radius: 0 25px 25px 0;
+.num {
+    font-size: 20px;
+    font-weight: bold;
 }
 
-.button-box span:hover{
-    color: rgb(0, 0, 0);
-    background-color: pink;
-}
-
-.button-box h2{
-
+h2 {
+    margin: 10px; /* Remove default margin */
 }
