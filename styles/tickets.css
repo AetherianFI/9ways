@@ -8,16 +8,17 @@
         rgb(117, 33, 243) 100%
     );
     width: 600px;
-    height: 300px;
+    height: 350px;
     margin: 80px auto; /* Center the wrapper horizontally */
     border-radius: 10px;
 }
 
 .button-container {
     display: flex;
-    align-items: center;
     justify-content: space-around; /* Make the layout symmetrical */
     margin-top: 20px; /* Adjust the margin as needed */
+    background-color: red;
+    width: 90%;
 }
 
 .button-box {
@@ -26,16 +27,17 @@
     justify-content: space-between;
     width: 200px;
     padding: 10px;
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
     border-radius: 5px;
+    margin-left: auto; /* Add this line */
 }
 
 .button-box span {
     cursor: pointer;
     padding: 5px;
     border-radius: 3px;
-    background-color: #ddd;
+    background-color: #ffffff;
 }
 
 .button-box span:hover {
