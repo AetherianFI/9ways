@@ -1,29 +1,21 @@
-let minus = document.querySelector('.minus');
-let add = document.querySelector('.add');
-let input = document.querySelector('.value');
+document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll(".button-box");
 
-let format = (num) => num > 9 ? num : '0' + num;
+    buttons.forEach(function (button) {
+        const minusBtn = button.querySelector(".minus");
+        const addBtn = button.querySelector(".add");
+        const num = button.querySelector(".num");
 
-minus.onclick = () =>{
-    let number = parseInt(input.value);
-    if(number == 0){
-        input.value == '00';
-    }else{
-        input.value = format(number - 1);
-    }
-}
+        minusBtn.addEventListener("click", function () {
+            let currentValue = parseInt(num.textContent);
+            if (currentValue > 1) {
+                num.textContent = currentValue - 1;
+            }
+        });
 
-add.onclick = () =>{
-    input.value = format(parseInt(input.value) + 1);
-}
-
-
-
-input.addEventListener('keyup', () =>{
-    let number = parseInt(input.value);
-    if(isNaN(number)){
-        input.value = '00';
-    }else{
-        input.value = format(number);
-    }
-})
+        addBtn.addEventListener("click", function () {
+            let currentValue = parseInt(num.textContent);
+            num.textContent = currentValue + 1;
+        });
+    });
+});
