@@ -19,11 +19,10 @@ var tileLayer = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
         '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
 }).addTo(map);
 
-// Create layer for bus stops that Noa found
-var random_bus_stops = L.layerGroup().addTo(map);
-
-// Create layer for bus stops from airport to city
+// Create layers for the different busstops routes
 var airport_to_city = L.layerGroup().addTo(map);
+var route_2 = L.layerGroup().addTo(map);
+var route_3 = L.layerGroup().addTo(map);
 
 // Create busIscon
 var busIcon = L.icon({
@@ -42,15 +41,19 @@ fetch("../databases/POI.json")
         data.bus_stops.forEach((busStop) => {
             var popup = L.popup({ maxWidth: 400, maxHeight: 300 });
             popup.setContent(
-                `<div id="popup" style="width: 100.0%; height: 100.0%;"><h1 id="bus_stop_name">${busStop.name}</h1><br>Timetable for the bus stop:<p><code>Insert timetable here...</code></p></div>`
+                `<div id="popup" style="width: 100.0%; height: 100.0%;"><h1>${busStop.name}</h1><br>Timetable for the bus stop:<p><code>${busStop.timetable}</code></p></div>`
             );
             var bus_marker = L.marker([busStop.latitude, busStop.longitude], {
                 icon: busIcon,
             });
-            if (busStop.color === "red") {
+            if (busStop.route === 1) {
                 bus_marker.addTo(airport_to_city);
-            } else {
-                bus_marker.addTo(random_bus_stops);
+            }
+            if (busStop.route === 2) {
+                bus_marker.addTo(route_2);
+            }
+            if (busStop.route === 3) {
+                bus_marker.addTo(route_3);
             }
             bus_marker.bindPopup(popup);
         });
@@ -63,7 +66,8 @@ var control_scale = L.control.scale().addTo(map);
 // Create baselayer for bus stops
 var baseLayers = {
     "Airport to City": airport_to_city,
-    "Random Bus Stops": random_bus_stops,
+    "Route 2": route_2,
+    "Route 3": route_3,
 };
 
 // Add layer control so that markers can be toggled on & off
