@@ -4,169 +4,197 @@
             "name": "Mabushi Bus Stop",
             "latitude": 9.07844,
             "longitude": 7.45669,
-            "route": 1
+            "route": 1,
+            "timetable": ["8.00", "10.00", "13.00", "15.00", "17.00"]
         },
         {
             "name": "Herbert Macaulay Way Stop",
             "latitude": 9.046681,
             "longitude": 7.45331,
-            "route": 1
+            "route": 1,
+            "timetable": []
         },
         {
             "name": "Nyanya Bridge",
             "latitude": 9.02272,
             "longitude": 7.56979,
-            "route": 1
+            "route": 1,
+            "timetable": []
         },
         {
             "name": "Immigration Bus Stop",
             "latitude": 8.96113,
             "longitude": 7.2436,
-            "route": 1
+            "route": 1,
+            "timetable": []
         },
         {
             "name": "Kuje/Kyami Bus Stop",
             "latitude": 8.95349,
             "longitude": 7.26371,
-            "route": 1
+            "route": 1,
+            "timetable": []
         },
         {
             "name": "Police Bus Stop",
             "latitude": 8.97266,
             "longitude": 7.36307,
-            "route": 1
+            "route": 1,
+            "timetable": []
         },
         {
             "name": "Dandata Bus Stop",
             "latitude": 9.00804,
             "longitude": 7.41695,
-            "route": 1
+            "route": 1,
+            "timetable": []
         },
         {
             "name": "Area 1 Bus Stop",
             "latitude": 9.02931,
             "longitude": 7.46921,
-            "route": 1
+            "route": 1,
+            "timetable": []
         },
         {
             "name": "Lugbe Car-Wash Bus Stop",
             "latitude": 8.97698,
             "longitude": 7.3726,
-            "route": 1
+            "route": 1,
+            "timetable": []
         },
         {
             "name": "Berger Bus Stop",
             "latitude": 9.06688,
             "longitude": 7.45305,
-            "route": 1
+            "route": 1,
+            "timetable": []
         },
         {
             "name": "NNPC towers Bus Stop",
             "latitude": 9.05485,
             "longitude": 7.48441,
-            "route": 1
+            "route": 1,
+            "timetable": []
         },
         {
             "name": "Shehu Shagari Wy",
             "latitude": 9.07054,
             "longitude": 7.49532,
-            "route": 1
+            "route": 1,
+            "timetable": []
         },
         {
             "name": "Masaka last bus stop/turning",
             "latitude": 8.99429,
             "longitude": 7.6745,
-            "route": 2
+            "route": 2,
+            "timetable": []
         },
         {
             "name": "Area1 junction, Masaka",
             "latitude": 9.00444,
             "longitude": 7.67132,
-            "route": 2
+            "route": 2,
+            "timetable": []
         },
         {
             "name": "New nyanya bus stop",
             "latitude": 9.01291,
             "longitude": 7.64255,
-            "route": 2
+            "route": 2,
+            "timetable": []
         },
         {
             "name": "Ado bus stop",
             "latitude": 9.01353,
             "longitude": 7.63299,
-            "route": 2
+            "route": 2,
+            "timetable": []
         },
         {
             "name": "One man village bus stop",
             "latitude": 9.01493,
             "longitude": 7.62697,
-            "route": 2
+            "route": 2,
+            "timetable": []
         },
         {
             "name": "International market junction",
             "latitude": 9.02084,
             "longitude": 7.60915,
-            "route": 2
+            "route": 2,
+            "timetable": []
         },
         {
             "name": "Orange market junction",
             "latitude": 9.02303,
             "longitude": 7.60791,
-            "route": 2
+            "route": 2,
+            "timetable": []
         },
         {
             "name": "Mararaba junction",
             "latitude": 9.02662,
             "longitude": 7.60024,
-            "route": 2
+            "route": 2,
+            "timetable": []
         },
         {
             "name": "Sharp corner bus stop,  Mararaba",
             "latitude": 9.03025,
             "longitude": 7.58943,
-            "route": 2
+            "route": 2,
+            "timetable": []
         },
         {
             "name": "Abacha road junction, Mararaba",
             "latitude": 9.02895,
             "longitude": 7.58537,
-            "route": 2
+            "route": 2,
+            "timetable": []
         },
         {
             "name": "Nyanya motor park",
             "latitude": 9.02327,
             "longitude": 7.57065,
-            "route": 3
+            "route": 3,
+            "timetable": []
         },
         {
             "name": "Karu before bridge bus stop",
             "latitude": 9.02295,
             "longitude": 7.56199,
-            "route": 3
+            "route": 3,
+            "timetable": []
         },
         {
             "name": "Kugbo furniture bus stop",
             "latitude": 9.02772,
             "longitude": 7.54927,
-            "route": 3
+            "route": 3,
+            "timetable": []
         },
         {
             "name": "Mogadishu Barack bus stop",
             "latitude": 9.02627,
             "longitude": 7.51649,
-            "route": 3
+            "route": 3,
+            "timetable": []
         },
         {
             "name": "AYA bus stop",
             "latitude": 9.05092,
             "longitude": 7.52743,
-            "route": 3
+            "route": 3,
+            "timetable": []
         },
         {
             "name": "Court of appeal bus stop",
             "latitude": 9.05611,
             "longitude": 7.50409,
-            "route": 3
+            "route": 3,
+            "timetable": []
         }
     ]
 }

@@ -41,7 +41,7 @@ fetch("../databases/POI.json")
         data.bus_stops.forEach((busStop) => {
             var popup = L.popup({ maxWidth: 400, maxHeight: 300 });
             popup.setContent(
-                `<div id="popup" style="width: 100.0%; height: 100.0%;"><h1 id="bus_stop_name">${busStop.name}</h1><br>Timetable for the bus stop:<p><code>Insert timetable here...</code></p></div>`
+                `<div id="popup" style="width: 100.0%; height: 100.0%;"><h1>${busStop.name}</h1><br>Timetable for the bus stop:<p><code>${busStop.timetable}</code></p></div>`
             );
             var bus_marker = L.marker([busStop.latitude, busStop.longitude], {
                 icon: busIcon,
