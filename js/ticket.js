@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         minusBtn.addEventListener("click", function () {
             let currentValue = parseInt(num.textContent);
-            if (currentValue > 1) {
+            if (currentValue >= 1) {
                 num.textContent = currentValue - 1;
             }
         });

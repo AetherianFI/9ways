@@ -17,7 +17,6 @@
     display: flex;
     justify-content: space-around; /* Make the layout symmetrical */
     margin-top: 20px; /* Adjust the margin as needed */
-    background-color: red;
     width: 90%;
 }
 
@@ -29,15 +28,14 @@
     padding: 10px;
     background-color: #ffffff;
     border: 1px solid #ffffff;
-    border-radius: 5px;
+    border-radius: 10px;
     margin-left: auto; /* Add this line */
 }
 
 .button-box span {
     cursor: pointer;
     padding: 5px;
-    border-radius: 3px;
-    background-color: #ffffff;
+    border-radius: 10px;
 }
 
 .button-box span:hover {
