@@ -1,32 +1,52 @@
 .wrapper {
-    margin: 80px auto;
-    background-color: rgb(255, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(
+        90deg,
+        rgb(0, 182, 173) 0%,
+        rgb(117, 33, 243) 100%
+    );
     width: 600px;
-    text-align: center;
+    height: 300px;
+    margin: 80px auto; /* Center the wrapper horizontally */
     border-radius: 10px;
 }
 
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around; /* Make the layout symmetrical */
+    margin-top: 20px; /* Adjust the margin as needed */
+}
+
 .button-box {
-    height: 100px;
-    background-color: rgb(20, 196, 20);
-    width: 300px;
-    text-align: center;
-    margin: auto; /* Add this line */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-
-.button-box h2{
-    font-size: 32px;
+.button-box span {
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 3px;
+    background-color: #ddd;
 }
 
-.button-box h1{
+.button-box span:hover {
+    background-color: #ccc;
+}
+
+.num {
     font-size: 20px;
-    background-color: blue;
-    text-align: center;
+    font-weight: bold;
 }
 
-.button-box span.num{
-    font-size: 20px;
-    border-right: 2px solid rgba(0,0,0,0,2);
-    border-left: 2px solid rgba(0,0,0,0,2);
+h2 {
+    margin: 10px; /* Remove default margin */
 }
