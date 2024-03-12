@@ -1,31 +1,13 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>9ways</title>
+    <title>Control Panel - 9ways</title>
 
     <!-- BASIC PAGE CSS -->
     <link rel="stylesheet" href="../styles/main.css" />
-
-    <!-- LEAFTLET CSS FILE -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-
-    <!-- Make sure you put this AFTER Leaflet's CSS -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-
-    <!-- LEAFLET-CONTROL-GEOCODER -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
-    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
-
-    <!-- LEAFLET.MOUSEPOSITION -->
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.css" />
-    <script src="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.js"></script>
 
     <!-- BOXICONS CSS -->
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
@@ -37,6 +19,7 @@
         <div class="header-logo">
             <img src="../img/logo.png" alt="9ways" />
         </div>
+
         <nav class="left-links">
             <a href="map.html">Home</a>
             <a href="tracking.html">Tracking</a>
@@ -54,14 +37,20 @@
         </div>
     </header>
 
-    <!-- Adds the map and all the functionality -->
-    <div id="map"></div>
+    <div id="bus_stop_selection">
+        <form>
+            <select id="bus_stop_list"></select>
+            <input type="submit" value="Update">
+        </form>
+
+        <p id="timetables"></p>
+    </div>
 </body>
 
 <!-- LOGIN.JS FILE THAT HANDLES THE LOGOUT BUTTON AND LOGGING IN -->
 <script src="../js/login.js"></script>
 
-<!--ALL THE MAP FUNCTIONS, MARKERS ETC. ARE LOCATED IN THE MAP.JS FILE-->
-<script src="../js/map.js"></script>
+<!-- GENERATES THE BUSSTOPS INTO THE DROPDOWN MENU AND HANDLES UPDATING THE TIMETABLES -->
+<script src="../js/controlpanel.js"></script>
 
 </html>

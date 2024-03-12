@@ -1,81 +1,80 @@
 <!DOCTYPE html>
 
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Tickets - 9ways</title>
 
-        <!-- BASIC PAGE CSS -->
-        <link rel="stylesheet" href="../styles/main.css" />
-        <link rel="stylesheet" href="../styles/tickets.css" />
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tickets - 9ways</title>
 
-        <!-- BOXICONS CSS -->
-        <link
-            href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-            rel="stylesheet"
-        />
-    </head>
+    <!-- BASIC PAGE CSS -->
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="../styles/tickets.css" />
 
-    <body>
-        <!-- HEADER BAR -->
-        <header>
-            <div class="header-logo">
-                <img src="../img/logo.png" alt="9ways" />
-            </div>
-            <nav class="left-links">
-                <a href="map.html">Home</a>
-                <a href="tracking.html">Tracking</a>
-                <a href="directions.html">Directions</a>
-                <a href="tickets.html">Tickets</a>
-                <a href="routes.html">Routes</a>
-            </nav>
+    <!-- BOXICONS CSS -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</head>
 
-            <div class="right-links">
-                <a href="userpage.html"
-                    ><i class="bx bxs-user-account"></i> User</a
-                >
-                <a href="contact.html"
-                    ><i class="bx bxs-envelope"></i> Contact us</a
-                >
-                <a href="login.html"><i class="bx bxs-user"></i> Login</a>
-                <a><i class="bx bx-globe"></i> English</a>
-            </div>
-        </header>
+<body>
+    <!-- HEADER BAR -->
+    <header>
+        <div class="header-logo">
+            <img src="../img/logo.png" alt="9ways" />
+        </div>
+        <nav class="left-links">
+            <a href="map.html">Home</a>
+            <a href="tracking.html">Tracking</a>
+            <a href="directions.html">Directions</a>
+            <a href="tickets.html">Tickets</a>
+            <a href="routes.html">Routes</a>
+            <a href="controlpanel.html">Control Panel</a>
+        </nav>
 
-        <!--Ticket types-->
+        <div class="right-links">
+            <a href="userpage.html"><i class="bx bxs-user-account"></i> User</a>
+            <a href="contact.html"><i class="bx bxs-envelope"></i> Contact us</a>
+            <a href="login.html" id="login_button"><i class="bx bxs-user"></i> Login</a>
+            <a><i class="bx bx-globe"></i> English</a>
+        </div>
+    </header>
 
-        <div class="wrapper">
-            <h1>Ticket types</h1>
+    <!--Ticket types-->
 
-            <div class="button-container">
-                <h2>Day ticket (5.99€)</h2>
-                <div class="button-box">
-                    <span class="minus">&minus;</span>
-                    <span class="num">0</span>
-                    <span class="add">&plus;</span>
-                </div>
-            </div>
+    <div class="wrapper">
+        <h1>Ticket types</h1>
 
-            <div class="button-container">
-                <h2>Single ticket (5.99€)</h2>
-                <div class="button-box">
-                    <span class="minus">&minus;</span>
-                    <span class="num">0</span>
-                    <span class="add">&plus;</span>
-                </div>
-            </div>
-            <div class="button-container">
-                <h2>Monthly pass (29,99€)</h2>
-                <div class="button-box">
-                    <span class="minus">&minus;</span>
-                    <span class="num">0</span>
-                    <span class="add">&plus;</span>
-                </div>
+        <div class="button-container">
+            <h2>Day ticket (5.99€)</h2>
+            <div class="button-box">
+                <span class="minus">&minus;</span>
+                <span class="num">0</span>
+                <span class="add">&plus;</span>
             </div>
         </div>
-    </body>
 
-    <!-- JS FILE FOR THE BUTTON FUNCTIONALITY -->
-    <script src="../js/ticket.js"></script>
+        <div class="button-container">
+            <h2>Single ticket (5.99€)</h2>
+            <div class="button-box">
+                <span class="minus">&minus;</span>
+                <span class="num">0</span>
+                <span class="add">&plus;</span>
+            </div>
+        </div>
+        <div class="button-container">
+            <h2>Monthly pass (29,99€)</h2>
+            <div class="button-box">
+                <span class="minus">&minus;</span>
+                <span class="num">0</span>
+                <span class="add">&plus;</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+<!-- LOGIN.JS FILE THAT HANDLES THE LOGOUT BUTTON AND LOGGING IN -->
+<script src="../js/login.js"></script>
+
+<!-- JS FILE FOR THE BUTTON FUNCTIONALITY -->
+<script src="../js/ticket.js"></script>
+
 </html>
