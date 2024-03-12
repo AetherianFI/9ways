@@ -25,3 +25,16 @@ function checkLogin(event) {
             console.error("Error fetching accounts.json:", error);
         });
 }
+
+var login_button = document.getElementById("login_button");
+
+if (localStorage.getItem("loggedInUser")) {
+    login_button.removeAttribute("href");
+    login_button.textContent = "logout";
+    login_button.addEventListener("click", () => {
+        localStorage.clear();
+        window.location.href = "login.html";
+    });
+} else {
+    login_button.textContent = "login";
+}

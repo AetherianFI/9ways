@@ -82,3 +82,8 @@ header {
 #routeForm {
     display: flex;
 }
+
+/* Uses pointer cursor on login button always (href attribute is removed from the button when user is logged in (login.js) so it doesnt user pointer cursor always)*/
+#login_button {
+    cursor: pointer;
+}
