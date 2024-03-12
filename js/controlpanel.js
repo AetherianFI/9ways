@@ -1,21 +1,33 @@
-// Goes through the POI.json and adds all busstops from there into the dropdown menu
 var drop_down_menu = document.getElementById("bus_stop_list");
-var timetables = document.getElementById("timetables");
+var time_list = document.getElementById("time_selection");
 
+// Goes through the POI.json and adds all busstops from there into the dropdown menu
 fetch("../databases/POI.json")
     .then((response) => response.json())
     .then((data) => {
         data.bus_stops.forEach((busStop) => {
             var bus_stop_element = document.createElement("option");
-            bus_stop_element.textContent = busStop.name;
+            bus_stop_element.textContent = `${busStop.id}. ${busStop.name}`;
             drop_down_menu.add(bus_stop_element);
         });
 
-        // Everytime new option is selected on the dropdown list it updated the selectedIndex variable and changed the timetable into correct one
+        // Everytime different bus stop is selected from the dropdown list it updated the selectedIndex variable and changes the timetable into one that matches the busstop
         drop_down_menu.addEventListener("change", () => {
+            // Saves currently selected option from the select element into a variable
             var selectedIndex = drop_down_menu.selectedIndex;
-            console.log(selectedIndex);
-            var timetable = data.bus_stops[selectedIndex].timetable;
-            timetables.textContent = timetable;
+
+            // Clears the previous times that have been added to the selection element
+            time_list.textContent = "";
+
+            // Goes through all the busstops from the selectedIndex busstop and adds them to selection element
+            data.bus_stops[selectedIndex].timetable.forEach((timetable) => {
+                var single_time = document.createElement("option");
+                single_time.textContent = `${timetable}`;
+                time_list.add(single_time);
+            });
         });
     });
+
+function updateTimetables(event) {
+    event.preventDefault();
+}
