@@ -1,77 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Login - 9ways</title>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login - 9ways</title>
+        <!-- BASIC PAGE CSS -->
+        <link rel="stylesheet" href="../styles/login.css" />
+        <link rel="stylesheet" href="../styles/main.css" />
 
-    <!-- BASIC PAGE CSS -->
-    <link rel="stylesheet" href="../styles/login.css" />
-    <link rel="stylesheet" href="../styles/main.css" />
+        <!-- BOXICONS CSS -->
+        <link
+            href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+            rel="stylesheet"
+        />
+    </head>
 
-    <!-- BOXICONS CSS -->
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-</head>
+    <body>
+        <!-- HEADER BAR -->
+        <header>
+            <div class="header-logo">
+                <img src="../img/logo.png" alt="9ways" />
+            </div>
+            <nav class="left-links">
+                <a href="map.html">Home</a>
+                <a href="tracking.html">Tracking</a>
+                <a href="directions.html">Directions</a>
+                <a href="tickets.html">Tickets</a>
+                <a href="routes.html">Routes</a>
+                <a href="controlpanel.html">Control Panel</a>
+            </nav>
 
-<body>
-    <!-- HEADER BAR -->
-    <header>
-        <div class="header-logo">
-            <img src="../img/logo.png" alt="9ways" />
+            <div class="right-links">
+                <a href="userpage.html"
+                    ><i class="bx bxs-user-account"></i> User</a
+                >
+                <a href="contact.html"
+                    ><i class="bx bxs-envelope"></i> Contact us</a
+                >
+                <a href="login.html" id="login_button"
+                    ><i class="bx bxs-user"></i> Login</a
+                >
+                <a><i class="bx bx-globe"></i> English</a>
+            </div>
+        </header>
+
+        <!-- LOGIN BOX -->
+        <div class="wrapper">
+            <!-- RUNS CHECKLOGIN() FUNCTION FROM LOGIN.JS WHEN FORM IS SUBMITTED -->
+            <form id="loginform" onsubmit="checkLogin(event)">
+                <h1>Login</h1>
+
+                <div class="input-box">
+                    <input
+                        type="text"
+                        placeholder="Username"
+                        id="username"
+                        required
+                    />
+                    <i class="bx bxs-user"></i>
+                </div>
+
+                <div class="input-box">
+                    <input
+                        type="password"
+                        placeholder="Password"
+                        id="password"
+                        required
+                    />
+                    <i class="bx bxs-lock-alt"></i>
+                </div>
+
+                <div class="remember-forgot">
+                    <label
+                        ><input type="checkbox" id="remember-forgot" /> Remember
+                        me</label
+                    >
+                    <a href="#">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="btn">Login</button>
+
+                <div class="register-link">
+                    <p>
+                        Don't have an account?
+                        <a href="register.html">Register</a>
+                    </p>
+                </div>
+            </form>
         </div>
-        <nav class="left-links">
-            <a href="map.html">Home</a>
-            <a href="tracking.html">Tracking</a>
-            <a href="directions.html">Directions</a>
-            <a href="tickets.html">Tickets</a>
-            <a href="routes.html">Routes</a>
-            <a href="controlpanel.html">Control Panel</a>
-        </nav>
+    </body>
 
-        <div class="right-links">
-            <a href="userpage.html"><i class="bx bxs-user-account"></i> User</a>
-            <a href="contact.html"><i class="bx bxs-envelope"></i> Contact us</a>
-            <a href="login.html" id="login_button"><i class="bx bxs-user"></i> Login</a>
-            <a><i class="bx bx-globe"></i> English</a>
-        </div>
-    </header>
-
-    <!-- LOGIN BOX -->
-    <div class="wrapper">
-        <!-- RUNS CHECKLOGIN() FUNCTION FROM LOGIN.JS WHEN FORM IS SUBMITTED -->
-        <form id="loginform" onsubmit="checkLogin(event)">
-            <h1>Login</h1>
-
-            <div class="input-box">
-                <input type="text" placeholder="Username" id="username" required />
-                <i class="bx bxs-user"></i>
-            </div>
-
-            <div class="input-box">
-                <input type="password" placeholder="Password" id="password" required />
-                <i class="bx bxs-lock-alt"></i>
-            </div>
-
-            <div class="remember-forgot">
-                <label><input type="checkbox" id="remember-forgot" /> Remember
-                    me</label>
-                <a href="#">Forgot password?</a>
-            </div>
-
-            <button type="submit" class="btn">Login</button>
-
-            <div class="register-link">
-                <p>
-                    Don't have an account?
-                    <a href="register.html">Register</a>
-                </p>
-            </div>
-        </form>
-    </div>
-</body>
-
-<!-- LOGIN.JS FILE THAT HANDLES THE LOGOUT BUTTON AND LOGGING IN -->
-<script src="../js/login.js"></script>
-
+    <!-- LOGIN.JS FILE THAT HANDLES THE LOGOUT BUTTON AND LOGGING IN -->
+    <script src="../js/login.js"></script>
 </html>

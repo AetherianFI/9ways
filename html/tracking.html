@@ -1,62 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Realtime location tracker</title>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Realtime location tracker</title>
+        <!-- LEAFTLET CSS FILE  -->
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+            integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+            crossorigin=""
+        />
 
-    <!-- LEAFTLET CSS FILE  -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+        <!-- Make sure you put this AFTER Leaflet's CSS  -->
+        <script
+            src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""
+        ></script>
 
-    <!-- Make sure you put this AFTER Leaflet's CSS  -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+        <!-- BASIC PAGE CSS -->
+        <link rel="stylesheet" href="../styles/main.css" />
+        <link rel="stylesheet" href="../styles/tracking.css" />
 
-    <!-- BASIC PAGE CSS -->
-    <link rel="stylesheet" href="../styles/main.css" />
-    <link rel="stylesheet" href="../styles/tracking.css" />
+        <!-- BOXICONS CSS -->
+        <link
+            href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+            rel="stylesheet"
+        />
+    </head>
 
-    <!-- BOXICONS CSS -->
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-</head>
+    <body>
+        <header>
+            <div class="header-logo">
+                <img src="../img/logo.png" alt="9ways" />
+            </div>
+            <nav class="left-links">
+                <a href="map.html">Home</a>
+                <a href="tracking.html">Tracking</a>
+                <a href="directions.html">Directions</a>
+                <a href="tickets.html">Tickets</a>
+                <a href="routes.html">Routes</a>
+                <a href="controlpanel.html">Control Panel</a>
+            </nav>
 
-<body>
-    <header>
-        <div class="header-logo">
-            <img src="../img/logo.png" alt="9ways" />
+            <div class="right-links">
+                <a href="userpage.html"
+                    ><i class="bx bxs-user-account"></i> User</a
+                >
+                <a href="contact.html"
+                    ><i class="bx bxs-envelope"></i> Contact us</a
+                >
+                <a href="login.html" id="login_button"
+                    ><i class="bx bxs-user"></i> Login</a
+                >
+                <a><i class="bx bx-globe"></i> English</a>
+            </div>
+        </header>
+
+        <div id="loginFirst">
+            <h1>Locked</h1>
+            <a href="login.html">Login before accessing tracking page</a>
         </div>
-        <nav class="left-links">
-            <a href="map.html">Home</a>
-            <a href="tracking.html">Tracking</a>
-            <a href="directions.html">Directions</a>
-            <a href="tickets.html">Tickets</a>
-            <a href="routes.html">Routes</a>
-            <a href="controlpanel.html">Control Panel</a>
-        </nav>
 
-        <div class="right-links">
-            <a href="userpage.html"><i class="bx bxs-user-account"></i> User</a>
-            <a href="contact.html"><i class="bx bxs-envelope"></i> Contact us</a>
-            <a href="login.html" id="login_button"><i class="bx bxs-user"></i> Login</a>
-            <a><i class="bx bx-globe"></i> English</a>
-        </div>
-    </header>
+        <!-- Adds the map and all the functionality -->
+        <div id="map"></div>
+    </body>
 
-    <div id="loginFirst">
-        <h1>Locked</h1>
-        <a href="login.html">Login before accessing tracking page</a>
-    </div>
+    <!-- LOGIN.JS FILE THAT HANDLES THE LOGOUT BUTTON AND LOGGING IN -->
+    <script src="../js/login.js"></script>
 
-    <!-- Adds the map and all the functionality -->
-    <div id="map"></div>
-</body>
-
-<!-- LOGIN.JS FILE THAT HANDLES THE LOGOUT BUTTON AND LOGGING IN -->
-<script src="../js/login.js"></script>
-
-<!-- Tracking javacript code -->
-<script src="../js/tracking.js"></script>
-
+    <!-- Tracking javacript code -->
+    <script src="../js/tracking.js"></script>
 </html>
