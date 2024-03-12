@@ -10,7 +10,3 @@ fetch("../databases/POI.json")
             drop_down_menu.add(bus_stop_element);
         });
     });
-
-/*var elementti = document.createElement("option");
-elementti.textContent = "testi123";
-drop_down_menu.add(elementti);*/
