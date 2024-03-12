@@ -1,62 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Login - 9ways</title>
 
-        <!-- BASIC PAGE CSS -->
-        <link rel="stylesheet" href="../styles/main.css" />
-        <link rel="stylesheet" href="../styles/userpage.css" />
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - 9ways</title>
 
-        <!-- BOXICONS CSS -->
-        <link
-            href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-            rel="stylesheet"
-        />
-    </head>
+    <!-- BASIC PAGE CSS -->
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="../styles/userpage.css" />
 
-    <body>
-        <!-- HEADER BAR -->
-        <header>
-            <div class="header-logo">
-                <img src="../img/logo.png" alt="9ways" />
-            </div>
-            <nav class="left-links">
-                <a href="map.html">Home</a>
-                <a href="tracking.html">Tracking</a>
-                <a href="directions.html">Directions</a>
-                <a href="tickets.html">Tickets</a>
-                <a href="routes.html">Routes</a>
-            </nav>
+    <!-- BOXICONS CSS -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</head>
 
-            <div class="right-links">
-                <a href="userpage.html"
-                    ><i class="bx bxs-user-account"></i> User</a
-                >
-                <a href="contact.html"
-                    ><i class="bx bxs-envelope"></i> Contact us</a
-                >
-                <a href="login.html"><i class="bx bxs-user"></i> Login</a>
-                <a><i class="bx bx-globe"></i> English</a>
-            </div>
-        </header>
-
-        <div class="user-box">
-            <div class="notLoggedIn">
-                <h1 id="pageLocked">Locked</h1>
-                <a href="login.html">Login before accessing your userpage</a>
-            </div>
-
-            <div class="loggedIn">
-                <h1 id="my-account">My account</h1>
-                <span id="loggedInUser"></span>
-                <span id="accountCreated"></span>
-                <h2 id="logoutButton">Logout</h2>
-            </div>
+<body>
+    <!-- HEADER BAR -->
+    <header>
+        <div class="header-logo">
+            <img src="../img/logo.png" alt="9ways" />
         </div>
-    </body>
+        <nav class="left-links">
+            <a href="map.html">Home</a>
+            <a href="tracking.html">Tracking</a>
+            <a href="directions.html">Directions</a>
+            <a href="tickets.html">Tickets</a>
+            <a href="routes.html">Routes</a>
+            <a href="controlpanel.html">Control Panel</a>
+        </nav>
 
-    <!-- SETS THE CURRECTLY LOGGED IN ACCOUNT TEXT -->
-    <script src="../js/user.js"></script>
+        <div class="right-links">
+            <a href="userpage.html"><i class="bx bxs-user-account"></i> User</a>
+            <a href="contact.html"><i class="bx bxs-envelope"></i> Contact us</a>
+            <a href="login.html"><i class="bx bxs-user"></i> Login</a>
+            <a><i class="bx bx-globe"></i> English</a>
+        </div>
+    </header>
+
+    <div class="user-box">
+        <div class="notLoggedIn">
+            <h1 id="pageLocked">Locked</h1>
+            <a href="login.html">Login before accessing your userpage</a>
+        </div>
+
+        <div class="loggedIn">
+            <h1 id="my-account">My account</h1>
+            <span id="loggedInUser"></span>
+            <span id="accountCreated"></span>
+            <h2 id="logoutButton">Logout</h2>
+        </div>
+    </div>
+</body>
+
+<!-- SETS THE CURRECTLY LOGGED IN ACCOUNT TEXT -->
+<script src="../js/user.js"></script>
+
 </html>
