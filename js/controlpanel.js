@@ -1,7 +1,7 @@
-// Goes through the POI.json and adds all busstops from there into the dropdown menu
 var drop_down_menu = document.getElementById("bus_stop_list");
-var timetables = document.getElementById("timetables");
+var timetable = document.getElementById("timetable");
 
+// Goes through the POI.json and adds all busstops from there into the dropdown menu
 fetch("../databases/POI.json")
     .then((response) => response.json())
     .then((data) => {
@@ -14,8 +14,9 @@ fetch("../databases/POI.json")
         // Everytime different bus stop is selected from the dropdown list it updated the selectedIndex variable and changes the timetable into one that matches the busstop
         drop_down_menu.addEventListener("change", () => {
             var selectedIndex = drop_down_menu.selectedIndex;
-            var timetable = data.bus_stops[selectedIndex].timetable;
-            timetables.textContent = timetable;
+            var busstop_timetable = data.bus_stops[selectedIndex].timetable;
+            // Adds timetable to the element with "timetables" id and separates the values with space
+            timetable.textContent = busstop_timetable.join(" ");
         });
     });
 
