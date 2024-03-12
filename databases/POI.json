@@ -1,6 +1,7 @@
 {
     "bus_stops": [
         {
+            "id": 1,
             "name": "Mabushi Bus Stop",
             "latitude": 9.07844,
             "longitude": 7.45669,
@@ -8,6 +9,7 @@
             "timetable": ["8.00", "10.00", "13.00", "15.00", "17.00"]
         },
         {
+            "id": 2,
             "name": "Herbert Macaulay Way Stop",
             "latitude": 9.046681,
             "longitude": 7.45331,
@@ -15,6 +17,7 @@
             "timetable": ["8.05", "10.05", "13.05", "15.05", "17.05"]
         },
         {
+            "id": 3,
             "name": "Nyanya Bridge",
             "latitude": 9.02272,
             "longitude": 7.56979,
@@ -22,6 +25,7 @@
             "timetable": ["8.15", "10.15", "13.15", "15.15", "17.15"]
         },
         {
+            "id": 4,
             "name": "Immigration Bus Stop",
             "latitude": 8.96113,
             "longitude": 7.2436,
@@ -29,6 +33,7 @@
             "timetable": ["8.25", "10.25", "13.25", "15.25", "17.25"]
         },
         {
+            "id": 5,
             "name": "Kuje/Kyami Bus Stop",
             "latitude": 8.95349,
             "longitude": 7.26371,
@@ -36,6 +41,7 @@
             "timetable": ["8.30", "10.30", "13.30", "15.30", "17.30"]
         },
         {
+            "id": 6,
             "name": "Police Bus Stop",
             "latitude": 8.97266,
             "longitude": 7.36307,
@@ -43,6 +49,7 @@
             "timetable": ["8.35", "10.35", "13.35", "15.35", "17.35"]
         },
         {
+            "id": 7,
             "name": "Dandata Bus Stop",
             "latitude": 9.00804,
             "longitude": 7.41695,
@@ -50,6 +57,7 @@
             "timetable": ["8.45", "10.45", "13.45", "17.45"]
         },
         {
+            "id": 8,
             "name": "Area 1 Bus Stop",
             "latitude": 9.02931,
             "longitude": 7.46921,
@@ -57,6 +65,7 @@
             "timetable": ["8.50", "10.50", "13.50", "15.50", "17.50"]
         },
         {
+            "id": 9,
             "name": "Lugbe Car-Wash Bus Stop",
             "latitude": 8.97698,
             "longitude": 7.3726,
@@ -64,6 +73,7 @@
             "timetable": ["9.00", "11.00", "16.00", "18.00"]
         },
         {
+            "id": 10,
             "name": "Berger Bus Stop",
             "latitude": 9.06688,
             "longitude": 7.45305,
@@ -71,6 +81,7 @@
             "timetable": ["9.15", "11.15", "14.15", "18.15"]
         },
         {
+            "id": 11,
             "name": "NNPC towers Bus Stop",
             "latitude": 9.05485,
             "longitude": 7.48441,
@@ -78,6 +89,7 @@
             "timetable": ["9.20", "11.20", "14.20", "16.20", "18.20"]
         },
         {
+            "id": 12,
             "name": "Shehu Shagari Wy",
             "latitude": 9.07054,
             "longitude": 7.49532,
@@ -85,6 +97,7 @@
             "timetable": ["9.25", "11.25", "14.25", "16.25", "18.25"]
         },
         {
+            "id": 13,
             "name": "Masaka last bus stop/turning",
             "latitude": 8.99429,
             "longitude": 7.6745,
@@ -92,6 +105,7 @@
             "timetable": ["8.00", "10.00", "13.00", "15.00", "17.00"]
         },
         {
+            "id": 14,
             "name": "Area1 junction, Masaka",
             "latitude": 9.00444,
             "longitude": 7.67132,
@@ -99,6 +113,7 @@
             "timetable": ["8.05", "10.05", "13.05", "15.05", "17.05"]
         },
         {
+            "id": 15,
             "name": "New nyanya bus stop",
             "latitude": 9.01291,
             "longitude": 7.64255,
@@ -106,6 +121,7 @@
             "timetable": ["8.15", "10.15", "13.15", "15.15", "17.15"]
         },
         {
+            "id": 16,
             "name": "Ado bus stop",
             "latitude": 9.01353,
             "longitude": 7.63299,
@@ -113,6 +129,7 @@
             "timetable": ["8.25", "10.25", "13.25", "15.25", "17.25"]
         },
         {
+            "id": 17,
             "name": "One man village bus stop",
             "latitude": 9.01493,
             "longitude": 7.62697,
@@ -120,6 +137,7 @@
             "timetable": ["8.30", "10.30", "13.30", "15.30", "17.30"]
         },
         {
+            "id": 18,
             "name": "International market junction",
             "latitude": 9.02084,
             "longitude": 7.60915,
@@ -127,6 +145,7 @@
             "timetable": ["8.35", "10.35", "13.35", "15.35", "17.35"]
         },
         {
+            "id": 19,
             "name": "Orange market junction",
             "latitude": 9.02303,
             "longitude": 7.60791,
@@ -134,6 +153,7 @@
             "timetable": ["8.45", "10.45", "13.45", "17.45"]
         },
         {
+            "id": 20,
             "name": "Mararaba junction",
             "latitude": 9.02662,
             "longitude": 7.60024,
@@ -141,6 +161,7 @@
             "timetable": ["8.50", "10.50", "13.50", "15.50", "17.50"]
         },
         {
+            "id": 21,
             "name": "Sharp corner bus stop,  Mararaba",
             "latitude": 9.03025,
             "longitude": 7.58943,
@@ -148,6 +169,7 @@
             "timetable": ["9.00", "11.00", "16.00", "18.00"]
         },
         {
+            "id": 22,
             "name": "Abacha road junction, Mararaba",
             "latitude": 9.02895,
             "longitude": 7.58537,
@@ -155,6 +177,7 @@
             "timetable": ["9.15", "11.15", "14.15", "18.15"]
         },
         {
+            "id": 23,
             "name": "Nyanya motor park",
             "latitude": 9.02327,
             "longitude": 7.57065,
@@ -162,6 +185,7 @@
             "timetable": ["8.00", "10.00", "13.00", "15.00", "17.00"]
         },
         {
+            "id": 24,
             "name": "Karu before bridge bus stop",
             "latitude": 9.02295,
             "longitude": 7.56199,
@@ -169,6 +193,7 @@
             "timetable": ["8.05", "10.05", "13.05", "15.05", "17.05"]
         },
         {
+            "id": 25,
             "name": "Kugbo furniture bus stop",
             "latitude": 9.02772,
             "longitude": 7.54927,
@@ -176,6 +201,7 @@
             "timetable": ["8.15", "10.15", "13.15", "15.15", "17.15"]
         },
         {
+            "id": 26,
             "name": "Mogadishu Barack bus stop",
             "latitude": 9.02627,
             "longitude": 7.51649,
@@ -183,6 +209,7 @@
             "timetable": ["8.25", "10.25", "13.25", "15.25", "17.25"]
         },
         {
+            "id": 27,
             "name": "AYA bus stop",
             "latitude": 9.05092,
             "longitude": 7.52743,
@@ -190,6 +217,7 @@
             "timetable": ["8.30", "10.30", "13.30", "15.30", "17.30"]
         },
         {
+            "id": 28,
             "name": "Court of appeal bus stop",
             "latitude": 9.05611,
             "longitude": 7.50409,
