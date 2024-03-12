@@ -35,6 +35,4 @@ if (localStorage.getItem("loggedInUser")) {
         localStorage.clear();
         window.location.href = "login.html";
     });
-} else {
-    login_button.textContent = "login";
 }
