@@ -11,10 +11,9 @@ fetch("../databases/POI.json")
             drop_down_menu.add(bus_stop_element);
         });
 
-        // Everytime new option is selected on the dropdown list it updated the selectedIndex variable and changed the timetable into correct one
+        // Everytime new option is selected on the dropdown list it updated the selectedIndex variable and changes the timetable into correct one
         drop_down_menu.addEventListener("change", () => {
             var selectedIndex = drop_down_menu.selectedIndex;
-            console.log(selectedIndex);
             var timetable = data.bus_stops[selectedIndex].timetable;
             timetables.textContent = timetable;
         });
