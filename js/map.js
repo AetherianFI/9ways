@@ -25,30 +25,61 @@ var random_bus_stops = L.layerGroup().addTo(map)
 var airport_to_city = L.layerGroup().addTo(map)
 
 
-// Create busIscon
-var busIcon = L.icon({
-    iconUrl: '../img/location.png', // Replace 'path/to/bus-icon.png' with the path to your bus icon image
-    iconSize: [50, 50], // Set the size of your icon
-    iconAnchor: [19, 38], // Set the anchor point of the icon
-    popupAnchor: [0, -38] // Set the popup anchor point
-})
+// Create busIcon
+var busIconRoute1 = L.icon({
+    iconUrl: '../img/icon4.png',
+    iconSize: [30, 30], // Set the size of the icon
+    iconAnchor: [15, 30], // Set the anchor point of the icon
+    popupAnchor: [0, -30] // Set the popup anchor point
+});
 
+var busIconRoute2 = L.icon({
+    iconUrl: '../img/icon6.png',
+    iconSize: [30, 30], // Set the size of the icon
+    iconAnchor: [15, 30], // Set the anchor point of the icon
+    popupAnchor: [0, -30] // Set the popup anchor point
+});
+
+var busIconRoute3 = L.icon({
+    iconUrl: '../img/icon8.png',
+    iconSize: [30, 30], // Set the size of the icon
+    iconAnchor: [15, 30], // Set the anchor point of the icon
+    popupAnchor: [0, -30] // Set the popup anchor point
+});
 
 fetch("../databases/POI.json")
     .then(response => response.json())
     .then(data => {
         // Process the JSON data and create markers
         // For example:
-        data.bus_stops.forEach(busStop => {
-            var popup = L.popup({ "maxWidth": 400, "maxHeight": 300 });
-            popup.setContent(`<div id="popup" style="width: 100.0%; height: 100.0%;"><h1 id="bus_stop_name">${busStop.name}</h1><br>Timetable for the bus stop:<p><code>Insert timetable here...</code></p></div>`);
-            var bus_marker = L.marker([busStop.latitude, busStop.longitude], { icon: busIcon })
-            if (busStop.color === "red") {
-                bus_marker.addTo(airport_to_city)
-            } else {
-                bus_marker.addTo(random_bus_stops)
+        data.bus_stops.forEach((busStop) => {
+            var popup = L.popup({ maxWidth: 400, maxHeight: 300 });
+            popup.setContent(
+                `<div id="popup" style="width: 100.0%; height: 100.0%;"><h1>${busStop.name}</h1><br>Timetable for the bus stop:<p><code>${busStop.timetable}</code></p></div>`
+            );
+
+            var busIcon;
+            if (busStop.route === 1) {
+                busIcon = busIconRoute1;
+            } else if (busStop.route === 2) {
+                busIcon = busIconRoute2;
+            } else if (busStop.route === 3) {
+                busIcon = busIconRoute3;
             }
-            bus_marker.bindPopup(popup)
+
+            var bus_marker = L.marker([busStop.latitude, busStop.longitude], {
+                icon: busIcon,
+            });
+            
+            if (busStop.route === 1) {
+                bus_marker.addTo(airport_to_city);
+            } else if (busStop.route === 2) {
+                bus_marker.addTo(route_2);
+            } else if (busStop.route === 3) {
+                bus_marker.addTo(route_3);
+            }
+
+            bus_marker.bindPopup(popup);
         });
     })
     .catch(error => console.error("Error loading JSON file:", error));
