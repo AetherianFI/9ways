@@ -19,11 +19,10 @@ var tileLayer = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
         '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
 }).addTo(map);
 
-// Create layer for bus stops that Noa found
-var random_bus_stops = L.layerGroup().addTo(map);
-
-// Create layer for bus stops from airport to city
+// Create layers for the different busstops routes
 var airport_to_city = L.layerGroup().addTo(map);
+var route_2 = L.layerGroup().addTo(map);
+var route_3 = L.layerGroup().addTo(map);
 
 // Create busIcon
 var busIconRoute1 = L.icon({
@@ -90,7 +89,8 @@ var control_scale = L.control.scale().addTo(map);
 // Create baselayer for bus stops
 var baseLayers = {
     "Airport to City": airport_to_city,
-    "Random Bus Stops": random_bus_stops,
+    "Route 2": route_2,
+    "Route 3": route_3,
 };
 
 // Add layer control so that markers can be toggled on & off
