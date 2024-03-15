@@ -138,7 +138,7 @@ form.addEventListener('submit', function (event) {
 }); */
 
 // For button creation
-function createButton(label, container) {
+/* function createButton(label, container) {
     var btn = L.DomUtil.create("button", "", container);
     btn.setAttribute("type", "button");
     btn.innerHTML = label;
@@ -162,4 +162,4 @@ map.on("click", function (e) {
         routing.spliceWaypoints(routing.getWaypoints().length - 1, 1, e.latlng);
         map.closePopup();
     });
-});
+}); */
