@@ -20,32 +20,33 @@ var tileLayer = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 }).addTo(map);
 
 // Create layers for the different busstops routes
-var airport_to_city = L.layerGroup().addTo(map);
-var route_2 = L.layerGroup().addTo(map);
-var route_3 = L.layerGroup().addTo(map);
+var airport_to_city = L.markerClusterGroup({ disableClusteringAtZoom: 13 }).addTo(map);
+var route_2 = L.markerClusterGroup({ disableClusteringAtZoom: 13 }).addTo(map);
+var route_3 = L.markerClusterGroup({ disableClusteringAtZoom: 13 }).addTo(map);
 
 // Create busIcon
 var busIconRoute1 = L.icon({
-    iconUrl: "../img/icon4.png",
-    iconSize: [30, 30], // Set the size of the icon
+    iconUrl: "../img/b.png",
+    iconSize: [80, 80], // Set the size of the icon
     iconAnchor: [15, 30], // Set the anchor point of the icon
     popupAnchor: [0, -30], // Set the popup anchor point
 });
 
 var busIconRoute2 = L.icon({
-    iconUrl: "../img/icon6.png",
-    iconSize: [30, 30], // Set the size of the icon
+    iconUrl: "../img/a.png",
+    iconSize: [80, 80], // Set the size of the icon
     iconAnchor: [15, 30], // Set the anchor point of the icon
     popupAnchor: [0, -30], // Set the popup anchor point
 });
 
 var busIconRoute3 = L.icon({
-    iconUrl: "../img/icon8.png",
-    iconSize: [30, 30], // Set the size of the icon
+    iconUrl: "../img/e.png",
+    iconSize: [80, 80], // Set the size of the icon
     iconAnchor: [15, 30], // Set the anchor point of the icon
     popupAnchor: [0, -30], // Set the popup anchor point
 });
 
+// Fetch bus stop data from JSON file
 fetch("../databases/POI.json")
     .then((response) => response.json())
     .then((data) => {

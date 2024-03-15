@@ -79,3 +79,19 @@ header {
 #login_button {
     cursor: pointer;
 }
+
+.marker-cluster{
+    background: linear-gradient(
+        90deg,
+        rgba(0, 132, 255, 0.356) 0%,
+        rgba(72, 33, 243, 0.842) 100%
+    );
+}
+
+.marker-cluster div {
+    background: linear-gradient(
+        90deg,
+        rgba(22, 255, 255, 0.733) 0%,
+        rgba(87, 20, 243, 0.801) 100%
+    );
+}
