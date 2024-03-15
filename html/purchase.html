@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tickets - 9ways</title>
+
+        <!-- BASIC PAGE CSS -->
+        <link rel="stylesheet" href="../styles/main.css" />
+
+        <!-- BOXICONS CSS -->
+        <link
+            href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+            rel="stylesheet"
+            
+        />
+        
+        
+
+
+    </head>
+
+    <body>
+        <!-- HEADER BAR -->
+        <header>
+            <div class="header-logo">
+                <img src="../img/logo.png" alt="9ways" />
+            </div>
+            <nav class="left-links">
+                <a href="map.html">Home</a>
+                <a href="tracking.html">Tracking</a>
+                <a href="directions.html">Directions</a>
+                <a href="tickets.html">Tickets</a>
+                <a href="routes.html">Routes</a>
+                <a href="controlpanel.html">Control Panel</a>
+            </nav>
+
+            <div class="right-links">
+                <a href="userpage.html"
+                    ><i class="bx bxs-user-account"></i> User</a
+                >
+                <a href="contact.html"
+                    ><i class="bx bxs-envelope"></i> Contact us</a
+                >
+                <a href="login.html" id="login_button"
+                    ><i class="bx bxs-user"></i> Login</a
+                >
+                <a><i class="bx bx-globe"></i> English</a>
+            </div>
+        </header> 
+        
+        <div class="wrapper">
+            <h2>Payment methods</h2>
+            <form method="post">
+                <h4> Account</h4>
+                <div class="input-group">
+                    <div class="input-box">
+                        <input type="text"
+                        placeholder="Full name" required
+                        class="name">
+                        <i class="fa fa-user icon" ></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="text"
+                        placeholder="Nick Name" required
+                        class="name">
+                        <i class="#"></i>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-box">
+                        <input type="email"
+                        placeholder="Email address" required
+                        class="name">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-box">
+                        <h4>Date of Birth</h4>
+                        <input type="text" placeholder="DD"
+                        class="dob">
+                        <input type="text" placeholder="MM"
+                        class="dob">
+                        <input type="text" placeholder="YYYY"
+                        class="dob">
+                    </div>
+                    <div class="input-box">
+                        <h4>Gender</h4>
+                        <input type="radio" id="b1"
+                        name="gender" checked class="radio">
+                        <label for="b1">Male</label>
+                        <input type="radio" id="b2"
+                        name="gender" checked class="radio">
+                        <label for="b2">Female</label>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-box">
+                        <h4>Payment Details</h4>
+                        <input type="radio" name="pay"
+                        id="bc1" checked class="radio">
+                        <label for="bc1"><span><i class="fa fa-cc-visa"></i>Credit Card</span></label>
+                        <input type="radio" name="pay"
+                        id="bc2" checked class="radio">
+                        <label for="bc2"><span><i class="fa fa-cc-visa"></i>PayPal</span></label>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div class="input-box">
+                        <input type="tel" placeholder="Card Number"
+                        required class="name">
+                        <i class="fa fa-credit-card icon"></i>
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+        
+
+
+
+    </body>
