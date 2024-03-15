@@ -137,6 +137,7 @@ form.addEventListener('submit', function (event) {
     });
 }); */
 
+// Moi
 // For button creation
 /* function createButton(label, container) {
     var btn = L.DomUtil.create("button", "", container);
