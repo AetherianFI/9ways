@@ -43,8 +43,8 @@ if (username) {
 
         // Define a custom bus icon
         var busIcon = L.icon({
-            iconUrl: "../img/location.png", // Replace 'path/to/bus-icon.png' with the path to your bus icon image
-            iconSize: [50, 50], // Set the size of your icon
+            iconUrl: "../img/bus.png", // Replace 'path/to/bus-icon.png' with the path to your bus icon image
+            iconSize: [40, 40], // Set the size of your icon
             iconAnchor: [19, 38], // Set the anchor point of the icon
             popupAnchor: [0, -38], // Set the popup anchor point
         });
