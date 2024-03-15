@@ -40,5 +40,7 @@ The icons used on the website are sourced from [Boxicons](https://boxicons.com/)
 
 [leaflet-routing-machine](https://github.com/perliedman/leaflet-routing-machine?tab=License-1-ov-file) ([see license](https://github.com/perliedman/leaflet-routing-machine/blob/master/LICENSE.md)).
 
+[Leaflet.markercluster](https://github.com/Leaflet/Leaflet.markercluster) ([see license](https://github.com/Leaflet/Leaflet.markercluster/blob/master/MIT-LICENCE.txt))
+
 ## For getting started with LeafletJS:
 https://leafletjs.com/reference.html
