@@ -45,6 +45,17 @@
         />
         <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
 
+        <!-- Leaflet.markercluster plugin -->
+        <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css"
+        />
+
         <!-- BOXICONS CSS -->
         <link
             href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -84,12 +95,6 @@
         <!-- Adds the map and all the functionality -->
         <div id="map"></div>
     </body>
-
-    <!-- Leaflet.markercluster plugin -->
-    <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
-
 
     <!-- LOGIN.JS FILE THAT HANDLES THE LOGOUT BUTTON AND LOGGING IN -->
     <script src="../js/login.js"></script>
@@ -136,8 +141,8 @@
             btn.setAttribute("type", "button");
             btn.innerHTML = label;
             return btn;
-        };
-        
+        }
+
         // On click events
         map.on("click", function (e) {
             var container = L.DomUtil.create("div"),
@@ -152,10 +157,13 @@
             });
 
             L.DomEvent.on(destBtn, "click", function () {
-                routing.spliceWaypoints(routing.getWaypoints().length - 1, 1, e.latlng);
+                routing.spliceWaypoints(
+                    routing.getWaypoints().length - 1,
+                    1,
+                    e.latlng
+                );
                 map.closePopup();
             });
         });
-
     </script>
 </html>
