@@ -23,7 +23,7 @@
     padding: 10px;
     margin-bottom: 20px;
     text-align: center;
-    border: 1px dotted black;
+    text-decoration-line: underline;
     
 
 }
@@ -51,21 +51,6 @@ h4{
 .input-box:last-child{
     margin-right: 0;
 }
-
-.input-box label{
-    width: 50%;
-    padding: 13px;
-    background-color: #fcfcfc;
-    display: inline-block;
-    float: left;
-    text-align: center;
-    border: 1px solid rgb(0, 0, 0);
-    border-radius: 4px;
-}
-
-.radio{
-    display: none;
-}
 .name{
     padding: 14px 10px 14px 50px;
     width: 100%;
@@ -79,16 +64,31 @@ h4{
 
 }
 
-button{
-    width: 100%;
-    background: transparent;
+
+.input-box .icon{
+    width: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    color: #000000;
+    background-color: #f3f3f3;
+    border-radius: 2px 0 0 2px;
+    transition: 0.3s;
+    font-size: 20px;
+    pointer-events: none;
+    border: 1px solid black;
+}
+
+.name:focus + .icon{
+    background-color: blueviolet;
+    color: #fff;
+    border-right: 1px solid blueviolet;
     border: none;
-    background: blueviolet;
-    color: #fcfcfc;
-    padding: 15px;
-    border-radius: 4px;
-    font-size: 16px;
-    transition: all 0.35s ease;
+    transition: 1s;
 }
 
 .dob{
@@ -101,7 +101,79 @@ button{
     border: 1px solid #000000;
     border-radius: 3px;
 }
+.radio{
+    display: none;
+}
+.input-box label{
+    width: 50%;
+    padding: 13px;
+    background-color: #fcfcfc;
+    display: inline-block;
+    float: left;
+    text-align: center;
+    border: 1px solid black;
+    
+    
+}
+
+.input-box  label i{
+    font-size: x-large;
+  
+}
+
+.input-box label:first-of-type{
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-right: none;
+}
+
+.input-box label:last-of-type{
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+.radio:checked + label{
+    background-color: blueviolet;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.input-box select{
+    display: inline-block;
+    width: 50%;
+    padding: 12px;
+    background-color: #fff;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    outline: none;
+    border: 1px solid #000000;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+}
+
+
+
+button{
+    width: 100%;
+    background: transparent;
+    border: none;
+    background: blueviolet;
+    color: #fcfcfc;
+    padding: 15px;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: all 0.35s ease;
+}
+
+
 
 h3{
+    
     width: 100%; 
+    background-color: #f2f2f2;
+    align-items: center;
+    text-align: center;
+    display: inline-block;
+    border-radius: 3px;
 }
