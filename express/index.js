@@ -47,6 +47,47 @@ app.post("/saveFormData", (req, res) => {
     });
 });
 
+// Handles the request regarding timetable updates
+app.post("/updateTimetable", (req, res) => {
+    const timetableData = req.body;
+
+    fs.readFile("../databases/POI.json", "utf8", (err, data) => {
+        if (err) {
+            console.log(err);
+            res.status(500).send("Error reading POI.json file");
+            return;
+        } else {
+            // Transforms data into json format
+            let parsedData = JSON.parse(data);
+
+            // get the index of the time dropdown menu
+            let index = timetableData["timetable_index"];
+
+            for (let i = 0; i < parsedData["bus_stops"].length; i++) {
+                if (
+                    parsedData["bus_stops"][i]["name"] ===
+                    timetableData["bus_stop"]
+                ) {
+                    parsedData["bus_stops"][i]["timetable"][index] =
+                        timetableData["updated_time"];
+                }
+            }
+            var updatedParsedData = JSON.stringify(parsedData);
+
+            // Write the updated data back to the file
+            fs.writeFile("../databases/POI.json", updatedParsedData, (err) => {
+                if (err) {
+                    console.error(err);
+                    res.status(500).send("Error writing to POI.json file");
+                } else {
+                    console.log("Data updated successfully");
+                    res.status(200).send("Data updated successfully");
+                }
+            });
+        }
+    });
+});
+
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });

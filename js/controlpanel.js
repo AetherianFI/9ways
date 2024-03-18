@@ -7,7 +7,7 @@ fetch("../databases/POI.json")
     .then((data) => {
         data.bus_stops.forEach((busStop) => {
             var bus_stop_element = document.createElement("option");
-            bus_stop_element.textContent = `${busStop.id}. ${busStop.name}`;
+            bus_stop_element.textContent = `${busStop.name}`;
             drop_down_menu.add(bus_stop_element);
         });
 
@@ -28,6 +28,39 @@ fetch("../databases/POI.json")
         });
     });
 
-function updateTimetables(event) {
+// Regular expression for the new time user inputs (checks if the time is in xx.xx format)
+let regex = /\b\d{2}\.\d{2}\b/;
+
+const timetableForm = document.getElementById("timetableForm");
+
+timetableForm.addEventListener("submit", (event) => {
+    // Prevents normal form submission behaviour
     event.preventDefault();
-}
+
+    // Creates form from the data of the timetableForm
+    const timetableData = new FormData(timetableForm);
+
+    // Gets the index of the timetable dropdown menu and adds it to the request
+    var timetableIndex = time_list.selectedIndex;
+    timetableData.append("timetable_index", timetableIndex);
+
+    // Changes data into dictionary datatype
+    const data = Object.fromEntries(timetableData);
+
+    // If new time is in correct format then send the POST request
+    if (regex.test(data["updated_time"])) {
+        fetch("http://localhost:3000/updateTimetable", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+        })
+            .then((res) => res.text())
+            .then((data) => console.log(data))
+            .catch((error) => console.log(error));
+    } else {
+        alert("New time has to be in xx.xx format e.g. 08:27");
+        console.log("Error while updating the timetables");
+    }
+});

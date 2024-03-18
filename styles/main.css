@@ -80,7 +80,7 @@ header {
     cursor: pointer;
 }
 
-.marker-cluster{
+.marker-cluster {
     background: linear-gradient(
         90deg,
         rgba(0, 132, 255, 0.356) 0%,
@@ -95,4 +95,3 @@ header {
         rgba(87, 20, 243, 0.801) 100%
     );
 }
-
