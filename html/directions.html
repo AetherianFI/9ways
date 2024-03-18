@@ -45,6 +45,17 @@
         />
         <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
 
+        <!-- Leaflet.markercluster plugin -->
+        <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css"
+        />
+
         <!-- BOXICONS CSS -->
         <link
             href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -64,6 +75,7 @@
                 <a href="directions.html">Directions</a>
                 <a href="tickets.html">Tickets</a>
                 <a href="routes.html">Routes</a>
+                <a href="controlpanel.html">Control Panel</a>
             </nav>
 
             <div class="right-links">
@@ -73,7 +85,9 @@
                 <a href="contact.html"
                     ><i class="bx bxs-envelope"></i> Contact us</a
                 >
-                <a href="login.html"><i class="bx bxs-user"></i> Login</a>
+                <a href="login.html" id="login_button"
+                    ><i class="bx bxs-user"></i> Login</a
+                >
                 <a><i class="bx bx-globe"></i> English</a>
             </div>
         </header>
@@ -82,10 +96,35 @@
         <div id="map"></div>
     </body>
 
+    <!-- LOGIN.JS FILE THAT HANDLES THE LOGOUT BUTTON AND LOGGING IN -->
+    <script src="../js/login.js"></script>
+
     <!--ALL THE MAP FUNCTIONS, MARKERS ETC. ARE LOCATED IN THE MAP.JS FILE-->
     <script src="../js/map.js"></script>
 
     <script>
+        // REVERSIBLE BUTTON; NOT WORKING YET
+        /* var ReversablePlan = L.Routing.Plan.extend({
+            createGeocoders: function() {
+                var container = L.Routing.Plan.prototype.createGeocoders.call(this),
+                    reverseWaypoint: true;
+                 return container;
+            }
+        });
+
+        
+        var routing = new ReversablePlan({
+            waypoints: [L.latLng(9.05258, 7.46182), L.latLng(9.03324, 7.47639)],
+            routeWhileDragging: true,
+            geocoder: L.Control.Geocoder.nominatim(),
+            lineOptions: {
+                styles: [{ color: "blue", opacity: 0.7, weight: 6 }],
+            }}),
+            control = L.Routing.control({
+                routeWhileDragging: true,
+                plan : plan
+        }).addTo(map); */
+
         // Add routing service with user input (routing machine)
         var routing = L.Routing.control({
             waypoints: [L.latLng(9.05258, 7.46182), L.latLng(9.03324, 7.47639)],
@@ -95,5 +134,36 @@
                 styles: [{ color: "blue", opacity: 0.7, weight: 6 }],
             },
         }).addTo(map);
+
+        // For button creation
+        function createButton(label, container) {
+            var btn = L.DomUtil.create("button", "", container);
+            btn.setAttribute("type", "button");
+            btn.innerHTML = label;
+            return btn;
+        }
+
+        // On click events
+        map.on("click", function (e) {
+            var container = L.DomUtil.create("div"),
+                startBtn = createButton("Start from this location", container),
+                destBtn = createButton("Go to this location", container);
+
+            L.popup().setContent(container).setLatLng(e.latlng).openOn(map);
+
+            L.DomEvent.on(startBtn, "click", function () {
+                routing.spliceWaypoints(0, 1, e.latlng);
+                map.closePopup();
+            });
+
+            L.DomEvent.on(destBtn, "click", function () {
+                routing.spliceWaypoints(
+                    routing.getWaypoints().length - 1,
+                    1,
+                    e.latlng
+                );
+                map.closePopup();
+            });
+        });
     </script>
 </html>

@@ -31,7 +31,7 @@ Existing accounts can be found from the accounts.json.
 Creating account happens on register.html page and submitted form data is then sent to express.js server (express/index.js) that receives the data and saves it into accounts.json.
 
 ## Acknowledgments
-All icons used on the website are from [Boxicons](https://boxicons.com/) ([see license](https://boxicons.com/usage#license)).
+The icons used on the website are sourced from [Boxicons](https://boxicons.com/) ([see license](https://boxicons.com/usage#license)) and [Icons8](https://icons8.com/) ([see license](https://icons8.com/license)).
 
 ### Project uses following LeafletJS plugins:
 [leaflet-control-geocoder](https://github.com/perliedman/leaflet-control-geocoder) ([see license](https://github.com/perliedman/leaflet-control-geocoder/blob/master/LICENSE)).
@@ -39,6 +39,8 @@ All icons used on the website are from [Boxicons](https://boxicons.com/) ([see l
 [Leaflet.MousePosition](https://github.com/ardhi/Leaflet.MousePosition) ([see license](https://github.com/ardhi/Leaflet.MousePosition/blob/master/MIT-LICENCE.txt)).
 
 [leaflet-routing-machine](https://github.com/perliedman/leaflet-routing-machine?tab=License-1-ov-file) ([see license](https://github.com/perliedman/leaflet-routing-machine/blob/master/LICENSE.md)).
+
+[Leaflet.markercluster](https://github.com/Leaflet/Leaflet.markercluster) ([see license](https://github.com/Leaflet/Leaflet.markercluster/blob/master/MIT-LICENCE.txt))
 
 ## For getting started with LeafletJS:
 https://leafletjs.com/reference.html

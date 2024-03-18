@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Tickets - 9ways</title>
+        <title>Control Panel - 9ways</title>
 
         <!-- BASIC PAGE CSS -->
         <link rel="stylesheet" href="../styles/main.css" />
-        <link rel="stylesheet" href="../styles/tickets.css" />
 
         <!-- BOXICONS CSS -->
         <link
@@ -23,6 +21,7 @@
             <div class="header-logo">
                 <img src="../img/logo.png" alt="9ways" />
             </div>
+
             <nav class="left-links">
                 <a href="map.html">Home</a>
                 <a href="tracking.html">Tracking</a>
@@ -46,43 +45,23 @@
             </div>
         </header>
 
-        <!--Ticket types-->
+        <!-- TIMETABLE UPDATER -->
+        <div id="timetable_updater">
+            <form onsubmit="updateTimetables(event)">
+                <select id="bus_stop_list"></select>
 
-        <div class="wrapper">
-            <h1>Ticket types</h1>
+                <select id="time_selection"></select>
 
-            <div class="button-container">
-                <h2>Day ticket (5,99€)</h2>
-                <div class="button-box">
-                    <span class="minus">&minus;</span>
-                    <span class="num">0</span>
-                    <span class="add">&plus;</span>
-                </div>
-            </div>
+                <input type="text" placeholder="New time" required />
 
-            <div class="button-container">
-                <h2>Single ticket (5,99€)</h2>
-                <div class="button-box">
-                    <span class="minus">&minus;</span>
-                    <span class="num">0</span>
-                    <span class="add">&plus;</span>
-                </div>
-            </div>
-            <div class="button-container">
-                <h2>Monthly pass (29,99€)</h2>
-                <div class="button-box">
-                    <span class="minus">&minus;</span>
-                    <span class="num">0</span>
-                    <span class="add">&plus;</span>
-                </div>
-            </div>
-            <button class="purchase-button">
-                <a href="purchase.html"> Purchase</a>
-                <!-- replace # with the purchase html page-->
-            </button>
+                <input type="submit" value="Update" />
+            </form>
         </div>
     </body>
 
+    <!-- LOGIN.JS FILE THAT HANDLES THE LOGOUT BUTTON AND LOGGING IN -->
     <script src="../js/login.js"></script>
-    <script src="../js/ticket.js"></script>
+
+    <!-- GENERATES THE BUSSTOPS INTO THE DROPDOWN MENU AND HANDLES UPDATING THE TIMETABLES -->
+    <script src="../js/controlpanel.js"></script>
 </html>

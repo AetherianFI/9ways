@@ -20,19 +20,33 @@ var tileLayer = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 }).addTo(map);
 
 // Create layers for the different busstops routes
-var airport_to_city = L.layerGroup().addTo(map);
-var route_2 = L.layerGroup().addTo(map);
-var route_3 = L.layerGroup().addTo(map);
+var airport_to_city = L.markerClusterGroup({ disableClusteringAtZoom: 13 }).addTo(map);
+var route_2 = L.markerClusterGroup({ disableClusteringAtZoom: 13 }).addTo(map);
+var route_3 = L.markerClusterGroup({ disableClusteringAtZoom: 13 }).addTo(map);
 
-// Create busIscon
-var busIcon = L.icon({
-    iconUrl: "../img/location.png", // Replace 'path/to/bus-icon.png' with the path to your bus icon image
-    iconSize: [50, 50], // Set the size of your icon
-    iconAnchor: [19, 38], // Set the anchor point of the icon
-    popupAnchor: [0, -38], // Set the popup anchor point
+// Create busIcon
+var busIconRoute1 = L.icon({
+    iconUrl: "../img/b.png",
+    iconSize: [80, 80], // Set the size of the icon
+    iconAnchor: [15, 30], // Set the anchor point of the icon
+    popupAnchor: [0, -30], // Set the popup anchor point
 });
 
-// Draw markers on the map from POI.json
+var busIconRoute2 = L.icon({
+    iconUrl: "../img/a.png",
+    iconSize: [80, 80], // Set the size of the icon
+    iconAnchor: [15, 30], // Set the anchor point of the icon
+    popupAnchor: [0, -30], // Set the popup anchor point
+});
+
+var busIconRoute3 = L.icon({
+    iconUrl: "../img/e.png",
+    iconSize: [80, 80], // Set the size of the icon
+    iconAnchor: [15, 30], // Set the anchor point of the icon
+    popupAnchor: [0, -30], // Set the popup anchor point
+});
+
+// Fetch bus stop data from JSON file
 fetch("../databases/POI.json")
     .then((response) => response.json())
     .then((data) => {
@@ -41,20 +55,30 @@ fetch("../databases/POI.json")
         data.bus_stops.forEach((busStop) => {
             var popup = L.popup({ maxWidth: 400, maxHeight: 300 });
             popup.setContent(
-                `<div id="popup" style="width: 100.0%; height: 100.0%;"><h1>${busStop.name}</h1><br>Timetable for the bus stop:<p><code>${busStop.timetable}</code></p></div>`
+                `<div id="popup" style="width: 100.0%; height: 100.0%;"><h1>${busStop.id}. ${busStop.name}</h1><br>Timetable for the bus stop:<p><code>${busStop.timetable}</code></p></div>`
             );
+
+            var busIcon;
+            if (busStop.route === 1) {
+                busIcon = busIconRoute1;
+            } else if (busStop.route === 2) {
+                busIcon = busIconRoute2;
+            } else if (busStop.route === 3) {
+                busIcon = busIconRoute3;
+            }
+
             var bus_marker = L.marker([busStop.latitude, busStop.longitude], {
                 icon: busIcon,
             });
+
             if (busStop.route === 1) {
                 bus_marker.addTo(airport_to_city);
-            }
-            if (busStop.route === 2) {
+            } else if (busStop.route === 2) {
                 bus_marker.addTo(route_2);
-            }
-            if (busStop.route === 3) {
+            } else if (busStop.route === 3) {
                 bus_marker.addTo(route_3);
             }
+
             bus_marker.bindPopup(popup);
         });
     })
@@ -73,7 +97,7 @@ var baseLayers = {
 // Add layer control so that markers can be toggled on & off
 var layer_control = L.control.layers(null, baseLayers).addTo(map);
 
-// Add control geocoder(Search bar)
+// Add geocoder control (Search bar)
 var geocoder = L.Control.geocoder({
     position: "topright",
     expand: "hover",
@@ -83,27 +107,3 @@ var geocoder = L.Control.geocoder({
 var mousePosition = L.control
     .mousePosition({ position: "bottomright" })
     .addTo(map);
-
-// Marker
-/* var marker = L.marker([9.0664, 7.45706]).addTo(map); */
-
-// On click event for creating markers
-/* map.on('click', function (e)
-    {
-        if (markerAmount <= 1)
-        {
-        // console.log(e)
-        var secondMarker = L.marker([e.latlng.lat, e.latlng.lng]).addTo(map);
-        markerAmount += 1
-            log.debug(markerAmount);
-        
-        L.Routing.control
-        ({
-            waypoints: [L.latLng([9.0664, 7.45706]), L.latLng(secondMarker)] , 
-            lineOptions: 
-            {
-                styles: [{ color: 'blue', opacity: 0.6, weight: 6 }]
-            }
-        }).addTo(map);
-        }
-    }) */
