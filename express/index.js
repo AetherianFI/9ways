@@ -58,6 +58,8 @@ app.post("/updateTimetable", (req, res) => {
         } else {
             // Transforms data into json format
             let parsedData = JSON.parse(data);
+
+            // get the index of the time dropdown menu
             let index = timetableData["timetable_index"];
 
             for (let i = 0; i < parsedData["bus_stops"].length; i++) {
@@ -65,16 +67,25 @@ app.post("/updateTimetable", (req, res) => {
                     parsedData["bus_stops"][i]["name"] ===
                     timetableData["bus_stop"]
                 ) {
-                    console.log(parsedData["bus_stops"][i]["name"]);
+                    parsedData["bus_stops"][i]["timetable"][index] =
+                        timetableData["time"];
                     console.log(parsedData["bus_stops"][i]["timetable"]);
-                    console.log(parsedData["bus_stops"][i]["timetable"][index]);
                 }
             }
+            var updatedParsedData = JSON.stringify(parsedData);
+
+            // Write the updated data back to the file
+            fs.writeFile("../databases/POI.json", updatedParsedData, (err) => {
+                if (err) {
+                    console.error(err);
+                    res.status(500).send("Error writing to POI.json file");
+                } else {
+                    console.log("Data updated successfully");
+                    res.status(200).send("Data updated successfully");
+                }
+            });
         }
     });
-
-    res.status(200);
-    res.send({ response: "request handled succesfully" });
 });
 
 app.listen(port, () => {
