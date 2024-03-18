@@ -1,20 +1,31 @@
 const express = require("express");
 const cors = require("cors");
 const fs = require("fs");
+const path = require("path");
 const app = express();
 const port = 3000;
+
+const accounts_json_path = path.join(
+    __dirname,
+    "public",
+    "databases",
+    "accounts.json"
+);
+const poi_json_path = path.join(__dirname, "public", "databases", "POI.json");
 
 app.use(express.json());
 app.use(cors()); // Use the cors middleware
 
-// Receives POST requests from /saveFormData endpoit on port 3000
+app.use(express.static(path.join(__dirname, "public")));
+
+// Receives POST requests from register.js
 // Reads accounts.json and if there's already any data there then saves that to "existingData" variable
 // New received data from POST request is also added to "existingData" variable and that is stringified and added to accounts.json
 app.post("/saveFormData", (req, res) => {
     const formData = req.body;
 
     // Read existing data from the file (if it exists)
-    fs.readFile("../databases/accounts.json", (err, data) => {
+    fs.readFile(accounts_json_path, (err, data) => {
         if (err) {
             console.error(err);
             res.status(500).send("Error reading form data from accounts.json");
@@ -35,7 +46,7 @@ app.post("/saveFormData", (req, res) => {
         const jsonFormData = JSON.stringify(existingData);
 
         // Write the updated data back to the file
-        fs.writeFile("../databases/accounts.json", jsonFormData, (err) => {
+        fs.writeFile(accounts_json_path, jsonFormData, (err) => {
             if (err) {
                 console.error(err);
                 res.status(500).send("Error saving form data to accounts.json");
@@ -51,7 +62,7 @@ app.post("/saveFormData", (req, res) => {
 app.post("/updateTimetable", (req, res) => {
     const timetableData = req.body;
 
-    fs.readFile("../databases/POI.json", "utf8", (err, data) => {
+    fs.readFile(poi_json_path, "utf8", (err, data) => {
         if (err) {
             console.log(err);
             res.status(500).send("Error reading POI.json file");
@@ -75,7 +86,7 @@ app.post("/updateTimetable", (req, res) => {
             var updatedParsedData = JSON.stringify(parsedData);
 
             // Write the updated data back to the file
-            fs.writeFile("../databases/POI.json", updatedParsedData, (err) => {
+            fs.writeFile(poi_json_path, updatedParsedData, (err) => {
                 if (err) {
                     console.error(err);
                     res.status(500).send("Error writing to POI.json file");
