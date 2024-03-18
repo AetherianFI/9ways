@@ -113,6 +113,12 @@ h4{
     text-align: center;
     border: 1px solid black;
     
+    
+}
+
+.input-box  label i{
+    font-size: x-large;
+  
 }
 
 .input-box label:first-of-type{
@@ -131,6 +137,23 @@ h4{
     transition: 0.5s;
 }
 
+.input-box select{
+    display: inline-block;
+    width: 50%;
+    padding: 12px;
+    background-color: #fff;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    outline: none;
+    border: 1px solid #000000;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+}
+
+
+
 button{
     width: 100%;
     background: transparent;
@@ -146,5 +169,11 @@ button{
 
 
 h3{
+    
     width: 100%; 
+    background-color: #f2f2f2;
+    align-items: center;
+    text-align: center;
+    display: inline-block;
+    border-radius: 3px;
 }
