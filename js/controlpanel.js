@@ -28,6 +28,38 @@ fetch("../databases/POI.json")
         });
     });
 
-function updateTimetables(event) {
+// Regular expression for the new time user inputs (checks if the time is in xx:xx format)
+let regex = /\b\d{2}:\d{2}\b/;
+
+const timetableForm = document.getElementById("timetableForm");
+
+timetableForm.addEventListener("submit", (event) => {
+    // Prevents normal form submission behaviour
     event.preventDefault();
-}
+
+    // Creates form from the data of the timetableForm
+    const timetableData = new FormData(timetableForm);
+
+    // Changes data into dictionary datatype
+    const data = Object.fromEntries(timetableData);
+
+    // testing
+    console.log(regex.test(data["updated_time"]));
+    console.log(data);
+
+    // If new time is in correct format then send the POST request
+    if (regex.test(data["updated_time"])) {
+        fetch("http://localhost:3000/updateTimetable", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+        })
+            .then((res) => res.text())
+            .then((data) => console.log(data))
+            .catch((error) => console.log(error));
+    } else {
+        console.log("Error while updating the timetables");
+    }
+});

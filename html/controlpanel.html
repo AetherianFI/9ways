@@ -45,12 +45,17 @@
 
         <!-- TIMETABLE UPDATER -->
         <div id="timetable_updater">
-            <form onsubmit="updateTimetables(event)">
-                <select id="bus_stop_list"></select>
+            <form id="timetableForm">
+                <select id="bus_stop_list" name="bus_stop" required></select>
 
-                <select id="time_selection"></select>
+                <select id="time_selection" name="time" required></select>
 
-                <input type="text" placeholder="New time" required />
+                <input
+                    type="text"
+                    name="updated_time"
+                    placeholder="New time"
+                    required
+                />
 
                 <input type="submit" value="Update" />
             </form>

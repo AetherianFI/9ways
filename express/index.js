@@ -47,6 +47,14 @@ app.post("/saveFormData", (req, res) => {
     });
 });
 
+app.post("/updateTimetable", (req, res) => {
+    const timetableData = req.body;
+    const a = JSON.stringify(timetableData);
+    console.log(a);
+    res.status(207);
+    res.send("test response");
+});
+
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
