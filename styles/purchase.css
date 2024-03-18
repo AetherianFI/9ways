@@ -1,22 +1,21 @@
-*{
-    margin:0;
+* {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
-.wrapper{
+.wrapper {
     background-color: rgb(251, 251, 251);
     width: 500px;
     padding: 25px;
     margin: 25px auto;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0 , 0.5);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
-    background-color:  rgb(253, 253, 253);
+    background-color: rgb(253, 253, 253);
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.wrapper h2{
+.wrapper h2 {
     background-color: #fcfcfc;
     color: blueviolet;
     font-size: 24px;
@@ -24,16 +23,14 @@
     margin-bottom: 20px;
     text-align: center;
     text-decoration-line: underline;
-    
-
 }
 
-h4{
+h4 {
     padding-bottom: 5px;
     color: blueviolet;
 }
 
-.input-group{
+.input-group {
     margin-bottom: 8px;
     width: 100%;
     position: relative;
@@ -42,16 +39,16 @@ h4{
     padding: 5px 0;
 }
 
-.input-box{
+.input-box {
     width: 100%;
     margin-right: 12px;
     position: relative;
 }
 
-.input-box:last-child{
+.input-box:last-child {
     margin-right: 0;
 }
-.name{
+.name {
     padding: 14px 10px 14px 50px;
     width: 100%;
     background-color: #fcfcfc;
@@ -61,11 +58,9 @@ h4{
     transition: 0.3s;
     border-radius: 3px;
     color: black;
-
 }
 
-
-.input-box .icon{
+.input-box .icon {
     width: 48px;
     display: flex;
     justify-content: center;
@@ -83,7 +78,7 @@ h4{
     border: 1px solid black;
 }
 
-.name:focus + .icon{
+.name:focus + .icon {
     background-color: blueviolet;
     color: #fff;
     border-right: 1px solid blueviolet;
@@ -91,7 +86,7 @@ h4{
     transition: 1s;
 }
 
-.dob{
+.dob {
     width: 30%;
     padding: 14px;
     text-align: center;
@@ -101,10 +96,10 @@ h4{
     border: 1px solid #000000;
     border-radius: 3px;
 }
-.radio{
+.radio {
     display: none;
 }
-.input-box label{
+.input-box label {
     width: 50%;
     padding: 13px;
     background-color: #fcfcfc;
@@ -112,32 +107,29 @@ h4{
     float: left;
     text-align: center;
     border: 1px solid black;
-    
-    
 }
 
-.input-box  label i{
+.input-box label i {
     font-size: x-large;
-  
 }
 
-.input-box label:first-of-type{
+.input-box label:first-of-type {
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
     border-right: none;
 }
 
-.input-box label:last-of-type{
+.input-box label:last-of-type {
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
 }
-.radio:checked + label{
+.radio:checked + label {
     background-color: blueviolet;
     color: #fff;
     transition: 0.5s;
 }
 
-.input-box select{
+.input-box select {
     display: inline-block;
     width: 50%;
     padding: 12px;
@@ -149,12 +141,9 @@ h4{
     border: 1px solid #000000;
     cursor: pointer;
     transition: all 0.2s ease;
-
 }
 
-
-
-button{
+button {
     width: 100%;
     background: transparent;
     border: none;
@@ -166,11 +155,8 @@ button{
     transition: all 0.35s ease;
 }
 
-
-
-h3{
-    
-    width: 100%; 
+h3 {
+    width: 100%;
     background-color: #f2f2f2;
     align-items: center;
     text-align: center;
