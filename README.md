@@ -44,3 +44,6 @@ The icons used on the website are sourced from [Boxicons](https://boxicons.com/)
 
 ## For getting started with LeafletJS:
 https://leafletjs.com/reference.html
+
+## Known problems
+When accessing the page with Firefox browser there are problems with downloading the css files so using Chrome is recommended
