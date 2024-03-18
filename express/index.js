@@ -67,9 +67,11 @@ app.post("/updateTimetable", (req, res) => {
                     parsedData["bus_stops"][i]["name"] ===
                     timetableData["bus_stop"]
                 ) {
+                    console.log(parsedData["bus_stops"][i]["timetable"][index]);
+                    console.log(timetableData["updated_time"]);
+
                     parsedData["bus_stops"][i]["timetable"][index] =
-                        timetableData["time"];
-                    console.log(parsedData["bus_stops"][i]["timetable"]);
+                        timetableData["updated_time"];
                 }
             }
             var updatedParsedData = JSON.stringify(parsedData);

@@ -29,7 +29,7 @@ fetch("../databases/POI.json")
     });
 
 // Regular expression for the new time user inputs (checks if the time is in xx:xx format)
-let regex = /\b\d{2}:\d{2}\b/;
+let regex = /\b\d{2}.\d{2}\b/;
 
 const timetableForm = document.getElementById("timetableForm");
 
