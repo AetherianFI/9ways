@@ -40,6 +40,10 @@ timetableForm.addEventListener("submit", (event) => {
     // Creates form from the data of the timetableForm
     const timetableData = new FormData(timetableForm);
 
+    // Gets the index of the timetable dropdown menu and adds it to the request
+    var timetableIndex = time_list.selectedIndex;
+    timetableData.append("timetable_index", timetableIndex);
+
     // Changes data into dictionary datatype
     const data = Object.fromEntries(timetableData);
 

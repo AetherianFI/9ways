@@ -53,9 +53,12 @@ app.post("/updateTimetable", (req, res) => {
     fs.readFile("../databases/POI.json", "utf8", (err, data) => {
         if (err) {
             console.log(err);
+            res.status(500).send("Error reading POI.json file");
             return;
         } else {
+            // Transforms data into json format
             let parsedData = JSON.parse(data);
+            let index = timetableData["timetable_index"];
 
             for (let i = 0; i < parsedData["bus_stops"].length; i++) {
                 if (
@@ -64,6 +67,7 @@ app.post("/updateTimetable", (req, res) => {
                 ) {
                     console.log(parsedData["bus_stops"][i]["name"]);
                     console.log(parsedData["bus_stops"][i]["timetable"]);
+                    console.log(parsedData["bus_stops"][i]["timetable"][index]);
                 }
             }
         }
