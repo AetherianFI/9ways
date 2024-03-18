@@ -1,11 +1,14 @@
 const express = require("express");
 const cors = require("cors");
 const fs = require("fs");
+const path = require("path");
 const app = express();
 const port = 3000;
 
 app.use(express.json());
 app.use(cors()); // Use the cors middleware
+
+app.use(express.static(path.join(__dirname, "public")));
 
 // Receives POST requests from /saveFormData endpoit on port 3000
 // Reads accounts.json and if there's already any data there then saves that to "existingData" variable
