@@ -9,14 +9,14 @@
     );
     width: 600px;
     height: 350px;
-    margin: 80px auto; /* Center the wrapper horizontally */
+    margin: 80px auto; 
     border-radius: 10px;
 }
 
 .button-container {
     display: flex;
-    justify-content: space-around; /* Make the layout symmetrical */
-    margin-top: 20px; /* Adjust the margin as needed */
+    justify-content: space-around; 
+    margin-top: 20px; 
     width: 90%;
 }
 
@@ -29,7 +29,7 @@
     background-color: #ffffff;
     border: 1px solid #ffffff;
     border-radius: 10px;
-    margin-left: auto; /* Add this line */
+    margin-left: auto; 
 }
 
 .button-box span {
@@ -48,5 +48,5 @@
 }
 
 h2 {
-    margin: 10px; /* Remove default margin */
+    margin: 10px; /
 }
