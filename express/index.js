@@ -47,6 +47,7 @@ app.post("/saveFormData", (req, res) => {
     });
 });
 
+// Handles the request regarding timetable updates
 app.post("/updateTimetable", (req, res) => {
     const timetableData = req.body;
 
