@@ -7,7 +7,7 @@ fetch("../databases/POI.json")
     .then((data) => {
         data.bus_stops.forEach((busStop) => {
             var bus_stop_element = document.createElement("option");
-            bus_stop_element.textContent = `${busStop.id}. ${busStop.name}`;
+            bus_stop_element.textContent = `${busStop.name}`;
             drop_down_menu.add(bus_stop_element);
         });
 

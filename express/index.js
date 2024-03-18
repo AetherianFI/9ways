@@ -49,10 +49,28 @@ app.post("/saveFormData", (req, res) => {
 
 app.post("/updateTimetable", (req, res) => {
     const timetableData = req.body;
-    const a = JSON.stringify(timetableData);
-    console.log(a);
-    res.status(207);
-    res.send("test response");
+
+    fs.readFile("../databases/POI.json", "utf8", (err, data) => {
+        if (err) {
+            console.log(err);
+            return;
+        } else {
+            let parsedData = JSON.parse(data);
+
+            for (let i = 0; i < parsedData["bus_stops"].length; i++) {
+                if (
+                    parsedData["bus_stops"][i]["name"] ===
+                    timetableData["bus_stop"]
+                ) {
+                    console.log(parsedData["bus_stops"][i]["name"]);
+                    console.log(parsedData["bus_stops"][i]["timetable"]);
+                }
+            }
+        }
+    });
+
+    res.status(200);
+    res.send({ response: "request handled succesfully" });
 });
 
 app.listen(port, () => {
