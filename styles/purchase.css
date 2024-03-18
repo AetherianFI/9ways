@@ -59,7 +59,7 @@ h4{
 .input-box label{
     width: 50%;
     padding: 13px;
-    background-color: white;
+    background-color: #fcfcfc;
     display: inline-block;
     float: left;
     text-align: center;
@@ -87,7 +87,7 @@ button{
     background: transparent;
     border: none;
     background: blueviolet;
-    color: #fff;
+    color: #fcfcfc;
     padding: 15px;
     border-radius: 4px;
     font-size: 16px;
@@ -101,6 +101,6 @@ button{
     background-color: #fcfcfc;
     transition: 0.3s;
     outline: none;
-    border: 1px solid gainsboro;
+    border: 1px solid #000000;
     border-radius: 3px;
 }
