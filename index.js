@@ -28,7 +28,9 @@ app.post("/saveFormData", (req, res) => {
     fs.readFile(accounts_json_path, (err, data) => {
         if (err) {
             console.error(err);
-            res.status(500).send("Error reading form data from accounts.json");
+            res.status(500).send({
+                response: "Error reading form data from accounts.json",
+            });
             return;
         }
 
@@ -49,10 +51,14 @@ app.post("/saveFormData", (req, res) => {
         fs.writeFile(accounts_json_path, jsonFormData, (err) => {
             if (err) {
                 console.error(err);
-                res.status(500).send("Error saving form data to accounts.json");
+                res.status(500).send({
+                    response: "Error saving form data to accounts.json",
+                });
             } else {
                 console.log("Form data saved successfully");
-                res.status(200).send("Form data saved successfully");
+                res.status(200).send({
+                    response: "Form data saved successfully",
+                });
             }
         });
     });
@@ -89,10 +95,14 @@ app.post("/updateTimetable", (req, res) => {
             fs.writeFile(poi_json_path, updatedParsedData, (err) => {
                 if (err) {
                     console.error(err);
-                    res.status(500).send("Error writing to POI.json file");
+                    res.status(500).send({
+                        response: "Error writing to POI.json file",
+                    });
                 } else {
                     console.log("Data updated successfully");
-                    res.status(200).send("Data updated successfully");
+                    res.status(200).send({
+                        response: "Data updated successfully",
+                    });
                 }
             });
         }
