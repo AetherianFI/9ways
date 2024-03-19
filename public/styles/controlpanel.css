@@ -1,0 +1,24 @@
+#timetable_updater {
+    max-width: 575px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#timetableForm {
+    display: flex;
+    justify-content: center;
+}
+
+#timetableForm select,
+input {
+    font-family: "Poppins";
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+#submitButton {
+    background-color: rgb(165, 255, 165);
+}
