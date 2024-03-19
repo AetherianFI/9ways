@@ -153,6 +153,7 @@ h4 {
     border: 1px solid #000000;
     cursor: pointer;
     transition: all 0.2s ease;
+    border-radius: 3px;
 }
 
 button {
