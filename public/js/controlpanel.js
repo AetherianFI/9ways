@@ -62,6 +62,5 @@ timetableForm.addEventListener("submit", (event) => {
         alert("Time updated succesfully");
     } else {
         alert("New time has to be in xx.xx format e.g. 08.27");
-        console.log("Error in the new time format");
     }
 });
