@@ -127,6 +127,8 @@
         var routing = L.Routing.control({
             waypoints: [L.latLng(9.05258, 7.46182), L.latLng(9.03324, 7.47639)],
             routeWhileDragging: true,
+            reverseWaypoints: true,
+            fitSelectedRoutes: true,
             geocoder: L.Control.Geocoder.nominatim(),
             lineOptions: {
                 styles: [{ color: "blue", opacity: 0.7, weight: 6 }],
