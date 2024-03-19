@@ -59,8 +59,8 @@ timetableForm.addEventListener("submit", (event) => {
             .then((res) => res.text())
             .then((data) => console.log(data))
             .catch((error) => console.log(error));
+        alert("Time updated succesfully");
     } else {
-        alert("New time has to be in xx.xx format e.g. 08:27");
-        console.log("Error in the new time format");
+        alert("New time has to be in xx.xx format e.g. 08.27");
     }
 });
