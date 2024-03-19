@@ -7,6 +7,7 @@
 
         <!-- BASIC PAGE CSS -->
         <link rel="stylesheet" href="../styles/main.css" />
+        <link rel="stylesheet" href="../styles/controlpanel.css" />
 
         <!-- BOXICONS CSS -->
         <link
@@ -47,17 +48,14 @@
         <div id="timetable_updater">
             <form id="timetableForm">
                 <select id="bus_stop_list" name="bus_stop" required></select>
-
                 <select id="time_selection" name="time" required></select>
-
                 <input
                     type="text"
                     name="updated_time"
                     placeholder="New time"
                     required
                 />
-
-                <input type="submit" value="Update" />
+                <input type="submit" value="Update" id="submitButton" />
             </form>
         </div>
     </body>
