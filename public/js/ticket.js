@@ -1,21 +1,24 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const buttons = document.querySelectorAll(".button-box");
+let quantities = [0, 0, 0];
+const prices = [5.99, 5.99, 29.99];
 
-    buttons.forEach(function (button) {
-        const minusBtn = button.querySelector(".minus");
-        const addBtn = button.querySelector(".add");
-        const num = button.querySelector(".num");
+function updateTotal() {
+  let total = 0;
+  for (let i = 0; i < quantities.length; i++) {
+    total += quantities[i] * prices[i];
+  }
+  document.getElementById("total").textContent = total.toFixed(2);
+}
 
-        minusBtn.addEventListener("click", function () {
-            let currentValue = parseInt(num.textContent);
-            if (currentValue >= 1) {
-                num.textContent = currentValue - 1;
-            }
-        });
+function increment(index) {
+  quantities[index]++;
+  document.getElementsByClassName("num")[index].textContent = quantities[index];
+  updateTotal();
+}
 
-        addBtn.addEventListener("click", function () {
-            let currentValue = parseInt(num.textContent);
-            num.textContent = currentValue + 1;
-        });
-    });
-});
+function decrement(index) {
+  if (quantities[index] > 0) {
+    quantities[index]--;
+    document.getElementsByClassName("num")[index].textContent = quantities[index];
+    updateTotal();
+  }
+}
