@@ -14,7 +14,7 @@ function increment(index) {
     numElement.textContent = num;
 
     var total = parseInt(totalElement.textContent);
-    total += index === 0 ? 200 : (index === 1 ? 200 : (index === 2 ? 15000 : 200));
+    total += index === 0 ? 400 : (index === 1 ? 200 : (index === 2 ? 15000 : 200));
     totalElement.textContent = total;
 
     if ((index === 0 || index === 1 || index === 2) && total > 0) {
