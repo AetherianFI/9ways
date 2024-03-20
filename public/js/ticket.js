@@ -1,5 +1,5 @@
 let quantities = [0, 0, 0];
-const prices = [5.99, 5.99, 29.99];
+const prices = [200, 100, 2000];
 
 function updateTotal() {
   let total = 0;
