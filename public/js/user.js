@@ -24,11 +24,11 @@ if (username) {
             console.error("Error fetching accounts.json:", error);
         });
 
-    // Adds event listeneder to logout button that clears localstorage and redirects to login page when clicked
+    // Adds event listener to logout button that clears localstorage and refreshes the page
     var logoutButton = document.getElementById("logoutButton");
     logoutButton.addEventListener("click", () => {
         localStorage.clear();
-        window.location.href = "../html/login.html";
+        window.location.reload();
     });
 } else {
     loggedIn.style.display = "none";

@@ -7,8 +7,21 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+#loginFirst {
+    text-align: center;
+}
+
+#loginFirst h1 {
+    color: #eb5c38;
+}
+
+#loginFirst a {
+    color: #333;
+    font-weight: 600;
+}
+
 #timetableForm {
-    display: flex;
+    display: none;
     justify-content: center;
 }
 

@@ -33,6 +33,6 @@ if (localStorage.getItem("loggedInUser")) {
     login_button.textContent = "logout";
     login_button.addEventListener("click", () => {
         localStorage.clear();
-        window.location.href = "../html/login.html";
+        window.location.reload();
     });
 }
