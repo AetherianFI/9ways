@@ -7,6 +7,7 @@
 
         <!-- BASIC PAGE CSS -->
         <link rel="stylesheet" href="../styles/main.css" />
+        <link rel="stylesheet" href="../styles/controlpanel.css" />
 
         <!-- BOXICONS CSS -->
         <link
@@ -26,7 +27,7 @@
                 <a href="map.html">Home</a>
                 <a href="tracking.html">Tracking</a>
                 <a href="directions.html">Directions</a>
-                <a href="tickets.html">Tickets</a>
+                <a href="purchase.html">Tickets</a>
                 <a href="routes.html">Routes</a>
                 <a href="controlpanel.html">Control Panel</a>
             </nav>
@@ -47,17 +48,14 @@
         <div id="timetable_updater">
             <form id="timetableForm">
                 <select id="bus_stop_list" name="bus_stop" required></select>
-
                 <select id="time_selection" name="time" required></select>
-
                 <input
                     type="text"
                     name="updated_time"
-                    placeholder="New time"
+                    placeholder="New time e.g. 12.45"
                     required
                 />
-
-                <input type="submit" value="Update" />
+                <input type="submit" value="Update" id="submitButton" />
             </form>
         </div>
     </body>

@@ -20,7 +20,9 @@ var tileLayer = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 }).addTo(map);
 
 // Create layers for the different busstops routes
-var airport_to_city = L.markerClusterGroup({ disableClusteringAtZoom: 13 }).addTo(map);
+var airport_to_city = L.markerClusterGroup({
+    disableClusteringAtZoom: 13,
+}).addTo(map);
 var route_2 = L.markerClusterGroup({ disableClusteringAtZoom: 13 }).addTo(map);
 var route_3 = L.markerClusterGroup({ disableClusteringAtZoom: 13 }).addTo(map);
 

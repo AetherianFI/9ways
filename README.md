@@ -11,7 +11,7 @@
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 
 ## Installation
-
+### Way 1
 1. Install Node.js from the [official website](https://nodejs.org/en)
 2. Clone the repository on your local machine and open with Visual Studio Code for example.
 3. Install dependencies express.js and cors with following commands:
@@ -25,6 +25,9 @@ $ npm install cors
 ```
 
 4. Run `index.js` file and navigate to [http://127.0.0.1:3000/html/map.html](http://127.0.0.1:3000/html/map.html)
+   
+### Way 2
+1. Run 9ways.exe and navigate to [http://127.0.0.1:3000/html/map.html](http://127.0.0.1:3000/html/map.html)
 
 ## Usage
 
