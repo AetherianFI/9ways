@@ -91,9 +91,7 @@
                     />
                     <i class="bx bxs-user-circle icon"></i>
                 </div>
-
             </div>
-
             <div class="input-group">
                 <div class="input-box">
                     <input
@@ -101,11 +99,11 @@
                         placeholder="Email address"
                         required
                         class="name"
+                        id="email"
                     />
                     <i class="bx bxs-envelope icon"></i>
                 </div>
             </div>
-
             <div class="input-group">
                 <div class="input-box">
                     <h4>Date of Birth</h4>
@@ -124,7 +122,6 @@
                         checked
                         class="radio"
                     />
-
                     <label for="bc1"
                         ><span><i class="bx bxl-visa"></i></span
                     ></label>
@@ -151,7 +148,6 @@
                     <i class="bx bx-credit-card icon"></i>
                 </div>
             </div>
-
             <div class="input-group">
                 <div class="input-box">
                     <input
@@ -163,7 +159,7 @@
                     <i class="bx bxs-user-circle icon"></i>
                 </div>
                 <div class="input-box">
-                    <select>
+                    <select id="expiryMonth">
                         <option>Jan</option>
                         <option>Feb</option>
                         <option>Mar</option>
@@ -177,7 +173,7 @@
                         <option>Nov</option>
                         <option>Dec</option>
                     </select>
-                    <select>
+                    <select id="expiryYear">
                         <option>2024</option>
                         <option>2025</option>
                         <option>2026</option>
@@ -191,10 +187,9 @@
             <p id="ticket-type"></p>
             <div class="input-group">
                 <div class="input-box">
-                    <button type="submit">Purchase</button>
+                    <button type="button" onclick="purchase()">Purchase</button>
                 </div>
             </div>
         </div>
-    </body>
     <script src="../js/ticket.js"></script>
 </html>

@@ -48,3 +48,21 @@ function decrement(index) {
     }
   }
 }
+
+
+function purchase() {
+  var email = document.getElementById('email').value;
+  var total = document.getElementById('total').textContent;
+  var ticketType = document.getElementById('ticket-type').textContent;
+  
+  // Get current date and time
+  var currentTime = new Date();
+  var purchaseTime = currentTime.toLocaleString(); // Format the date and time as a string
+  
+  var content = "Purchase Details\n\nTotal: " + total + "₦\nTicket Type: " + ticketType + "\nPurchase Time: " + purchaseTime + "\n\n";
+  var blob = new Blob([content], { type: 'text/plain' });
+  var link = document.createElement('a');
+  link.download = 'purchase_details.txt';
+  link.href = window.URL.createObjectURL(blob);
+  link.click();
+}
