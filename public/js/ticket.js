@@ -55,9 +55,9 @@ function purchase() {
   var total = document.getElementById('total').textContent;
   var ticketType = document.getElementById('ticket-type').textContent;
   
-  // Get current date and time
+ 
   var currentTime = new Date();
-  var purchaseTime = currentTime.toLocaleString(); // Format the date and time as a string
+  var purchaseTime = currentTime.toLocaleString();
   
   var content = "-----------------------------\n";
   content += "        Purchase Receipt       \n";
@@ -68,6 +68,7 @@ function purchase() {
   content += "Total: " + total + "₦\n";
   content += "Ticket Type: " + ticketType + "\n";
   content += "-----------------------------\n";
+  
   
   var blob = new Blob([content], { type: 'text/plain' });
   var link = document.createElement('a');
