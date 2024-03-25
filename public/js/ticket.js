@@ -14,16 +14,16 @@ function increment(index) {
     numElement.textContent = num;
 
     var total = parseInt(totalElement.textContent);
-    total += index === 0 ? 400 : (index === 1 ? 200 : (index === 2 ? 15000 : 200));
+    total += index === 0 ? 200 : (index === 1 ? 400 : (index === 2 ? 15000 : 400));
     totalElement.textContent = total;
 
     if ((index === 0 || index === 1 || index === 2) && total > 0) {
       if (index === 0) {
-        ticketTypeElement.textContent = 'Day ticket';
+        ticketTypeElement.textContent = 'Ticket type: Day ticket';
       } else if (index === 1) {
-        ticketTypeElement.textContent = 'Single ticket';
+        ticketTypeElement.textContent = 'Ticket type: Single ticket';
       } else if (index === 2) {
-        ticketTypeElement.textContent = 'Monthly pass';
+        ticketTypeElement.textContent = 'Ticket type:Monthly pass';
       }
     }
   }
@@ -40,7 +40,7 @@ function decrement(index) {
     numElement.textContent = num;
 
     var total = parseInt(totalElement.textContent);
-    total -= index === 0 ? 400 : (index === 1 ? 200 : (index === 2 ? 15000 : 200));
+    total -= index === 0 ? 200 : (index === 1 ? 400 : (index === 2 ? 15000 : 400));
     totalElement.textContent = total;
 
     if (total === 0) {
