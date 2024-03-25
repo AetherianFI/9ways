@@ -23,7 +23,7 @@ function increment(index) {
       } else if (index === 1) {
         ticketTypeElement.textContent = 'Ticket type: Single ticket';
       } else if (index === 2) {
-        ticketTypeElement.textContent = 'Ticket type:Monthly pass';
+        ticketTypeElement.textContent = 'Ticket type: Monthly pass';
       }
     }
   }
