@@ -66,7 +66,7 @@ function purchase() {
   content += "Email: " + email + "\n";
   content += "-----------------------------\n";
   content += "Total: " + total + "₦\n";
-  content += "Ticket Type: " + ticketType + "\n";
+  content +=  ticketType + "\n";
   content += "-----------------------------\n";
   
   
