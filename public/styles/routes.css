@@ -14,13 +14,14 @@ body {
 }
 
 h2 {
-    color: #333;
+    color: blueviolet;
     margin-top: 20px;
     text-align: center;
+    text-decoration: underline;
 }
 
 h1 {
-    color: #790857;
+    color: blueviolet;
     margin-top: 60px;
     font-size: large;
 }
