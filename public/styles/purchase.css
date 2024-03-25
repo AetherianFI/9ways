@@ -5,13 +5,13 @@
 }
 
 .wrapper {
-    background-color: rgb(251, 251, 251);
+    
     width: 500px;
     padding: 25px;
     margin: 25px auto;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
-    background-color: rgb(253, 253, 253);
+    background-color: rgb(255, 255, 255);
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -176,3 +176,12 @@ h3 {
     display: inline-block;
     border-radius: 3px;
 }
+
+.wrapper p{
+    width: 50%;
+    display: flex;
+    float: left;
+    background-color: red;
+}
+
+
