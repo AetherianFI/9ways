@@ -11,13 +11,18 @@ var coordinates = [
   [9.06688, 7.45305],
   [9.05485, 7.48441],
   [9.07054, 7.49532]
-  
 ];
 
-var marker = L.marker(coordinates[0]).addTo(map); 
+
+var customIcon = L.icon({
+  iconUrl: "../img/bus.png",
+  iconSize: [32, 32], 
+  iconAnchor: [16, 32], 
+});
+
+var marker = L.marker(coordinates[0], {icon: customIcon}).addTo(map); 
 
 var currentIndex = 0;
-
 function animateMarker() {
   if (currentIndex === coordinates.length) return;
   var newPosition = coordinates[currentIndex];
