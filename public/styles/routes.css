@@ -24,6 +24,8 @@ h1 {
     color: blueviolet;
     margin-top: 60px;
     font-size: large;
+    max-width: 100%;
+    text-align: center;
 }
 
 p {
