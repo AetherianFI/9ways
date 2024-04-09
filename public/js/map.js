@@ -14,7 +14,7 @@ var map = L.map("map", {
 // Choose tiles that the map uses and set min and max zoom
 var tileLayer = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
     maxZoom: 19,
-    minZoom: 12,
+    minZoom: 11,
     attribution:
         '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
 }).addTo(map);
@@ -57,7 +57,7 @@ fetch("../databases/POI.json")
         data.bus_stops.forEach((busStop) => {
             var popup = L.popup({ maxWidth: 400, maxHeight: 300 });
             popup.setContent(
-                `<div id="popup" style="width: 100.0%; height: 100.0%;"><h1>${busStop.id}. ${busStop.name}</h1><br>Timetable for the bus stop:<p><script>${busStop.timetable}</script></p><button id="start">Start from this location</button><button id="end">Go to this location</button></div>`
+                `<div id="popup" style="width: 100.0%; height: 100.0%;"><h1>${busStop.id}. ${busStop.name}</h1><br>Timetable for the bus stop:<p>${busStop.timetable}</p></div>`
             );
 
             var busIcon;
