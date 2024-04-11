@@ -50,10 +50,14 @@ header {
 
 .left-links {
     margin-left: 10px;
+    height: center;
+    min-width: 1px;
 }
 
 .right-links {
-    margin-left: auto;
+     margin-left: auto;
+     height: center;
+     min-width: 1px;
 }
 
 #log-in-header {
