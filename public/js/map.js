@@ -59,6 +59,17 @@ fetch("../databases/POI.json")
             popup.setContent(
                 `<div id="popup" style="width: 100.0%; height: 100.0%;"><h1>${busStop.id}. ${busStop.name}</h1><br>Timetable for the bus stop:<p>${busStop.timetable}</p></div>`
             );
+            popup.bindPopup(button.id="start".onclick("click", function (e) {
+                L.DomEvent.on("click", function () {
+                routing.spliceWaypoints(0, 1, e.latlng);
+                map.closePopup();
+            })}));
+
+            /* popup.bindPopup(button.onclick("click", function (e) {
+                L.DomEvent.on("click", function () {
+                routing.spliceWaypoints(routing.getWaypoints().length - 1, 1, e.latlng);
+                map.closePopup();
+            })})); */
 
             var busIcon;
             if (busStop.route === 1) {
