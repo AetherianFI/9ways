@@ -33,7 +33,7 @@ $ npm install cors
 
 You can login to website with already existing accounts or make a new one for yourself.
 Existing accounts can be found from the accounts.json.
-Creating account happens on register.html page and submitted form data is then sent to express.js server (express/index.js) that receives the data and saves it into accounts.json.
+Creating account happens on register.html page and submitted form data is then sent to express.js server (index.js) that receives the data and saves it into accounts.json.
 
 ## Acknowledgments
 
