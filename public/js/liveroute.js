@@ -1,34 +1,69 @@
-var map = L.map('map').setView([8.96113, 7.2436], 12); 
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map); 
+var map = L.map("map").setView([8.96113, 7.2436], 12);
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(map);
 
 var coordinates = [
-  [8.96113, 7.2436],
-  [8.95349, 7.26371],
-  [8.97266, 7.36307],
-  [8.97698, 7.3726],
-  [9.00804, 7.41695],
-  [9.02931, 7.46921],
-  [9.06688, 7.45305],
-  [9.05485, 7.48441],
-  [9.07054, 7.49532]
+    [9.003252, 7.271892],
+    [8.997634, 7.275405],
+    [8.989867, 7.270051],
+    [8.983587, 7.265534],
+    [8.977142, 7.259678],
+    [8.97028, 7.250032],
+    [8.964047, 7.245404],
+    [8.960168, 7.24316],
+    [8.95809, 7.249751],
+    [8.955735, 7.259147],
+    [8.951856, 7.267842],
+    [8.94867, 7.277519],
+    [8.945345, 7.285653],
+    [8.942713, 7.294067],
+    [8.940219, 7.304164],
+    [8.941189, 7.317627],
+    [8.949639, 7.330249],
+    [8.959614, 7.34273],
+    [8.969311, 7.356474],
+    [8.974852, 7.369516],
+    [8.982527, 7.383537],
+    [8.987152, 7.392795],
+    [8.998399, 7.40812],
+    [9.005966, 7.417272],
+    [9.003339, 7.426424],
+    [9.011747, 7.432915],
+    [9.017002, 7.441429],
+    [9.026672, 7.452177],
+    [9.030705, 7.45955],
+    [9.035478, 7.462071],
+    [9.038791, 7.459469],
+    [9.045289, 7.455772],
+    [9.051045, 7.454017],
+    [9.058658, 7.453578],
+    [9.069859, 7.452262],
+    [9.075429, 7.454393],
+    [9.074191, 7.460973],
+    [9.07054, 7.466864],
+    [9.068683, 7.473445],
+    [9.06726, 7.481529],
+    [9.06268, 7.48648],
+    [9.058286, 7.48717],
+    [9.060576, 7.493061],
+    [9.064166, 7.497698],
+    [9.06955, 7.500644],
 ];
 
-
 var customIcon = L.icon({
-  iconUrl: "../img/bus.png",
-  iconSize: [32, 32], 
-  iconAnchor: [16, 32], 
+    iconUrl: "../img/bus.png",
+    iconSize: [32, 32],
+    iconAnchor: [16, 32],
 });
 
-var marker = L.marker(coordinates[0], {icon: customIcon}).addTo(map); 
+var marker = L.marker(coordinates[0], { icon: customIcon }).addTo(map);
 
 var currentIndex = 0;
 function animateMarker() {
-  if (currentIndex === coordinates.length) return;
-  var newPosition = coordinates[currentIndex];
-  marker.setLatLng(newPosition);
-  currentIndex++;
-  setTimeout(animateMarker, 3000); 
+    if (currentIndex === coordinates.length) return;
+    var newPosition = coordinates[currentIndex];
+    marker.setLatLng(newPosition);
+    currentIndex++;
+    setTimeout(animateMarker, 3000);
 }
 
 animateMarker();
