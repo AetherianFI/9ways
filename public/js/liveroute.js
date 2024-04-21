@@ -63,7 +63,7 @@ function animateMarker() {
     var newPosition = coordinates[currentIndex];
     marker.setLatLng(newPosition);
     currentIndex++;
-    setTimeout(animateMarker, 3000);
+    setTimeout(animateMarker, 1000);
 }
 
 animateMarker();
