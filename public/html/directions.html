@@ -66,6 +66,7 @@
     <body>
         <!-- HEADER BAR -->
         <header>
+            <!-- Required style changes to work in firefox -->
             <div class="header-logo" style="display:flex; max-width: 64px;">
                 <img src="../img/logo.png" alt="9ways" />
             </div>
@@ -128,13 +129,16 @@
                 startBtn = createButton("Start from this location", container),
                 destBtn = createButton("Go to this location", container);
 
+            // Opens a container on map if map is clicked
             L.popup().setContent(container).setLatLng(e.latlng).openOn(map);
 
+            // If start button is clicked, set container's coordinates to router's starting point
             L.DomEvent.on(startBtn, "click", function () {
                 routing.spliceWaypoints(0, 1, e.latlng);
                 map.closePopup();
             });
 
+            // If end button is clicked, set container's coordinates to router's ending point
             L.DomEvent.on(destBtn, "click", function () {
                 routing.spliceWaypoints(
                     routing.getWaypoints().length - 1,
@@ -142,6 +146,7 @@
                     e.latlng
                 );
                 map.closePopup();
+                
             });
         });
     </script>
